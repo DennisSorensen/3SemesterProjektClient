@@ -16,5 +16,13 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        //Laver en instans af vores service reference, sådan vi kan kalde dem
+        ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+
+        private void UserManagement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
