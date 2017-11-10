@@ -31,6 +31,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Client.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,11 +48,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AdminClient.cs">
+    <Compile Include="AdminClientFront.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AdminClient.Designer.cs">
-      <DependentUpon>AdminClient.cs</DependentUpon>
+    <Compile Include="AdminClientFront.Designer.cs">
+      <DependentUpon>AdminClientFront.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CalendarManagement.Designer.cs">
+      <DependentUpon>CalendarManagement.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -59,8 +68,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AdminClient.resx">
-      <DependentUpon>AdminClient.cs</DependentUpon>
+    <Compile Include="UserManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserManagement.Designer.cs">
+      <DependentUpon>UserManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminClientFront.resx">
+      <DependentUpon>AdminClientFront.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

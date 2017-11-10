@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Client
+{
+    public partial class AdminClientFront : Form
+    {
+        public AdminClientFront()
+        {
+            InitializeComponent();
+        }
+
+        private void btnUserManagement_Click(object sender, EventArgs e)
+        {
+            
+
+
+        }
+
+        private void btnCalManagement_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUserManagement_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+            UserManagement um = new UserManagement();
+            um.Show();
+        }
+    }
+}
