@@ -103,9 +103,9 @@
             // btnCreateCal
             // 
             this.btnCreateCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateCal.Location = new System.Drawing.Point(70, 349);
+            this.btnCreateCal.Location = new System.Drawing.Point(52, 355);
             this.btnCreateCal.Name = "btnCreateCal";
-            this.btnCreateCal.Size = new System.Drawing.Size(154, 42);
+            this.btnCreateCal.Size = new System.Drawing.Size(169, 52);
             this.btnCreateCal.TabIndex = 5;
             this.btnCreateCal.Text = "Opret Kalender";
             this.btnCreateCal.UseVisualStyleBackColor = true;
@@ -154,7 +154,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1048, 479);
+            this.ClientSize = new System.Drawing.Size(789, 479);
             this.Controls.Add(this.tabControl1);
             this.Name = "CalendarManagement";
             this.Text = "CalendarManagement";
