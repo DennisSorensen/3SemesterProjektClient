@@ -16,24 +16,18 @@ namespace Client
         {
             InitializeComponent();
         }
-
-        private void btnUserManagement_Click(object sender, EventArgs e)
-        {
-            
-
-
-        }
-
-        private void btnCalManagement_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnUserManagement_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             UserManagement um = new UserManagement();
             um.Show();
+        }
+
+        private void btnCalManagement_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CalendarManagement cm = new CalendarManagement();
+            cm.Show();
         }
     }
 }
