@@ -33,7 +33,7 @@ namespace Client
             //Laver en user, og kalder create over i WCFConnection
 
             //Sprøg brian hvorfor den kan se dette uden noget reference osv.
-            ServiceReference1.User user = new ServiceReference1.User(tbUserId, cbUserRole, tbUserFirstName, tbUserLastName, tbPassword);
+            ServiceReference1.User user = new ServiceReference1.User(tbUserId, cbUserRole.SelectedItem.ToString, tbUserFirstName, tbUserLastName, tbPassword);
 
             wcfConection.CreateUser(user);
             

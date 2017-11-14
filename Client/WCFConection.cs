@@ -18,7 +18,8 @@ namespace Client
 
         public void CreateUser(ServiceReference1.User user)
         {
-            service.CreateUser(user);
+            
+                
         }
 
     }
