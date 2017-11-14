@@ -81,6 +81,7 @@
     <Compile Include="UserManagement.Designer.cs">
       <DependentUpon>UserManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="WCFConection.cs" />
     <EmbeddedResource Include="AdminClientFront.resx">
       <DependentUpon>AdminClientFront.cs</DependentUpon>
     </EmbeddedResource>
