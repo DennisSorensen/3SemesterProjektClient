@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Client;
 
 namespace ClientTest
 {
@@ -16,16 +17,19 @@ namespace ClientTest
             UserManagement userManagement = new UserManagement(); //Her kalder vi metoden som opretter en user i GUI'en.
 
             //Act
-            userController.Create("TestUser");
+            //userController.Create("TestUser");
 
-            User testUserCreate = new User("TestUser");
+            User testUser = new User(1, "Admin", "Bo", "Hansen", "A1234");
 
-            userManagement.Create(int id, string role, string firstname, string lastname, string password);
+            userManagement.Create(1, "Admin", "Bo", "Hansen", "A1234");
 
             //Assert
-            User user = userController.Get();
+            //User user = userController.Get();
+            User user = userManagement.get(id);
             Assert.ReferenceEquals(user, testUser);
 
+
+            
 
         }
     }

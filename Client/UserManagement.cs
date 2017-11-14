@@ -24,5 +24,10 @@ namespace Client
         {
             
         }
+
+        private void btnCreateUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
