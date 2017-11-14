@@ -12,9 +12,12 @@ namespace Client
 {
     public partial class UserManagement : Form
     {
+        WCFConection wcfConection = new WCFConection();
+
         public UserManagement()
         {
             InitializeComponent();
+            
         }
 
         //Laver en instans af vores service reference, sådan vi kan kalde dem
@@ -27,7 +30,13 @@ namespace Client
 
         private void btnCreateUser_Click(object sender, EventArgs e)
         {
+            //Laver en user, og kalder create over i WCFConnection
 
+            //Sprøg brian hvorfor den kan se dette uden noget reference osv.
+            ServiceReference1.User user = new ServiceReference1.User(tbUserId, cbUserRole.SelectedItem.ToString, tbUserFirstName, tbUserLastName, tbPassword);
+
+            wcfConection.CreateUser(user);
+            
         }
 
         

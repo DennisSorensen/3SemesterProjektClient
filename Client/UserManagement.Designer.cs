@@ -30,20 +30,20 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCreateUser = new System.Windows.Forms.TabPage();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnCreateUser = new System.Windows.Forms.Button();
             this.tpViewUser = new System.Windows.Forms.TabPage();
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
+            this.btnCreateUser = new System.Windows.Forms.Button();
+            this.tbUserId = new System.Windows.Forms.TextBox();
+            this.tbUserFirstName = new System.Windows.Forms.TextBox();
+            this.tbUserLastName = new System.Windows.Forms.TextBox();
+            this.tbPassword = new System.Windows.Forms.TextBox();
+            this.cbUserRole = new System.Windows.Forms.ComboBox();
+            this.Id = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpCreateUser.SuspendLayout();
             this.SuspendLayout();
@@ -67,11 +67,11 @@
             this.tpCreateUser.Controls.Add(this.label3);
             this.tpCreateUser.Controls.Add(this.label2);
             this.tpCreateUser.Controls.Add(this.Id);
-            this.tpCreateUser.Controls.Add(this.comboBox1);
-            this.tpCreateUser.Controls.Add(this.textBox4);
-            this.tpCreateUser.Controls.Add(this.textBox3);
-            this.tpCreateUser.Controls.Add(this.textBox2);
-            this.tpCreateUser.Controls.Add(this.textBox1);
+            this.tpCreateUser.Controls.Add(this.cbUserRole);
+            this.tpCreateUser.Controls.Add(this.tbPassword);
+            this.tpCreateUser.Controls.Add(this.tbUserLastName);
+            this.tpCreateUser.Controls.Add(this.tbUserFirstName);
+            this.tpCreateUser.Controls.Add(this.tbUserId);
             this.tpCreateUser.Controls.Add(this.btnCreateUser);
             this.tpCreateUser.Location = new System.Drawing.Point(4, 25);
             this.tpCreateUser.Name = "tpCreateUser";
@@ -80,102 +80,6 @@
             this.tpCreateUser.TabIndex = 0;
             this.tpCreateUser.Text = "Opret Bruger";
             this.tpCreateUser.UseVisualStyleBackColor = true;
-
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(75, 99);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 17);
-            this.label5.TabIndex = 10;
-            this.label5.Text = "Rolle";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 248);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(62, 17);
-            this.label4.TabIndex = 9;
-            this.label4.Text = "Kodeord";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 199);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 17);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "Efternavn";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 150);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 17);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Fornavn";
-            // 
-            // Id
-            // 
-            this.Id.AutoSize = true;
-            this.Id.Location = new System.Drawing.Point(75, 50);
-            this.Id.Name = "Id";
-            this.Id.Size = new System.Drawing.Size(19, 17);
-            this.Id.TabIndex = 6;
-            this.Id.Text = "Id";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Admin",
-            "Supporter",
-            "Sælger"});
-            this.comboBox1.Location = new System.Drawing.Point(75, 121);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 5;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(75, 270);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 22);
-            this.textBox4.TabIndex = 4;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(75, 221);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 22);
-            this.textBox3.TabIndex = 3;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(75, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(75, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 1;
-            // 
-            // btnCreateUser
-            // 
-            this.btnCreateUser.Location = new System.Drawing.Point(382, 366);
-            this.btnCreateUser.Name = "btnCreateUser";
-            this.btnCreateUser.Size = new System.Drawing.Size(121, 34);
-            this.btnCreateUser.TabIndex = 0;
-            this.btnCreateUser.Text = "Opret Bruger";
-            this.btnCreateUser.UseVisualStyleBackColor = true;
-            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
             // 
             // tpViewUser
             // 
@@ -205,6 +109,101 @@
             this.tpDeleteUser.Text = "Slet Bruger";
             this.tpDeleteUser.UseVisualStyleBackColor = true;
             // 
+            // btnCreateUser
+            // 
+            this.btnCreateUser.Location = new System.Drawing.Point(382, 366);
+            this.btnCreateUser.Name = "btnCreateUser";
+            this.btnCreateUser.Size = new System.Drawing.Size(121, 34);
+            this.btnCreateUser.TabIndex = 0;
+            this.btnCreateUser.Text = "Opret Bruger";
+            this.btnCreateUser.UseVisualStyleBackColor = true;
+            this.btnCreateUser.Click += new System.EventHandler(this.btnCreateUser_Click);
+            // 
+            // tbUserId
+            // 
+            this.tbUserId.Location = new System.Drawing.Point(78, 70);
+            this.tbUserId.Name = "tbUserId";
+            this.tbUserId.Size = new System.Drawing.Size(100, 22);
+            this.tbUserId.TabIndex = 1;
+            // 
+            // tbUserFirstName
+            // 
+            this.tbUserFirstName.Location = new System.Drawing.Point(81, 169);
+            this.tbUserFirstName.Name = "tbUserFirstName";
+            this.tbUserFirstName.Size = new System.Drawing.Size(100, 22);
+            this.tbUserFirstName.TabIndex = 2;
+            // 
+            // tbUserLastName
+            // 
+            this.tbUserLastName.Location = new System.Drawing.Point(78, 214);
+            this.tbUserLastName.Name = "tbUserLastName";
+            this.tbUserLastName.Size = new System.Drawing.Size(100, 22);
+            this.tbUserLastName.TabIndex = 3;
+            // 
+            // tbPassword
+            // 
+            this.tbPassword.Location = new System.Drawing.Point(78, 286);
+            this.tbPassword.Name = "tbPassword";
+            this.tbPassword.Size = new System.Drawing.Size(100, 22);
+            this.tbPassword.TabIndex = 4;
+            // 
+            // cbUserRole
+            // 
+            this.cbUserRole.FormattingEnabled = true;
+            this.cbUserRole.Items.AddRange(new object[] {
+            "Admin",
+            "Supporter",
+            "Sælger"});
+            this.cbUserRole.Location = new System.Drawing.Point(78, 125);
+            this.cbUserRole.Name = "cbUserRole";
+            this.cbUserRole.Size = new System.Drawing.Size(121, 24);
+            this.cbUserRole.TabIndex = 5;
+            // 
+            // Id
+            // 
+            this.Id.AutoSize = true;
+            this.Id.Location = new System.Drawing.Point(75, 50);
+            this.Id.Name = "Id";
+            this.Id.Size = new System.Drawing.Size(19, 17);
+            this.Id.TabIndex = 6;
+            this.Id.Text = "Id";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(78, 152);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(60, 17);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Fornavn";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(81, 194);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(69, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Efternavn";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(78, 266);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(62, 17);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Kodeord";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(75, 105);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(40, 17);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Rolle";
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -233,11 +232,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label Id;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox cbUserRole;
+        private System.Windows.Forms.TextBox tbPassword;
+        private System.Windows.Forms.TextBox tbUserLastName;
+        private System.Windows.Forms.TextBox tbUserFirstName;
+        private System.Windows.Forms.TextBox tbUserId;
         private System.Windows.Forms.Button btnCreateUser;
     }
 }
