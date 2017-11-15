@@ -38,9 +38,9 @@ namespace Client
             {
                 numberId = Convert.ToInt32(tbUserId);
             }
-            catch (FormatException e)
+            catch (FormatException e) //Hvorfor fejler denne
             {
-                Console.WriteLine("Det er ikke tal som ser skrevet");
+                Console.WriteLine("Det er ikke tal som er skrevet");
             }
             catch (OverflowException e)
             {
