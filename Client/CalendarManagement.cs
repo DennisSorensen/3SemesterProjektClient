@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Client.ServiceReference1;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,24 +8,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Client.ServiceReference1;
+
 
 namespace Client
 {
     public partial class CalendarManagement : Form
     {
-        //Laver en instans af vores service reference, sådan vi kan kalde dem
+        //Lav en service reference, sådan vi kan kalde metoder
         
 
         public CalendarManagement()
         {
             InitializeComponent();
             
-            List<User> supporters = new List<User>(); 
+            List<User> supporters = new List<User>();
+            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
             supporters = service.GetAllSupporters();
 
-            foreach (var User in supporters)
+            foreach (User user in supporters)
             {
+                
+                string.Format("{0} {1}", user.)
                 listAllSupport.Items.Add()
             }
             
