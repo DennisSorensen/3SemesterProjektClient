@@ -12,7 +12,7 @@ namespace Client
 {
     public partial class UserManagement : Form
     {
-        WCFConection wcfConection = new WCFConection();
+        UserService userService = new UserService();
 
         public UserManagement()
         {
@@ -20,8 +20,6 @@ namespace Client
             
         }
 
-        //Laver en instans af vores service reference, sådan vi kan kalde dem
-        ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
         
         private void UserManagement_Load(object sender, EventArgs e)
         {
@@ -33,9 +31,27 @@ namespace Client
             //Laver en user, og kalder create over i WCFConnection
 
             //Sprøg brian hvorfor den kan se dette uden noget reference osv.
-            ServiceReference1.User user = new ServiceReference1.User(tbUserId, cbUserRole.SelectedItem.ToString, tbUserFirstName, tbUserLastName, tbPassword);
 
-            wcfConection.CreateUser(user);
+            int numberId = 0;
+
+            try
+            {
+                numberId = Convert.ToInt32(tbUserId);
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Det er ikke tal som ser skrevet");
+            }
+            catch (OverflowException e)
+            {
+                Console.WriteLine("Tallet er for stort til en int32");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Fejl med bruger id");
+            }
+
+            userService.CreateUser(numberId, cbUserRole.ToString(), tbUserFirstName.ToString(), tbUserLastName.ToString(), tbPassword.ToString());
             
         }
 
