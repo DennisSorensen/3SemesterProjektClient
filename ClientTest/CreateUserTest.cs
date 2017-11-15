@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Client;
+using Client.ServiceReference1;
 
 namespace ClientTest
 {
@@ -23,6 +24,7 @@ namespace ClientTest
 
             userManagement.Create(1, "Admin", "Bo", "Hansen", "A1234");
 
+            testUser.
             //Assert
             //User user = userController.Get();
             User user = userManagement.get(id);
