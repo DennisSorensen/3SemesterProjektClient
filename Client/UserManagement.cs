@@ -36,20 +36,22 @@ namespace Client
 
             try
             {
-                numberId = Convert.ToInt32(tbUserId);
+                numberId = Convert.ToInt32(tbUserId.Text);
             }
-            catch (FormatException e) //Hvorfor fejler denne
+            catch (FormatException) //Hvorfor fejler denne
             {
                 Console.WriteLine("Det er ikke tal som er skrevet");
             }
-            catch (OverflowException e)
+            catch (OverflowException)
             {
                 Console.WriteLine("Tallet er for stort til en int32");
             }
-            catch (Exception e)
+            
+            catch (Exception)
             {
                 Console.WriteLine("Fejl med bruger id");
             }
+            
 
             userService.CreateUser(numberId, cbUserRole.Text.ToString(), tbUserFirstName.Text.ToString(), tbUserLastName.Text.ToString(), tbPassword.Text.ToString());
             

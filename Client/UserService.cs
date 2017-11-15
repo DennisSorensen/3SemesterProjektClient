@@ -16,11 +16,12 @@ namespace Client
         {
             //Skal kalde servicen, og sende et user obj med
             ServiceReference1.User user = new ServiceReference1.User();
-            user.Id = 1;
-            user.Role = "adm";
-            user.LastName = "Bøh";
-            user.FirstName = "ulla";
-            user.Password = "1234friskfyr";
+            user.Id = id;
+            user.Role = role;
+            user.LastName = firstName;
+            user.FirstName = lastName;
+            user.Password = password;
+
             service.CreateUser(user);
         }
     }

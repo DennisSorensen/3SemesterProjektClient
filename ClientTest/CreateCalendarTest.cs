@@ -7,9 +7,11 @@ namespace ClientTest
     [TestClass]
     public class CreateCalendarTest
     {
+        /*
         [TestMethod]
         public void TestCalendarIsCreated()
         {
+            
             //Arrange
            
 
@@ -42,6 +44,6 @@ namespace ClientTest
             Assert.ReferenceEquals(calendar, testCalendar);
 
         }
-
+        */
     }
 }

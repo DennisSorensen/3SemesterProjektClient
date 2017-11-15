@@ -30,14 +30,14 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCreateCal = new System.Windows.Forms.TabPage();
+            this.lblHelptxt2 = new System.Windows.Forms.Label();
+            this.lblHelptxt1 = new System.Windows.Forms.Label();
+            this.listAllSupport = new System.Windows.Forms.ListBox();
+            this.lblTitelSuppList = new System.Windows.Forms.Label();
+            this.btnCreateCal = new System.Windows.Forms.Button();
             this.tabViewCal = new System.Windows.Forms.TabPage();
             this.tabEditCal = new System.Windows.Forms.TabPage();
             this.tabDeleteCal = new System.Windows.Forms.TabPage();
-            this.btnCreateCal = new System.Windows.Forms.Button();
-            this.lblTitelSuppList = new System.Windows.Forms.Label();
-            this.listAllSupport = new System.Windows.Forms.ListBox();
-            this.lblHelptxt1 = new System.Windows.Forms.Label();
-            this.lblHelptxt2 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabCreateCal.SuspendLayout();
             this.SuspendLayout();
@@ -70,6 +70,56 @@
             this.tabCreateCal.Text = "Opret Kalender";
             this.tabCreateCal.UseVisualStyleBackColor = true;
             // 
+            // lblHelptxt2
+            // 
+            this.lblHelptxt2.AutoSize = true;
+            this.lblHelptxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelptxt2.Location = new System.Drawing.Point(30, 316);
+            this.lblHelptxt2.Name = "lblHelptxt2";
+            this.lblHelptxt2.Size = new System.Drawing.Size(209, 20);
+            this.lblHelptxt2.TabIndex = 9;
+            this.lblHelptxt2.Text = "opret kalender til supporter";
+            // 
+            // lblHelptxt1
+            // 
+            this.lblHelptxt1.AutoSize = true;
+            this.lblHelptxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblHelptxt1.Location = new System.Drawing.Point(30, 57);
+            this.lblHelptxt1.Name = "lblHelptxt1";
+            this.lblHelptxt1.Size = new System.Drawing.Size(236, 20);
+            this.lblHelptxt1.TabIndex = 8;
+            this.lblHelptxt1.Text = "Markér den ønskede supporter";
+            // 
+            // listAllSupport
+            // 
+            this.listAllSupport.FormattingEnabled = true;
+            this.listAllSupport.ItemHeight = 29;
+            this.listAllSupport.Location = new System.Drawing.Point(34, 92);
+            this.listAllSupport.Name = "listAllSupport";
+            this.listAllSupport.Size = new System.Drawing.Size(220, 178);
+            this.listAllSupport.TabIndex = 7;
+            // 
+            // lblTitelSuppList
+            // 
+            this.lblTitelSuppList.AutoSize = true;
+            this.lblTitelSuppList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitelSuppList.Location = new System.Drawing.Point(21, 15);
+            this.lblTitelSuppList.Name = "lblTitelSuppList";
+            this.lblTitelSuppList.Size = new System.Drawing.Size(245, 29);
+            this.lblTitelSuppList.TabIndex = 6;
+            this.lblTitelSuppList.Text = "Supporter - oversigt";
+            // 
+            // btnCreateCal
+            // 
+            this.btnCreateCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCreateCal.Location = new System.Drawing.Point(52, 355);
+            this.btnCreateCal.Name = "btnCreateCal";
+            this.btnCreateCal.Size = new System.Drawing.Size(169, 52);
+            this.btnCreateCal.TabIndex = 5;
+            this.btnCreateCal.Text = "Opret Kalender";
+            this.btnCreateCal.UseVisualStyleBackColor = true;
+            this.btnCreateCal.Click += new System.EventHandler(this.btnCreateCal_Click);
+            // 
             // tabViewCal
             // 
             this.tabViewCal.Location = new System.Drawing.Point(4, 38);
@@ -100,56 +150,6 @@
             this.tabDeleteCal.Text = "Slet Kalender";
             this.tabDeleteCal.UseVisualStyleBackColor = true;
             // 
-            // btnCreateCal
-            // 
-            this.btnCreateCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCreateCal.Location = new System.Drawing.Point(52, 355);
-            this.btnCreateCal.Name = "btnCreateCal";
-            this.btnCreateCal.Size = new System.Drawing.Size(169, 52);
-            this.btnCreateCal.TabIndex = 5;
-            this.btnCreateCal.Text = "Opret Kalender";
-            this.btnCreateCal.UseVisualStyleBackColor = true;
-            this.btnCreateCal.Click += new System.EventHandler(this.btnCreateCal_Click);
-            // 
-            // lblTitelSuppList
-            // 
-            this.lblTitelSuppList.AutoSize = true;
-            this.lblTitelSuppList.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitelSuppList.Location = new System.Drawing.Point(21, 15);
-            this.lblTitelSuppList.Name = "lblTitelSuppList";
-            this.lblTitelSuppList.Size = new System.Drawing.Size(245, 29);
-            this.lblTitelSuppList.TabIndex = 6;
-            this.lblTitelSuppList.Text = "Supporter - oversigt";
-            // 
-            // listAllSupport
-            // 
-            this.listAllSupport.FormattingEnabled = true;
-            this.listAllSupport.ItemHeight = 29;
-            this.listAllSupport.Location = new System.Drawing.Point(34, 92);
-            this.listAllSupport.Name = "listAllSupport";
-            this.listAllSupport.Size = new System.Drawing.Size(220, 178);
-            this.listAllSupport.TabIndex = 7;
-            // 
-            // lblHelptxt1
-            // 
-            this.lblHelptxt1.AutoSize = true;
-            this.lblHelptxt1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelptxt1.Location = new System.Drawing.Point(30, 57);
-            this.lblHelptxt1.Name = "lblHelptxt1";
-            this.lblHelptxt1.Size = new System.Drawing.Size(236, 20);
-            this.lblHelptxt1.TabIndex = 8;
-            this.lblHelptxt1.Text = "Markér den ønskede supporter";
-            // 
-            // lblHelptxt2
-            // 
-            this.lblHelptxt2.AutoSize = true;
-            this.lblHelptxt2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHelptxt2.Location = new System.Drawing.Point(30, 316);
-            this.lblHelptxt2.Name = "lblHelptxt2";
-            this.lblHelptxt2.Size = new System.Drawing.Size(209, 20);
-            this.lblHelptxt2.TabIndex = 9;
-            this.lblHelptxt2.Text = "opret kalender til supporter";
-            // 
             // CalendarManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -158,6 +158,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "CalendarManagement";
             this.Text = "CalendarManagement";
+            this.Load += new System.EventHandler(this.CalendarManagement_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabCreateCal.ResumeLayout(false);
             this.tabCreateCal.PerformLayout();
