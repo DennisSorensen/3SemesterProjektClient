@@ -24,12 +24,11 @@ namespace Client
             List<User> supporters = new List<User>();
             ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
             supporters = service.GetAllSupporters();
-
-            foreach (User user in supporters)
+            foreach (var user in supporters)
             {
-                
-                string.Format("{0} {1}", user.)
-                listAllSupport.Items.Add()
+
+                String s = String.Format("{0} {1}", user.FirstName, user.LastName);
+                listAllSupport.Items.Add(s);
             }
             
             // kode til at sætte liste i listbox
