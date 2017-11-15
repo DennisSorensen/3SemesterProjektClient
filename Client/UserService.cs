@@ -6,24 +6,15 @@ using System.Threading.Tasks;
 
 namespace Client
 {
-    public class WCFConection
+    class UserService
     {
         //Laver en instans af vores service reference, sådan vi kan kalde dem
         ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
 
-        public WCFConection()
+        public void CreateUser(int id, string role, string firstName, string lastName, string password)
         {
             
-        }
 
-        public void CreateUser(ServiceReference1.User user)
-        {
-            
-                
         }
-
     }
-
-    
-
 }
