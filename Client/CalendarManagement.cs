@@ -27,17 +27,20 @@ namespace Client
             foreach (var user in supporters)
             {
 
-                String s = String.Format("{0} {1}", user.FirstName, user.LastName);
+                string s = string.Format("{0} {1}", user.FirstName, user.LastName);
                 listAllSupport.Items.Add(s);
             }
-            
-            // kode til at sætte liste i listbox
-            
+                        
         }
 
         private void btnCreateCal_Click(object sender, EventArgs e)
         {
-
+            User selectedUser = listAllSupport.SelectedItem as User;
+            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+            ServiceReference1.
+            service.CreateCalendar(selectedUser);
+            string s = string.Format("{0} {1}'s kalender er blevet lavet", selectedUser.FirstName, selectedUser.LastName);
+            MessageBox.Show(s, "Kalender lavet");
         }
     }
 }

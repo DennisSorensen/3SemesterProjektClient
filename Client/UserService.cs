@@ -1,4 +1,4 @@
-﻿using Client.ServiceReference1;
+﻿//using Client.ServiceReference1;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,8 +15,12 @@ namespace Client
         public void CreateUser(int id, string role, string firstName, string lastName, string password)
         {
             //Skal kalde servicen, og sende et user obj med
-            User user = new User(1, "d", "d", "d", "d");
-
+            ServiceReference1.User user = new ServiceReference1.User();
+            user.Id = 1;
+            user.Role = "adm";
+            user.LastName = "Bøh";
+            user.FirstName = "ulla";
+            user.Password = "1234friskfyr";
             service.CreateUser(user);
         }
     }

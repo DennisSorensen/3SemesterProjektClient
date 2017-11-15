@@ -51,7 +51,7 @@ namespace Client
                 Console.WriteLine("Fejl med bruger id");
             }
 
-            userService.CreateUser(numberId, cbUserRole.ToString(), tbUserFirstName.ToString(), tbUserLastName.ToString(), tbPassword.ToString());
+            userService.CreateUser(numberId, cbUserRole.Text.ToString(), tbUserFirstName.Text.ToString(), tbUserLastName.Text.ToString(), tbPassword.Text.ToString());
             
         }
 

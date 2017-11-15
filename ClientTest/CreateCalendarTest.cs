@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+
 namespace ClientTest
 {
     [TestClass]
@@ -10,7 +11,7 @@ namespace ClientTest
         public void TestCalendarIsCreated()
         {
             //Arrange
-            CalendarController calendarController = new CalendarController();
+           
 
             //Act
             calendarController.Create("TestCalendarName");
