@@ -12,16 +12,9 @@ namespace Client
         //Laver en instans af vores service reference, sådan vi kan kalde dem
         ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
 
-        public bool CreateUser(int id, string role, string firstName, string lastName, string password)
+        //Tager mod en user fra gui, og sender den op til wcf'en
+        public bool CreateUser(ServiceReference1.User user)
         {
-            //Skal kalde servicen, og sende et user obj med
-            ServiceReference1.User user = new ServiceReference1.User();
-            user.Id = id;
-            user.Role = role;
-            user.LastName = firstName;
-            user.FirstName = lastName;
-            user.Password = password;
-
             return service.CreateUser(user);
         }
     }
