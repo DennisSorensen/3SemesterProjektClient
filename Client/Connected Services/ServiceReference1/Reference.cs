@@ -188,10 +188,10 @@ namespace Client.ServiceReference1 {
     public interface IService1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateUser", ReplyAction="http://tempuri.org/IService1/CreateUserResponse")]
-        void CreateUser(Client.ServiceReference1.User user);
+        bool CreateUser(Client.ServiceReference1.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CreateUser", ReplyAction="http://tempuri.org/IService1/CreateUserResponse")]
-        System.Threading.Tasks.Task CreateUserAsync(Client.ServiceReference1.User user);
+        System.Threading.Tasks.Task<bool> CreateUserAsync(Client.ServiceReference1.User user);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetUser", ReplyAction="http://tempuri.org/IService1/GetUserResponse")]
         Client.ServiceReference1.User GetUser(int id);
@@ -239,11 +239,11 @@ namespace Client.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public void CreateUser(Client.ServiceReference1.User user) {
-            base.Channel.CreateUser(user);
+        public bool CreateUser(Client.ServiceReference1.User user) {
+            return base.Channel.CreateUser(user);
         }
         
-        public System.Threading.Tasks.Task CreateUserAsync(Client.ServiceReference1.User user) {
+        public System.Threading.Tasks.Task<bool> CreateUserAsync(Client.ServiceReference1.User user) {
             return base.Channel.CreateUserAsync(user);
         }
         

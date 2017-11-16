@@ -52,8 +52,16 @@ namespace Client
                 Console.WriteLine("Fejl med bruger id");
             }
             
-
-            userService.CreateUser(numberId, cbUserRole.Text.ToString(), tbUserFirstName.Text.ToString(), tbUserLastName.Text.ToString(), tbPassword.Text.ToString());
+            if (userService.CreateUser(numberId, cbUserRole.Text.ToString(), tbUserFirstName.Text.ToString(), tbUserLastName.Text.ToString(), tbPassword.Text.ToString()) == true)
+            {
+                //Sucess
+                MessageBox.Show("Bruger oprettet korrekt", "Sucess");
+            }
+            else
+            {
+                //Fail
+                MessageBox.Show("Bruger med dette id eksisterer allerede", "Id fejl");
+            }
             
         }
 

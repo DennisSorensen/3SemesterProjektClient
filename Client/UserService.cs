@@ -12,7 +12,7 @@ namespace Client
         //Laver en instans af vores service reference, sådan vi kan kalde dem
         ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
 
-        public void CreateUser(int id, string role, string firstName, string lastName, string password)
+        public bool CreateUser(int id, string role, string firstName, string lastName, string password)
         {
             //Skal kalde servicen, og sende et user obj med
             ServiceReference1.User user = new ServiceReference1.User();
@@ -22,7 +22,7 @@ namespace Client
             user.FirstName = lastName;
             user.Password = password;
 
-            service.CreateUser(user);
+            return service.CreateUser(user);
         }
     }
 }
