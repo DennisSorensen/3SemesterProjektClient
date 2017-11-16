@@ -15,7 +15,7 @@ namespace Client
         public bool CreateUser(int id, string role, string firstName, string lastName, string password)
         {
             //Skal kalde servicen, og sende et user obj med
-            ServiceReference1.User user = new ServiceReference1.User();
+            ServiceReference1.User user = new ServiceReference1.User() { FirstName = firstName};
             user.Id = id;
             user.Role = role;
             user.LastName = firstName;

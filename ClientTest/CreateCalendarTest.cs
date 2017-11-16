@@ -7,7 +7,7 @@ namespace ClientTest
     [TestClass]
     public class CreateCalendarTest
     {
-        /*
+        
         [TestMethod]
         public void TestCalendarIsCreated()
         {
@@ -16,8 +16,7 @@ namespace ClientTest
            
 
             //Act
-            calendarController.Create("TestCalendarName");
-
+            
             Calendar testCalendarCreate = new Calendar("TestCalendarName");
 
             //Assert
@@ -44,6 +43,6 @@ namespace ClientTest
             Assert.ReferenceEquals(calendar, testCalendar);
 
         }
-        */
+        
     }
 }

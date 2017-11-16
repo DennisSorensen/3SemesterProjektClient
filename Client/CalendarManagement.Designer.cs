@@ -158,7 +158,7 @@
             this.Controls.Add(this.tabControl1);
             this.Name = "CalendarManagement";
             this.Text = "CalendarManagement";
-            this.Load += new System.EventHandler(this.CalendarManagement_Load);
+          
             this.tabControl1.ResumeLayout(false);
             this.tabCreateCal.ResumeLayout(false);
             this.tabCreateCal.PerformLayout();
