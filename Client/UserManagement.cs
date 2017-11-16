@@ -33,13 +33,14 @@ namespace Client
 
             //Sprøg brian hvorfor den kan se dette uden noget reference osv.
 
+            //Int værdi til id, som skal laves om fra string i gui, til int
             int numberId = 0;
 
             try
             {
                 numberId = Convert.ToInt32(tbUserId.Text);
             }
-            catch (FormatException) //Hvorfor fejler denne
+            catch (FormatException)
             {
                 Console.WriteLine("Det er ikke tal som er skrevet");
             }
@@ -52,8 +53,17 @@ namespace Client
             {
                 Console.WriteLine("Fejl med bruger id");
             }
-            
-            if (userService.CreateUser(numberId, cbUserRole.Text.ToString(), tbUserFirstName.Text.ToString(), tbUserLastName.Text.ToString(), tbPassword.Text.ToString()) == true)
+
+            //Opretter user obj med værdier fra gui
+            ServiceReference1.User user = new ServiceReference1.User() { Id = numberId,
+                                                                         Role = cbUserRole.Text.ToString(),
+                                                                         FirstName = tbUserFirstName.Text.ToString(),
+                                                                         LastName = tbUserLastName.Text.ToString(),
+                                                                         Password = tbPassword.Text.ToString()
+                                                                        };
+
+            //Messagebox til og fortælle om bruger er oprettet eller ej
+            if (userService.CreateUser(user) == true)
             {
                 //Sucess
                 MessageBox.Show("Bruger oprettet korrekt", "Sucess");
@@ -66,6 +76,9 @@ namespace Client
             
         }
 
-        
+        private void tpCreateUser_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
