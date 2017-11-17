@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="77d980c1-4731-4b9f-b51b-aba082bb5009" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:49197/CalendarService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="CalendarService.xsd" MetadataType="Schema" ID="aa102df3-9693-41b5-8bd9-319d28fd9f3c" SourceId="1" SourceUrl="http://localhost:49197/CalendarService.svc?xsd=xsd2" />
+    <MetadataFile FileName="CalendarService.wsdl" MetadataType="Wsdl" ID="745d4f6a-5e6e-459e-a991-fdea5ad62f8b" SourceId="1" SourceUrl="http://localhost:49197/CalendarService.svc?wsdl" />
+    <MetadataFile FileName="CalendarService.disco" MetadataType="Disco" ID="5926729b-a8dd-4dd7-9db6-9f41fd3aeaab" SourceId="1" SourceUrl="http://localhost:49197/CalendarService.svc?disco" />
+    <MetadataFile FileName="CalendarService1.xsd" MetadataType="Schema" ID="aadb5c48-6bc3-40f8-8d3d-777e808c2d1b" SourceId="1" SourceUrl="http://localhost:49197/CalendarService.svc?xsd=xsd1" />
+    <MetadataFile FileName="CalendarService2.xsd" MetadataType="Schema" ID="e72c449c-98f1-4465-8dab-cdb4795572c9" SourceId="1" SourceUrl="http://localhost:49197/CalendarService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

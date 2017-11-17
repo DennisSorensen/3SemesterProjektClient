@@ -16,10 +16,11 @@ namespace Client
     {
         public CalendarManagement()
         {
+            
             InitializeComponent();
             
             List<User> supporters = new List<User>();
-            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+            CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
             supporters = service.GetAllSupporters();
             foreach (var user in supporters)
             {
@@ -35,9 +36,8 @@ namespace Client
         {
             
             User selectedUser = listAllSupport.SelectedItem as User;
-            ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
             
-            service.CreateCalendar(selectedUser);
+            
             string s = string.Format("{0} {1}'s kalender er blevet lavet", selectedUser.FirstName, selectedUser.LastName);
             MessageBox.Show(s, "Kalender lavet");
             
