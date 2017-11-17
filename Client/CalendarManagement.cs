@@ -13,14 +13,16 @@ namespace Client
 {
     public partial class CalendarManagement : Form
     {
+        UserService userService = new UserService();
+        CalendarService calendarService = new CalendarService();
         public CalendarManagement()
         {
             
             InitializeComponent();
             
-            List<ServiceReference1.User> supporters = new List<ServiceReference1.User>();
+            List<UserServiceReference.User> supporters = new List<UserServiceReference.User>();
             CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
-            supporters = ServiceReference1.IService1.GetAllSupporters();
+            supporters = userService.GetAllSupporters().ToList();
             foreach (var user in supporters)
             {
 
@@ -34,7 +36,7 @@ namespace Client
         private void btnCreateCal_Click(object sender, EventArgs e)
         {
 
-            ServiceReference1.User selectedUser = listAllSupport.SelectedItem as ServiceReference1.User;
+            UserServiceReference.User selectedUser = listAllSupport.SelectedItem as UserServiceReference.User;
             
             
             string s = string.Format("{0} {1}'s kalender er blevet lavet", selectedUser.FirstName, selectedUser.LastName);

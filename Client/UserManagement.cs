@@ -55,7 +55,7 @@ namespace Client
             }
 
             //Opretter user obj med værdier fra gui
-            ServiceReference1.User user = new ServiceReference1.User() { Id = numberId,
+            UserServiceReference.User user = new UserServiceReference.User() { Id = numberId,
                                                                          Role = cbUserRole.Text.ToString(),
                                                                          FirstName = tbUserFirstName.Text.ToString(),
                                                                          LastName = tbUserLastName.Text.ToString(),

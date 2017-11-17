@@ -9,12 +9,13 @@ namespace Client
     class CalendarService
     {
         //Laver en instans af vores service reference, sådan vi kan kalde dem
-        CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
+        CalendarServiceReference.ICalendarService calendarService = new CalendarServiceReference.CalendarServiceClient();
+        UserServiceReference.IUserService userService = new UserServiceReference.UserServiceClient();
 
         //Tager mod en user fra gui, og sender den op til wcf'en
         public void CreateCalendar(CalendarServiceReference.Calendar calendar)
         {
-            service.Create(calendar);
+            calendarService.Create(calendar);
         }
     }
 }

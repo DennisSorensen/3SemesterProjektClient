@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Client;
-using Client.ServiceReference1;
 
 namespace ClientTest
 {
@@ -29,9 +28,9 @@ namespace ClientTest
             //User user = userController.Get();
             User user = userManagement.get(id);
             Assert.ReferenceEquals(user, testUser);
-
-
             */
+
+            
 
         }
     }
