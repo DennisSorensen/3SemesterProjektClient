@@ -27,10 +27,13 @@ namespace Client
         https://stackoverflow.com/questions/410026/proper-use-of-yield-return
         17-11-2017 
         */
+        
+        /*
         public IEnumerable<UserServiceReference.User> GetAllSupporters()
         {
             yield return userService.GetAllSupporters();
         }
+        */
 
         public UserServiceReference.User GetUser(int id)
         {
