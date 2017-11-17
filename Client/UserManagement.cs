@@ -23,7 +23,7 @@ namespace Client
         
         private void UserManagement_Load(object sender, EventArgs e)
         {
-            
+            ListAllUsers();
         }
 
         private void btnCreateUser_Click(object sender, EventArgs e)
@@ -113,10 +113,21 @@ namespace Client
                 lblRole.Text = user.Role;
                 lblFirstName.Text = user.FirstName;
                 lblLastName.Text = user.LastName;
+                lblPassword.Text = user.Password;
             }
             else
             {
                 MessageBox.Show("Der er ingen bruger med dette id", "Forkert bruger id");
+            }
+        }
+
+        private void ListAllUsers()
+        {
+            List<UserServiceReference.User> users = userService.GetAllUsers().ToList();
+            foreach (var user in users)
+            {
+                string s = string.Format("{0}, {1} {2}", user.Id.ToString(), user.FirstName, user.LastName);
+                lbAllUsers.Items.Add(s);
             }
         }
     }

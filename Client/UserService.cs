@@ -39,5 +39,10 @@ namespace Client
         {
             return userService.GetUser(id);
         }
+
+        public IEnumerable<UserServiceReference.User> GetAllUsers()
+        {
+            return userService.GetAll();
+        }
     }
 }

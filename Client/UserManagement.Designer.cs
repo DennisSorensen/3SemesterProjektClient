@@ -42,17 +42,20 @@
             this.tbUserId = new System.Windows.Forms.TextBox();
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.tpViewUser = new System.Windows.Forms.TabPage();
+            this.lblRole = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.role = new System.Windows.Forms.Label();
+            this.lastName = new System.Windows.Forms.Label();
+            this.firstName = new System.Windows.Forms.Label();
+            this.btnSearchUser = new System.Windows.Forms.Button();
+            this.txtInputUserId = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtInputUserId = new System.Windows.Forms.TextBox();
-            this.btnSearchUser = new System.Windows.Forms.Button();
-            this.firstName = new System.Windows.Forms.Label();
-            this.lastName = new System.Windows.Forms.Label();
-            this.role = new System.Windows.Forms.Label();
-            this.lblFirstName = new System.Windows.Forms.Label();
-            this.lblLastName = new System.Windows.Forms.Label();
-            this.lblRole = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.lbAllUsers = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tpCreateUser.SuspendLayout();
             this.tpViewUser.SuspendLayout();
@@ -87,7 +90,7 @@
             this.tpCreateUser.Location = new System.Drawing.Point(4, 35);
             this.tpCreateUser.Name = "tpCreateUser";
             this.tpCreateUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCreateUser.Size = new System.Drawing.Size(532, 410);
+            this.tpCreateUser.Size = new System.Drawing.Size(886, 550);
             this.tpCreateUser.TabIndex = 0;
             this.tpCreateUser.Text = "Opret Bruger";
             this.tpCreateUser.UseVisualStyleBackColor = true;
@@ -190,6 +193,9 @@
             // 
             // tpViewUser
             // 
+            this.tpViewUser.Controls.Add(this.lbAllUsers);
+            this.tpViewUser.Controls.Add(this.lblPassword);
+            this.tpViewUser.Controls.Add(this.label6);
             this.tpViewUser.Controls.Add(this.lblRole);
             this.tpViewUser.Controls.Add(this.lblLastName);
             this.tpViewUser.Controls.Add(this.lblFirstName);
@@ -207,39 +213,59 @@
             this.tpViewUser.Text = "Se Bruger";
             this.tpViewUser.UseVisualStyleBackColor = true;
             // 
-            // tpEditUser
+            // lblRole
             // 
-            this.tpEditUser.Location = new System.Drawing.Point(4, 35);
-            this.tpEditUser.Name = "tpEditUser";
-            this.tpEditUser.Size = new System.Drawing.Size(532, 410);
-            this.tpEditUser.TabIndex = 2;
-            this.tpEditUser.Text = "Rediger Bruger";
-            this.tpEditUser.UseVisualStyleBackColor = true;
+            this.lblRole.AutoSize = true;
+            this.lblRole.Location = new System.Drawing.Point(156, 192);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(82, 26);
+            this.lblRole.TabIndex = 8;
+            this.lblRole.Text = "label11";
             // 
-            // tpDeleteUser
+            // lblLastName
             // 
-            this.tpDeleteUser.Location = new System.Drawing.Point(4, 35);
-            this.tpDeleteUser.Name = "tpDeleteUser";
-            this.tpDeleteUser.Size = new System.Drawing.Size(532, 410);
-            this.tpDeleteUser.TabIndex = 3;
-            this.tpDeleteUser.Text = "Slet Bruger";
-            this.tpDeleteUser.UseVisualStyleBackColor = true;
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(156, 270);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(82, 26);
+            this.lblLastName.TabIndex = 7;
+            this.lblLastName.Text = "label10";
             // 
-            // label1
+            // lblFirstName
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 26);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Bruger id";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(156, 231);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(70, 26);
+            this.lblFirstName.TabIndex = 6;
+            this.lblFirstName.Text = "label9";
             // 
-            // txtInputUserId
+            // role
             // 
-            this.txtInputUserId.Location = new System.Drawing.Point(38, 59);
-            this.txtInputUserId.Name = "txtInputUserId";
-            this.txtInputUserId.Size = new System.Drawing.Size(100, 32);
-            this.txtInputUserId.TabIndex = 1;
+            this.role.AutoSize = true;
+            this.role.Location = new System.Drawing.Point(38, 192);
+            this.role.Name = "role";
+            this.role.Size = new System.Drawing.Size(68, 26);
+            this.role.TabIndex = 5;
+            this.role.Text = "Rolle:";
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSize = true;
+            this.lastName.Location = new System.Drawing.Point(38, 270);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(111, 26);
+            this.lastName.TabIndex = 4;
+            this.lastName.Text = "Efternavn:";
+            // 
+            // firstName
+            // 
+            this.firstName.AutoSize = true;
+            this.firstName.Location = new System.Drawing.Point(38, 231);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(97, 26);
+            this.firstName.TabIndex = 3;
+            this.firstName.Text = "Fornavn:";
             // 
             // btnSearchUser
             // 
@@ -251,59 +277,66 @@
             this.btnSearchUser.UseVisualStyleBackColor = true;
             this.btnSearchUser.Click += new System.EventHandler(this.btnSearchUser_Click);
             // 
-            // firstName
+            // txtInputUserId
             // 
-            this.firstName.AutoSize = true;
-            this.firstName.Location = new System.Drawing.Point(38, 231);
-            this.firstName.Name = "firstName";
-            this.firstName.Size = new System.Drawing.Size(97, 26);
-            this.firstName.TabIndex = 3;
-            this.firstName.Text = "Fornavn:";
+            this.txtInputUserId.Location = new System.Drawing.Point(38, 59);
+            this.txtInputUserId.Name = "txtInputUserId";
+            this.txtInputUserId.Size = new System.Drawing.Size(100, 32);
+            this.txtInputUserId.TabIndex = 1;
             // 
-            // lastName
+            // label1
             // 
-            this.lastName.AutoSize = true;
-            this.lastName.Location = new System.Drawing.Point(38, 270);
-            this.lastName.Name = "lastName";
-            this.lastName.Size = new System.Drawing.Size(111, 26);
-            this.lastName.TabIndex = 4;
-            this.lastName.Text = "Efternavn:";
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bruger id";
             // 
-            // role
+            // tpEditUser
             // 
-            this.role.AutoSize = true;
-            this.role.Location = new System.Drawing.Point(38, 192);
-            this.role.Name = "role";
-            this.role.Size = new System.Drawing.Size(68, 26);
-            this.role.TabIndex = 5;
-            this.role.Text = "Rolle:";
+            this.tpEditUser.Location = new System.Drawing.Point(4, 35);
+            this.tpEditUser.Name = "tpEditUser";
+            this.tpEditUser.Size = new System.Drawing.Size(886, 550);
+            this.tpEditUser.TabIndex = 2;
+            this.tpEditUser.Text = "Rediger Bruger";
+            this.tpEditUser.UseVisualStyleBackColor = true;
             // 
-            // lblFirstName
+            // tpDeleteUser
             // 
-            this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(156, 231);
-            this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(70, 26);
-            this.lblFirstName.TabIndex = 6;
-            this.lblFirstName.Text = "label9";
+            this.tpDeleteUser.Location = new System.Drawing.Point(4, 35);
+            this.tpDeleteUser.Name = "tpDeleteUser";
+            this.tpDeleteUser.Size = new System.Drawing.Size(886, 550);
+            this.tpDeleteUser.TabIndex = 3;
+            this.tpDeleteUser.Text = "Slet Bruger";
+            this.tpDeleteUser.UseVisualStyleBackColor = true;
             // 
-            // lblLastName
+            // label6
             // 
-            this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(156, 270);
-            this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(82, 26);
-            this.lblLastName.TabIndex = 7;
-            this.lblLastName.Text = "label10";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(38, 309);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 26);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Kode:";
             // 
-            // lblRole
+            // lblPassword
             // 
-            this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(156, 192);
-            this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(82, 26);
-            this.lblRole.TabIndex = 8;
-            this.lblRole.Text = "label11";
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(156, 309);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(70, 26);
+            this.lblPassword.TabIndex = 10;
+            this.lblPassword.Text = "label7";
+            // 
+            // lbAllUsers
+            // 
+            this.lbAllUsers.FormattingEnabled = true;
+            this.lbAllUsers.ItemHeight = 26;
+            this.lbAllUsers.Location = new System.Drawing.Point(510, 39);
+            this.lbAllUsers.Name = "lbAllUsers";
+            this.lbAllUsers.Size = new System.Drawing.Size(340, 446);
+            this.lbAllUsers.TabIndex = 11;
             // 
             // UserManagement
             // 
@@ -350,5 +383,8 @@
         private System.Windows.Forms.Button btnSearchUser;
         private System.Windows.Forms.TextBox txtInputUserId;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblPassword;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ListBox lbAllUsers;
     }
 }

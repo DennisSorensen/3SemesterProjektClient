@@ -138,6 +138,12 @@ namespace Client.UserServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetUser", ReplyAction="http://tempuri.org/IUserService/GetUserResponse")]
         System.Threading.Tasks.Task<Client.UserServiceReference.User> GetUserAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAll", ReplyAction="http://tempuri.org/IUserService/GetAllResponse")]
+        Client.UserServiceReference.User[] GetAll();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAll", ReplyAction="http://tempuri.org/IUserService/GetAllResponse")]
+        System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllAsync();
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllSupporters", ReplyAction="http://tempuri.org/IUserService/GetAllSupportersResponse")]
         Client.UserServiceReference.User[] GetAllSupporters();
         
@@ -186,6 +192,14 @@ namespace Client.UserServiceReference {
         
         public System.Threading.Tasks.Task<Client.UserServiceReference.User> GetUserAsync(int id) {
             return base.Channel.GetUserAsync(id);
+        }
+        
+        public Client.UserServiceReference.User[] GetAll() {
+            return base.Channel.GetAll();
+        }
+        
+        public System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllAsync() {
+            return base.Channel.GetAllAsync();
         }
         
         public Client.UserServiceReference.User[] GetAllSupporters() {
