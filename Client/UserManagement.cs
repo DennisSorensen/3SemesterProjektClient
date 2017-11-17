@@ -107,10 +107,17 @@ namespace Client
             //Opretter et user obj til og gemme user i fra UserService
             UserServiceReference.User user = userService.GetUser(numberId);
 
-            //Sætter variabler på gui
-            lblRole.Text = user.Role;
-            lblFirstName.Text = user.FirstName;
-            lblLastName.Text = user.LastName;
+            if (user != null) //Tjekker om det er en bruger, eller om det er en null bruger
+            {
+                //Sætter variabler på gui
+                lblRole.Text = user.Role;
+                lblFirstName.Text = user.FirstName;
+                lblLastName.Text = user.LastName;
+            }
+            else
+            {
+                MessageBox.Show("Der er ingen bruger med dette id", "Forkert bruger id");
+            }
         }
     }
 }
