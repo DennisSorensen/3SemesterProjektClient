@@ -44,8 +44,18 @@
             this.tpViewUser = new System.Windows.Forms.TabPage();
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btnSearchUser = new System.Windows.Forms.Button();
+            this.firstName = new System.Windows.Forms.Label();
+            this.lastName = new System.Windows.Forms.Label();
+            this.role = new System.Windows.Forms.Label();
+            this.lblFirstName = new System.Windows.Forms.Label();
+            this.lblLastName = new System.Windows.Forms.Label();
+            this.lblRole = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpCreateUser.SuspendLayout();
+            this.tpViewUser.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -58,7 +68,7 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(540, 449);
+            this.tabControl1.Size = new System.Drawing.Size(894, 589);
             this.tabControl1.TabIndex = 0;
             // 
             // tpCreateUser
@@ -180,10 +190,19 @@
             // 
             // tpViewUser
             // 
+            this.tpViewUser.Controls.Add(this.lblRole);
+            this.tpViewUser.Controls.Add(this.lblLastName);
+            this.tpViewUser.Controls.Add(this.lblFirstName);
+            this.tpViewUser.Controls.Add(this.role);
+            this.tpViewUser.Controls.Add(this.lastName);
+            this.tpViewUser.Controls.Add(this.firstName);
+            this.tpViewUser.Controls.Add(this.btnSearchUser);
+            this.tpViewUser.Controls.Add(this.textBox1);
+            this.tpViewUser.Controls.Add(this.label1);
             this.tpViewUser.Location = new System.Drawing.Point(4, 35);
             this.tpViewUser.Name = "tpViewUser";
             this.tpViewUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tpViewUser.Size = new System.Drawing.Size(532, 410);
+            this.tpViewUser.Size = new System.Drawing.Size(886, 550);
             this.tpViewUser.TabIndex = 1;
             this.tpViewUser.Text = "Se Bruger";
             this.tpViewUser.UseVisualStyleBackColor = true;
@@ -206,6 +225,85 @@
             this.tpDeleteUser.Text = "Slet Bruger";
             this.tpDeleteUser.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(38, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Bruger id";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(38, 59);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 32);
+            this.textBox1.TabIndex = 1;
+            // 
+            // btnSearchUser
+            // 
+            this.btnSearchUser.Location = new System.Drawing.Point(38, 104);
+            this.btnSearchUser.Name = "btnSearchUser";
+            this.btnSearchUser.Size = new System.Drawing.Size(105, 54);
+            this.btnSearchUser.TabIndex = 2;
+            this.btnSearchUser.Text = "Søg";
+            this.btnSearchUser.UseVisualStyleBackColor = true;
+            // 
+            // firstName
+            // 
+            this.firstName.AutoSize = true;
+            this.firstName.Location = new System.Drawing.Point(38, 231);
+            this.firstName.Name = "firstName";
+            this.firstName.Size = new System.Drawing.Size(97, 26);
+            this.firstName.TabIndex = 3;
+            this.firstName.Text = "Fornavn:";
+            // 
+            // lastName
+            // 
+            this.lastName.AutoSize = true;
+            this.lastName.Location = new System.Drawing.Point(38, 270);
+            this.lastName.Name = "lastName";
+            this.lastName.Size = new System.Drawing.Size(111, 26);
+            this.lastName.TabIndex = 4;
+            this.lastName.Text = "Efternavn:";
+            // 
+            // role
+            // 
+            this.role.AutoSize = true;
+            this.role.Location = new System.Drawing.Point(38, 192);
+            this.role.Name = "role";
+            this.role.Size = new System.Drawing.Size(68, 26);
+            this.role.TabIndex = 5;
+            this.role.Text = "Rolle:";
+            // 
+            // lblFirstName
+            // 
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(156, 231);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(70, 26);
+            this.lblFirstName.TabIndex = 6;
+            this.lblFirstName.Text = "label9";
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(156, 270);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(82, 26);
+            this.lblLastName.TabIndex = 7;
+            this.lblLastName.Text = "label10";
+            // 
+            // lblRole
+            // 
+            this.lblRole.AutoSize = true;
+            this.lblRole.Location = new System.Drawing.Point(156, 192);
+            this.lblRole.Name = "lblRole";
+            this.lblRole.Size = new System.Drawing.Size(82, 26);
+            this.lblRole.TabIndex = 8;
+            this.lblRole.Text = "label11";
+            // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -218,6 +316,8 @@
             this.tabControl1.ResumeLayout(false);
             this.tpCreateUser.ResumeLayout(false);
             this.tpCreateUser.PerformLayout();
+            this.tpViewUser.ResumeLayout(false);
+            this.tpViewUser.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -240,5 +340,14 @@
         private System.Windows.Forms.TextBox tbUserFirstName;
         private System.Windows.Forms.TextBox tbUserId;
         private System.Windows.Forms.Button btnCreateUser;
+        private System.Windows.Forms.Label lblRole;
+        private System.Windows.Forms.Label lblLastName;
+        private System.Windows.Forms.Label lblFirstName;
+        private System.Windows.Forms.Label role;
+        private System.Windows.Forms.Label lastName;
+        private System.Windows.Forms.Label firstName;
+        private System.Windows.Forms.Button btnSearchUser;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }
