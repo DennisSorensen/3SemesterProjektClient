@@ -37,7 +37,7 @@
   <xs:element name="GetAllSupportersResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF.ModelLayer" minOccurs="0" name="GetAllSupportersResult" nillable="true" type="q3:User" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WCF.ModelLayer" minOccurs="0" name="GetAllSupportersResult" nillable="true" type="q3:ArrayOfUser" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

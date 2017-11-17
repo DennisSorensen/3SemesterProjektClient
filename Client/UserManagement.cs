@@ -80,5 +80,37 @@ namespace Client
         {
 
         }
+
+        private void btnSearchUser_Click(object sender, EventArgs e)
+        {
+            //Int værdi til id, som skal laves om fra string i gui, til int
+            int numberId = 0;
+
+            try
+            {
+                numberId = Convert.ToInt32(txtInputUserId.Text);
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Det er ikke tal som er skrevet");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine("Tallet er for stort til en int32");
+            }
+
+            catch (Exception)
+            {
+                Console.WriteLine("Fejl med bruger id");
+            }
+
+            //Opretter et user obj til og gemme user i fra UserService
+            UserServiceReference.User user = userService.GetUser(numberId);
+
+            //Sætter variabler på gui
+            lblRole.Text = user.Role;
+            lblFirstName.Text = user.FirstName;
+            lblLastName.Text = user.LastName;
+        }
     }
 }
