@@ -1,5 +1,4 @@
-﻿using Client.ServiceReference1;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,9 +18,9 @@ namespace Client
             
             InitializeComponent();
             
-            List<User> supporters = new List<User>();
+            List<ServiceReference1.User> supporters = new List<ServiceReference1.User>();
             CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
-            supporters = service.GetAllSupporters();
+            supporters = ServiceReference1.IService1.GetAllSupporters();
             foreach (var user in supporters)
             {
 
@@ -34,8 +33,8 @@ namespace Client
 
         private void btnCreateCal_Click(object sender, EventArgs e)
         {
-            
-            User selectedUser = listAllSupport.SelectedItem as User;
+
+            ServiceReference1.User selectedUser = listAllSupport.SelectedItem as ServiceReference1.User;
             
             
             string s = string.Format("{0} {1}'s kalender er blevet lavet", selectedUser.FirstName, selectedUser.LastName);

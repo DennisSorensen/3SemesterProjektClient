@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Client
 {
-    public class UserService
+    class CalendarService
     {
         //Laver en instans af vores service reference, sådan vi kan kalde dem
-        ServiceReference1.IService1 service = new ServiceReference1.Service1Client();
+        CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
 
         //Tager mod en user fra gui, og sender den op til wcf'en
-        public bool CreateUser(ServiceReference1.User user)
+        public void CreateCalendar(CalendarServiceReference.Calendar calendar)
         {
-            return service.CreateUser(user);
+            service.Create(calendar);
         }
     }
 }
