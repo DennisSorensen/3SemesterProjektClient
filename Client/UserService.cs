@@ -31,5 +31,10 @@ namespace Client
         {
             yield return userService.GetAllSupporters();
         }
+
+        public UserServiceReference.User GetUser(int id)
+        {
+            return userService.GetUser(id);
+        }
     }
 }

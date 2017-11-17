@@ -45,7 +45,7 @@
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtInputUserId = new System.Windows.Forms.TextBox();
             this.btnSearchUser = new System.Windows.Forms.Button();
             this.firstName = new System.Windows.Forms.Label();
             this.lastName = new System.Windows.Forms.Label();
@@ -197,7 +197,7 @@
             this.tpViewUser.Controls.Add(this.lastName);
             this.tpViewUser.Controls.Add(this.firstName);
             this.tpViewUser.Controls.Add(this.btnSearchUser);
-            this.tpViewUser.Controls.Add(this.textBox1);
+            this.tpViewUser.Controls.Add(this.txtInputUserId);
             this.tpViewUser.Controls.Add(this.label1);
             this.tpViewUser.Location = new System.Drawing.Point(4, 35);
             this.tpViewUser.Name = "tpViewUser";
@@ -234,12 +234,12 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Bruger id";
             // 
-            // textBox1
+            // txtInputUserId
             // 
-            this.textBox1.Location = new System.Drawing.Point(38, 59);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 32);
-            this.textBox1.TabIndex = 1;
+            this.txtInputUserId.Location = new System.Drawing.Point(38, 59);
+            this.txtInputUserId.Name = "txtInputUserId";
+            this.txtInputUserId.Size = new System.Drawing.Size(100, 32);
+            this.txtInputUserId.TabIndex = 1;
             // 
             // btnSearchUser
             // 
@@ -249,6 +249,7 @@
             this.btnSearchUser.TabIndex = 2;
             this.btnSearchUser.Text = "Søg";
             this.btnSearchUser.UseVisualStyleBackColor = true;
+            this.btnSearchUser.Click += new System.EventHandler(this.btnSearchUser_Click);
             // 
             // firstName
             // 
@@ -347,7 +348,7 @@
         private System.Windows.Forms.Label lastName;
         private System.Windows.Forms.Label firstName;
         private System.Windows.Forms.Button btnSearchUser;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtInputUserId;
         private System.Windows.Forms.Label label1;
     }
 }

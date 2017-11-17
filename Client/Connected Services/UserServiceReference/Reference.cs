@@ -139,10 +139,10 @@ namespace Client.UserServiceReference {
         System.Threading.Tasks.Task<Client.UserServiceReference.User> GetUserAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllSupporters", ReplyAction="http://tempuri.org/IUserService/GetAllSupportersResponse")]
-        Client.UserServiceReference.User GetAllSupporters();
+        Client.UserServiceReference.User[] GetAllSupporters();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllSupporters", ReplyAction="http://tempuri.org/IUserService/GetAllSupportersResponse")]
-        System.Threading.Tasks.Task<Client.UserServiceReference.User> GetAllSupportersAsync();
+        System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllSupportersAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -188,11 +188,11 @@ namespace Client.UserServiceReference {
             return base.Channel.GetUserAsync(id);
         }
         
-        public Client.UserServiceReference.User GetAllSupporters() {
+        public Client.UserServiceReference.User[] GetAllSupporters() {
             return base.Channel.GetAllSupporters();
         }
         
-        public System.Threading.Tasks.Task<Client.UserServiceReference.User> GetAllSupportersAsync() {
+        public System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllSupportersAsync() {
             return base.Channel.GetAllSupportersAsync();
         }
     }
