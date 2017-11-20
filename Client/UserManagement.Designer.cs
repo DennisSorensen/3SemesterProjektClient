@@ -42,6 +42,9 @@
             this.tbUserId = new System.Windows.Forms.TextBox();
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.tpViewUser = new System.Windows.Forms.TabPage();
+            this.lbAllUsers = new System.Windows.Forms.ListBox();
+            this.lblPassword = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.lblRole = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lblFirstName = new System.Windows.Forms.Label();
@@ -53,9 +56,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
-            this.label6 = new System.Windows.Forms.Label();
-            this.lblPassword = new System.Windows.Forms.Label();
-            this.lbAllUsers = new System.Windows.Forms.ListBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpCreateUser.SuspendLayout();
             this.tpViewUser.SuspendLayout();
@@ -71,11 +77,12 @@
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(894, 589);
+            this.tabControl1.Size = new System.Drawing.Size(894, 544);
             this.tabControl1.TabIndex = 0;
             // 
             // tpCreateUser
             // 
+            this.tpCreateUser.Controls.Add(this.label7);
             this.tpCreateUser.Controls.Add(this.label5);
             this.tpCreateUser.Controls.Add(this.label4);
             this.tpCreateUser.Controls.Add(this.label3);
@@ -90,7 +97,7 @@
             this.tpCreateUser.Location = new System.Drawing.Point(4, 35);
             this.tpCreateUser.Name = "tpCreateUser";
             this.tpCreateUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tpCreateUser.Size = new System.Drawing.Size(886, 550);
+            this.tpCreateUser.Size = new System.Drawing.Size(886, 505);
             this.tpCreateUser.TabIndex = 0;
             this.tpCreateUser.Text = "Opret Bruger";
             this.tpCreateUser.UseVisualStyleBackColor = true;
@@ -99,7 +106,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(29, 94);
+            this.label5.Location = new System.Drawing.Point(39, 139);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 26);
             this.label5.TabIndex = 10;
@@ -108,7 +115,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(29, 306);
+            this.label4.Location = new System.Drawing.Point(39, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 26);
             this.label4.TabIndex = 9;
@@ -117,7 +124,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(29, 236);
+            this.label3.Location = new System.Drawing.Point(39, 273);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 26);
             this.label3.TabIndex = 8;
@@ -126,7 +133,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 166);
+            this.label2.Location = new System.Drawing.Point(39, 207);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 26);
             this.label2.TabIndex = 7;
@@ -135,7 +142,7 @@
             // Id
             // 
             this.Id.AutoSize = true;
-            this.Id.Location = new System.Drawing.Point(29, 24);
+            this.Id.Location = new System.Drawing.Point(39, 75);
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(30, 26);
             this.Id.TabIndex = 6;
@@ -148,42 +155,42 @@
             "Admin",
             "Supporter",
             "Sælger"});
-            this.cbUserRole.Location = new System.Drawing.Point(29, 126);
+            this.cbUserRole.Location = new System.Drawing.Point(39, 170);
             this.cbUserRole.Name = "cbUserRole";
-            this.cbUserRole.Size = new System.Drawing.Size(121, 34);
+            this.cbUserRole.Size = new System.Drawing.Size(149, 34);
             this.cbUserRole.TabIndex = 5;
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(29, 338);
+            this.tbPassword.Location = new System.Drawing.Point(39, 370);
             this.tbPassword.Name = "tbPassword";
-            this.tbPassword.Size = new System.Drawing.Size(100, 32);
+            this.tbPassword.Size = new System.Drawing.Size(149, 32);
             this.tbPassword.TabIndex = 4;
             // 
             // tbUserLastName
             // 
-            this.tbUserLastName.Location = new System.Drawing.Point(29, 268);
+            this.tbUserLastName.Location = new System.Drawing.Point(39, 304);
             this.tbUserLastName.Name = "tbUserLastName";
-            this.tbUserLastName.Size = new System.Drawing.Size(100, 32);
+            this.tbUserLastName.Size = new System.Drawing.Size(149, 32);
             this.tbUserLastName.TabIndex = 3;
             // 
             // tbUserFirstName
             // 
-            this.tbUserFirstName.Location = new System.Drawing.Point(29, 198);
+            this.tbUserFirstName.Location = new System.Drawing.Point(39, 238);
             this.tbUserFirstName.Name = "tbUserFirstName";
-            this.tbUserFirstName.Size = new System.Drawing.Size(100, 32);
+            this.tbUserFirstName.Size = new System.Drawing.Size(149, 32);
             this.tbUserFirstName.TabIndex = 2;
             // 
             // tbUserId
             // 
-            this.tbUserId.Location = new System.Drawing.Point(29, 56);
+            this.tbUserId.Location = new System.Drawing.Point(39, 104);
             this.tbUserId.Name = "tbUserId";
-            this.tbUserId.Size = new System.Drawing.Size(100, 32);
+            this.tbUserId.Size = new System.Drawing.Size(149, 32);
             this.tbUserId.TabIndex = 1;
             // 
             // btnCreateUser
             // 
-            this.btnCreateUser.Location = new System.Drawing.Point(336, 338);
+            this.btnCreateUser.Location = new System.Drawing.Point(29, 431);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(169, 52);
             this.btnCreateUser.TabIndex = 0;
@@ -193,6 +200,11 @@
             // 
             // tpViewUser
             // 
+            this.tpViewUser.Controls.Add(this.label12);
+            this.tpViewUser.Controls.Add(this.label11);
+            this.tpViewUser.Controls.Add(this.label10);
+            this.tpViewUser.Controls.Add(this.label9);
+            this.tpViewUser.Controls.Add(this.label8);
             this.tpViewUser.Controls.Add(this.lbAllUsers);
             this.tpViewUser.Controls.Add(this.lblPassword);
             this.tpViewUser.Controls.Add(this.label6);
@@ -208,42 +220,69 @@
             this.tpViewUser.Location = new System.Drawing.Point(4, 35);
             this.tpViewUser.Name = "tpViewUser";
             this.tpViewUser.Padding = new System.Windows.Forms.Padding(3);
-            this.tpViewUser.Size = new System.Drawing.Size(886, 550);
+            this.tpViewUser.Size = new System.Drawing.Size(886, 505);
             this.tpViewUser.TabIndex = 1;
             this.tpViewUser.Text = "Se Bruger";
             this.tpViewUser.UseVisualStyleBackColor = true;
             // 
+            // lbAllUsers
+            // 
+            this.lbAllUsers.FormattingEnabled = true;
+            this.lbAllUsers.ItemHeight = 26;
+            this.lbAllUsers.Location = new System.Drawing.Point(510, 117);
+            this.lbAllUsers.Name = "lbAllUsers";
+            this.lbAllUsers.Size = new System.Drawing.Size(340, 368);
+            this.lbAllUsers.TabIndex = 11;
+            // 
+            // lblPassword
+            // 
+            this.lblPassword.AutoSize = true;
+            this.lblPassword.Location = new System.Drawing.Point(165, 399);
+            this.lblPassword.Name = "lblPassword";
+            this.lblPassword.Size = new System.Drawing.Size(30, 26);
+            this.lblPassword.TabIndex = 10;
+            this.lblPassword.Text = "...";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(43, 399);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(69, 26);
+            this.label6.TabIndex = 9;
+            this.label6.Text = "Kode:";
+            // 
             // lblRole
             // 
             this.lblRole.AutoSize = true;
-            this.lblRole.Location = new System.Drawing.Point(156, 192);
+            this.lblRole.Location = new System.Drawing.Point(165, 270);
             this.lblRole.Name = "lblRole";
-            this.lblRole.Size = new System.Drawing.Size(82, 26);
+            this.lblRole.Size = new System.Drawing.Size(30, 26);
             this.lblRole.TabIndex = 8;
-            this.lblRole.Text = "label11";
+            this.lblRole.Text = "...";
             // 
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(156, 270);
+            this.lblLastName.Location = new System.Drawing.Point(165, 356);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(82, 26);
+            this.lblLastName.Size = new System.Drawing.Size(30, 26);
             this.lblLastName.TabIndex = 7;
-            this.lblLastName.Text = "label10";
+            this.lblLastName.Text = "...";
             // 
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(156, 231);
+            this.lblFirstName.Location = new System.Drawing.Point(165, 309);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(70, 26);
+            this.lblFirstName.Size = new System.Drawing.Size(30, 26);
             this.lblFirstName.TabIndex = 6;
-            this.lblFirstName.Text = "label9";
+            this.lblFirstName.Text = "...";
             // 
             // role
             // 
             this.role.AutoSize = true;
-            this.role.Location = new System.Drawing.Point(38, 192);
+            this.role.Location = new System.Drawing.Point(43, 270);
             this.role.Name = "role";
             this.role.Size = new System.Drawing.Size(68, 26);
             this.role.TabIndex = 5;
@@ -252,7 +291,7 @@
             // lastName
             // 
             this.lastName.AutoSize = true;
-            this.lastName.Location = new System.Drawing.Point(38, 270);
+            this.lastName.Location = new System.Drawing.Point(43, 356);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(111, 26);
             this.lastName.TabIndex = 4;
@@ -261,7 +300,7 @@
             // firstName
             // 
             this.firstName.AutoSize = true;
-            this.firstName.Location = new System.Drawing.Point(38, 231);
+            this.firstName.Location = new System.Drawing.Point(43, 309);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(97, 26);
             this.firstName.TabIndex = 3;
@@ -269,9 +308,9 @@
             // 
             // btnSearchUser
             // 
-            this.btnSearchUser.Location = new System.Drawing.Point(38, 104);
+            this.btnSearchUser.Location = new System.Drawing.Point(266, 112);
             this.btnSearchUser.Name = "btnSearchUser";
-            this.btnSearchUser.Size = new System.Drawing.Size(105, 54);
+            this.btnSearchUser.Size = new System.Drawing.Size(74, 36);
             this.btnSearchUser.TabIndex = 2;
             this.btnSearchUser.Text = "Søg";
             this.btnSearchUser.UseVisualStyleBackColor = true;
@@ -279,7 +318,7 @@
             // 
             // txtInputUserId
             // 
-            this.txtInputUserId.Location = new System.Drawing.Point(38, 59);
+            this.txtInputUserId.Location = new System.Drawing.Point(149, 114);
             this.txtInputUserId.Name = "txtInputUserId";
             this.txtInputUserId.Size = new System.Drawing.Size(100, 32);
             this.txtInputUserId.TabIndex = 1;
@@ -287,11 +326,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(38, 20);
+            this.label1.Location = new System.Drawing.Point(43, 117);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 26);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Bruger id";
+            this.label1.Text = "Brugerid:";
             // 
             // tpEditUser
             // 
@@ -311,38 +350,71 @@
             this.tpDeleteUser.Text = "Slet Bruger";
             this.tpDeleteUser.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // label7
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(38, 309);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(69, 26);
-            this.label6.TabIndex = 9;
-            this.label6.Text = "Kode:";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(24, 24);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(168, 29);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "Udfyld felterne";
             // 
-            // lblPassword
+            // label8
             // 
-            this.lblPassword.AutoSize = true;
-            this.lblPassword.Location = new System.Drawing.Point(156, 309);
-            this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(70, 26);
-            this.lblPassword.TabIndex = 10;
-            this.lblPassword.Text = "label7";
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(77, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(147, 25);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Indsæt brugerid";
             // 
-            // lbAllUsers
+            // label9
             // 
-            this.lbAllUsers.FormattingEnabled = true;
-            this.lbAllUsers.ItemHeight = 26;
-            this.lbAllUsers.Location = new System.Drawing.Point(510, 39);
-            this.lbAllUsers.Name = "lbAllUsers";
-            this.lbAllUsers.Size = new System.Drawing.Size(340, 446);
-            this.lbAllUsers.TabIndex = 11;
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(19, 194);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(242, 32);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "Brugerinformation";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(559, 13);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(247, 32);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Oprettede brugere";
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(505, 56);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(345, 50);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Markér bruger og tryk søg for at se yderligere information";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(19, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(219, 32);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Søg efter bruger";
             // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 611);
+            this.ClientSize = new System.Drawing.Size(923, 553);
             this.Controls.Add(this.tabControl1);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
@@ -386,5 +458,11 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ListBox lbAllUsers;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }
