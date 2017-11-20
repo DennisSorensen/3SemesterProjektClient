@@ -19,7 +19,7 @@ namespace Client
         {
             
             InitializeComponent();
-            /*
+            
             List<UserServiceReference.User> supporters = new List<UserServiceReference.User>();
             CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
             supporters = userService.GetAllSupporters().ToList();
@@ -29,18 +29,18 @@ namespace Client
                 string s = string.Format("{0} {1}", user.FirstName, user.LastName);
                 listAllSupport.Items.Add(s);
             }
-            */
+            
                         
         }
 
         private void btnCreateCal_Click(object sender, EventArgs e)
         {
-            /*
+            
             UserServiceReference.User selectedUser = listAllSupport.SelectedItem as UserServiceReference.User;
             
             string s = string.Format("{0} {1}'s kalender er blevet lavet", selectedUser.FirstName, selectedUser.LastName);
             MessageBox.Show(s, "Kalender lavet");
-            */
+            
         }
 
      
