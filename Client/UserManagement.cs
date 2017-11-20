@@ -23,7 +23,7 @@ namespace Client
         
         private void UserManagement_Load(object sender, EventArgs e)
         {
-            ListAllUsers();
+
         }
 
         private void btnCreateUser_Click(object sender, EventArgs e)
@@ -128,6 +128,14 @@ namespace Client
             {
                 string s = string.Format("{0}, {1} {2}", user.Id.ToString(), user.FirstName, user.LastName);
                 lbAllUsers.Items.Add(s);
+            }
+        }
+
+        private void tabControl1_Selected(object sender, TabControlEventArgs e)
+        {
+            if (e.TabPageIndex == 1)
+            {
+                ListAllUsers()
             }
         }
     }
