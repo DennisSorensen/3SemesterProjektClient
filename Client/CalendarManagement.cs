@@ -26,21 +26,24 @@ namespace Client
             foreach (var user in supporters)
             {
 
-                string s = string.Format("{0} {1}", user.FirstName, user.LastName);
-                listAllSupport.Items.Add(s);
+                string s = string.Format("{0}, {1} {2}", user.Id, user.FirstName, user.LastName);
+                listAllSupport.Items.Add(user);
             }
-            
+           
                         
         }
 
         private void btnCreateCal_Click(object sender, EventArgs e)
         {
-            
+
             UserServiceReference.User selectedUser = listAllSupport.SelectedItem as UserServiceReference.User;
+            CalendarServiceReference.Calendar calendar = new CalendarServiceReference.Calendar();
+            calendar.UserId = selectedUser.Id;
+            calendarService.CreateCalendar(calendar);
             
             string s = string.Format("{0} {1}'s kalender er blevet lavet", selectedUser.FirstName, selectedUser.LastName);
             MessageBox.Show(s, "Kalender lavet");
-            
+          
         }
 
      
