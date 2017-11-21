@@ -135,7 +135,7 @@ namespace Client
         {
             if (e.TabPageIndex == 1)
             {
-                ListAllUsers()
+                ListAllUsers();
             }
         }
     }

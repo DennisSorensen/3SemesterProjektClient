@@ -15,15 +15,12 @@ namespace Client
     {
         UserService userService = new UserService();
         CalendarService calendarService = new CalendarService();
+        CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
+        DataTable table = new DataTable();
+        string Tid;
         public CalendarManagement()
         {
-            
             InitializeComponent();
-            
-            CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
-            DataTable table = new DataTable();
-            string Tid;
-
                         
         }
 
@@ -69,7 +66,16 @@ namespace Client
             }
             else if(e.TabPageIndex == 1)
             {
+                table.Columns.Add("Tid", typeof(string));
+                table.Columns.Add("Mandag", typeof(string));
+                table.Columns.Add("Tirsdag", typeof(string));
+                table.Columns.Add("Onsdag", typeof(string));
+                table.Columns.Add("Torsdag", typeof(string));
+                table.Columns.Add("Fredag", typeof(string));
+                table.Columns.Add("Lørdag", typeof(string));
+                table.Columns.Add("Søndag", typeof(string));
 
+                dgvSupportCalendar.DataSource = table;
             }
 
         }
