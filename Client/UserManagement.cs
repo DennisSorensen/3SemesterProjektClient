@@ -124,6 +124,7 @@ namespace Client
         private void ListAllUsers()
         {
             List<UserServiceReference.User> users = userService.GetAllUsers().ToList();
+            lbAllUsers.Items.Clear();
             foreach (var user in users)
             {
                 string s = string.Format("{0}, {1} {2}", user.Id.ToString(), user.FirstName, user.LastName);
