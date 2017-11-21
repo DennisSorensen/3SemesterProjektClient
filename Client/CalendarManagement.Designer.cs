@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCreateCal = new System.Windows.Forms.TabPage();
             this.tevAllSupport = new System.Windows.Forms.TreeView();
             this.lblHelptxt2 = new System.Windows.Forms.Label();
             this.lblHelptxt1 = new System.Windows.Forms.Label();
-            this.listAllSupport = new System.Windows.Forms.ListBox();
             this.lblTitelSuppList = new System.Windows.Forms.Label();
             this.btnCreateCal = new System.Windows.Forms.Button();
             this.tabViewCal = new System.Windows.Forms.TabPage();
@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabEditCal = new System.Windows.Forms.TabPage();
             this.tabDeleteCal = new System.Windows.Forms.TabPage();
+            this.listAllSupport = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabCreateCal.SuspendLayout();
             this.tabViewCal.SuspendLayout();
@@ -83,12 +84,16 @@
             // 
             // tevAllSupport
             // 
-            this.tevAllSupport.Location = new System.Drawing.Point(363, 75);
+            this.tevAllSupport.Location = new System.Drawing.Point(207, 75);
             this.tevAllSupport.Name = "tevAllSupport";
+            treeNode1.Name = "TreeViewAllSupport";
+            treeNode1.Text = "TreeViewAllSupport";
+            this.tevAllSupport.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
+            treeNode1});
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
-            this.tevAllSupport.Size = new System.Drawing.Size(304, 162);
+            this.tevAllSupport.Size = new System.Drawing.Size(166, 136);
             this.tevAllSupport.TabIndex = 10;
             // 
             // lblHelptxt2
@@ -112,16 +117,6 @@
             this.lblHelptxt1.Size = new System.Drawing.Size(203, 17);
             this.lblHelptxt1.TabIndex = 8;
             this.lblHelptxt1.Text = "Markér den ønskede supporter";
-            // 
-            // listAllSupport
-            // 
-            this.listAllSupport.FormattingEnabled = true;
-            this.listAllSupport.ItemHeight = 22;
-            this.listAllSupport.Location = new System.Drawing.Point(26, 75);
-            this.listAllSupport.Margin = new System.Windows.Forms.Padding(2);
-            this.listAllSupport.Name = "listAllSupport";
-            this.listAllSupport.Size = new System.Drawing.Size(166, 136);
-            this.listAllSupport.TabIndex = 7;
             // 
             // lblTitelSuppList
             // 
@@ -221,6 +216,16 @@
             this.tabDeleteCal.Text = "Slet Kalender";
             this.tabDeleteCal.UseVisualStyleBackColor = true;
             // 
+            // listAllSupport
+            // 
+            this.listAllSupport.FormattingEnabled = true;
+            this.listAllSupport.ItemHeight = 22;
+            this.listAllSupport.Location = new System.Drawing.Point(26, 75);
+            this.listAllSupport.Margin = new System.Windows.Forms.Padding(2);
+            this.listAllSupport.Name = "listAllSupport";
+            this.listAllSupport.Size = new System.Drawing.Size(166, 136);
+            this.listAllSupport.TabIndex = 7;
+            // 
             // CalendarManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -249,7 +254,6 @@
         private System.Windows.Forms.TabPage tabDeleteCal;
         private System.Windows.Forms.Button btnCreateCal;
         private System.Windows.Forms.Label lblHelptxt1;
-        private System.Windows.Forms.ListBox listAllSupport;
         private System.Windows.Forms.Label lblTitelSuppList;
         private System.Windows.Forms.Label lblHelptxt2;
         private System.Windows.Forms.DataGridView dgvSupportCalendar;
@@ -257,5 +261,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView tevAllSupport;
+        private System.Windows.Forms.ListBox listAllSupport;
     }
 }
