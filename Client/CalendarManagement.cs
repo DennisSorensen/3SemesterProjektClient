@@ -21,7 +21,7 @@ namespace Client
         public CalendarManagement()
         {
             InitializeComponent();
-
+            
             dgvSupportCalendar.AllowUserToResizeColumns = false;
             dgvSupportCalendar.AllowUserToResizeRows = false;
             table.Columns.Add("Tid", typeof(string));
@@ -45,15 +45,18 @@ namespace Client
             calendarService.CreateCalendar(calendar);
             */
 
-            //UserServiceReference.User selectedUser = tr
+            UserServiceReference.User selectedUser = tevAllSupport.SelectedNode.Tag as UserServiceReference.User;
+            CalendarServiceReference.Calendar calendar = new CalendarServiceReference.Calendar();
+            calendar.UserId = selectedUser.Id;
+            calendarService.CreateCalendar(calendar);
             /*var selectedObj = listAllSupport.SelectedItem; //Henter obj fra listen
             string ss = Convert.ToString(selectedObj); //Formaterer obj til string
             string[] words = ss.Split(',');//Deler strengen op
             int i = Int32.Parse(words[0]);//Tager den første string i listen og formaterer den fra string til int*/
-            UserServiceReference.User user = userService.GetUser(i);// Henter user med den int id vi har fundet ovenover
+            /*UserServiceReference.User user = userService.GetUser(i);// Henter user med den int id vi har fundet ovenover
             CalendarServiceReference.Calendar calendar = new CalendarServiceReference.Calendar();// oprettet et nyt calender object
             calendar.UserId = user.Id;// den nye calendar får et user id
-            calendarService.CreateCalendar(calendar);// oprettet calender objectet
+            calendarService.CreateCalendar(calendar);// oprettet calender objectet*/
 
             string s = string.Format("{0} {1}'s kalender er blevet lavet", user.FirstName, user.LastName);
             MessageBox.Show(s, "Kalender lavet");
