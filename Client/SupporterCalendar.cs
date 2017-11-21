@@ -18,6 +18,9 @@ namespace Client
         {
             InitializeComponent();
 
+            dgvSupporterCalendar.AllowUserToResizeColumns = false;
+            dgvSupporterCalendar.AllowUserToResizeRows = false;
+
             table.Columns.Add("Tid", typeof(string));
             table.Columns.Add("Mandag", typeof(string));
             table.Columns.Add("Tirsdag", typeof(string));
