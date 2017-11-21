@@ -21,7 +21,17 @@ namespace Client
         public CalendarManagement()
         {
             InitializeComponent();
-                        
+
+            table.Columns.Add("Tid", typeof(string));
+            table.Columns.Add("Mandag", typeof(string));
+            table.Columns.Add("Tirsdag", typeof(string));
+            table.Columns.Add("Onsdag", typeof(string));
+            table.Columns.Add("Torsdag", typeof(string));
+            table.Columns.Add("Fredag", typeof(string));
+            table.Columns.Add("Lørdag", typeof(string));
+            table.Columns.Add("Søndag", typeof(string));
+
+
         }
 
         private void btnCreateCal_Click(object sender, EventArgs e)
@@ -55,7 +65,7 @@ namespace Client
                 tevAllSupport.Nodes.Clear();
                 foreach (var user in supporters)
                 {
-
+                    listAllSupport.Items.Clear();
                     string s = string.Format("{0}, {1} {2}", user.Id, user.FirstName, user.LastName);
                     listAllSupport.Items.Add(s);
                     TreeNode treeNode = new TreeNode();
@@ -66,15 +76,6 @@ namespace Client
             }
             else if(e.TabPageIndex == 1)
             {
-                table.Columns.Add("Tid", typeof(string));
-                table.Columns.Add("Mandag", typeof(string));
-                table.Columns.Add("Tirsdag", typeof(string));
-                table.Columns.Add("Onsdag", typeof(string));
-                table.Columns.Add("Torsdag", typeof(string));
-                table.Columns.Add("Fredag", typeof(string));
-                table.Columns.Add("Lørdag", typeof(string));
-                table.Columns.Add("Søndag", typeof(string));
-
                 dgvSupportCalendar.DataSource = table;
             }
 

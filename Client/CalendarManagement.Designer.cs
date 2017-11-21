@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCreateCal = new System.Windows.Forms.TabPage();
             this.tevAllSupport = new System.Windows.Forms.TreeView();
@@ -86,10 +86,10 @@
             // 
             this.tevAllSupport.Location = new System.Drawing.Point(207, 75);
             this.tevAllSupport.Name = "tevAllSupport";
-            treeNode1.Name = "TreeViewAllSupport";
-            treeNode1.Text = "TreeViewAllSupport";
+            treeNode5.Name = "TreeViewAllSupport";
+            treeNode5.Text = "TreeViewAllSupport";
             this.tevAllSupport.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode5});
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
@@ -162,11 +162,14 @@
             this.dgvSupportCalendar.AllowUserToDeleteRows = false;
             this.dgvSupportCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupportCalendar.Location = new System.Drawing.Point(20, 53);
+            this.dgvSupportCalendar.MultiSelect = false;
             this.dgvSupportCalendar.Name = "dgvSupportCalendar";
             this.dgvSupportCalendar.ReadOnly = true;
             this.dgvSupportCalendar.RowHeadersVisible = false;
+            this.dgvSupportCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.dgvSupportCalendar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvSupportCalendar.Size = new System.Drawing.Size(753, 293);
-            this.dgvSupportCalendar.TabIndex = 3;
+            this.dgvSupportCalendar.TabIndex = 0;
             // 
             // btnFindCalendar
             // 
