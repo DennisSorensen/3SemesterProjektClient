@@ -40,6 +40,7 @@
             this.dgvSupporterCalendar.Location = new System.Drawing.Point(12, 75);
             this.dgvSupporterCalendar.Name = "dgvSupporterCalendar";
             this.dgvSupporterCalendar.RowHeadersVisible = false;
+            this.dgvSupporterCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSupporterCalendar.RowTemplate.Height = 24;
             this.dgvSupporterCalendar.Size = new System.Drawing.Size(1041, 435);
             this.dgvSupporterCalendar.TabIndex = 0;
