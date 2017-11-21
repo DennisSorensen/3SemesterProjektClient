@@ -121,23 +121,44 @@ namespace Client
             }
         }
 
+        //Metode som bliver kaldt hver gang se bruger fanen bliver trykket på
         private void ListAllUsers()
         {
             List<UserServiceReference.User> users = userService.GetAllUsers().ToList();
-            lbAllUsers.Items.Clear();
+            
+            tevAllUsers.Nodes.Clear();
+
             foreach (var user in users)
             {
-                string s = string.Format("{0}, {1} {2}", user.Id.ToString(), user.FirstName, user.LastName);
-                lbAllUsers.Items.Add(s);
+                TreeNode treeNode = new TreeNode();
+                treeNode.Text = user.Id + ", " + user.FirstName + " " + user.LastName;
+                treeNode.Tag = user;
+                tevAllUsers.Nodes.Add(treeNode);
             }
         }
 
+        //Metode som kan bestemme hvilken fane man er i
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
         {
-            if (e.TabPageIndex == 1)
+            if (e.TabPageIndex == 1) //Når se bruger fanen klikkes på
             {
                 ListAllUsers();
             }
         }
+
+        //Metode som indeholder den selected user fra treeView
+        private void tevAllUsers_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            UserServiceReference.User user = new UserServiceReference.User(); //Opretter en nu user
+            user = e.Node.Tag as UserServiceReference.User; //Tager den selected user fra treeView, og sætter den lig user variabel
+            
+            //Skriver selected user ud på labels og søgefelt id
+            txtInputUserId.Text = user.Id.ToString();
+            lblRole.Text = user.Role;
+            lblFirstName.Text = user.FirstName;
+            lblLastName.Text = user.LastName;
+            lblPassword.Text = user.Password;
+        }
+        
     }
 }
