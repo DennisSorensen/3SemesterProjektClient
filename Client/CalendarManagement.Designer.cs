@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCreateCal = new System.Windows.Forms.TabPage();
             this.tevAllSupport = new System.Windows.Forms.TreeView();
             this.lblHelptxt2 = new System.Windows.Forms.Label();
             this.lblHelptxt1 = new System.Windows.Forms.Label();
+            this.listAllSupport = new System.Windows.Forms.ListBox();
             this.lblTitelSuppList = new System.Windows.Forms.Label();
             this.btnCreateCal = new System.Windows.Forms.Button();
             this.tabViewCal = new System.Windows.Forms.TabPage();
@@ -43,7 +44,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabEditCal = new System.Windows.Forms.TabPage();
             this.tabDeleteCal = new System.Windows.Forms.TabPage();
-            this.listAllSupport = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.tabCreateCal.SuspendLayout();
             this.tabViewCal.SuspendLayout();
@@ -86,10 +86,10 @@
             // 
             this.tevAllSupport.Location = new System.Drawing.Point(25, 75);
             this.tevAllSupport.Name = "tevAllSupport";
-            treeNode5.Name = "TreeViewAllSupport";
-            treeNode5.Text = "TreeViewAllSupport";
+            treeNode1.Name = "TreeViewAllSupport";
+            treeNode1.Text = "TreeViewAllSupport";
             this.tevAllSupport.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode5});
+            treeNode1});
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
@@ -117,6 +117,16 @@
             this.lblHelptxt1.Size = new System.Drawing.Size(203, 17);
             this.lblHelptxt1.TabIndex = 8;
             this.lblHelptxt1.Text = "Markér den ønskede supporter";
+            // 
+            // listAllSupport
+            // 
+            this.listAllSupport.FormattingEnabled = true;
+            this.listAllSupport.ItemHeight = 22;
+            this.listAllSupport.Location = new System.Drawing.Point(416, 75);
+            this.listAllSupport.Margin = new System.Windows.Forms.Padding(2);
+            this.listAllSupport.Name = "listAllSupport";
+            this.listAllSupport.Size = new System.Drawing.Size(166, 136);
+            this.listAllSupport.TabIndex = 7;
             // 
             // lblTitelSuppList
             // 
@@ -166,7 +176,7 @@
             this.dgvSupportCalendar.Name = "dgvSupportCalendar";
             this.dgvSupportCalendar.ReadOnly = true;
             this.dgvSupportCalendar.RowHeadersVisible = false;
-            this.dgvSupportCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
+            this.dgvSupportCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dgvSupportCalendar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvSupportCalendar.Size = new System.Drawing.Size(803, 293);
             this.dgvSupportCalendar.TabIndex = 0;
@@ -203,7 +213,7 @@
             this.tabEditCal.Margin = new System.Windows.Forms.Padding(2);
             this.tabEditCal.Name = "tabEditCal";
             this.tabEditCal.Padding = new System.Windows.Forms.Padding(2);
-            this.tabEditCal.Size = new System.Drawing.Size(778, 351);
+            this.tabEditCal.Size = new System.Drawing.Size(814, 351);
             this.tabEditCal.TabIndex = 2;
             this.tabEditCal.Text = "Rediger Kalender";
             this.tabEditCal.UseVisualStyleBackColor = true;
@@ -214,20 +224,10 @@
             this.tabDeleteCal.Margin = new System.Windows.Forms.Padding(2);
             this.tabDeleteCal.Name = "tabDeleteCal";
             this.tabDeleteCal.Padding = new System.Windows.Forms.Padding(2);
-            this.tabDeleteCal.Size = new System.Drawing.Size(778, 351);
+            this.tabDeleteCal.Size = new System.Drawing.Size(814, 351);
             this.tabDeleteCal.TabIndex = 3;
             this.tabDeleteCal.Text = "Slet Kalender";
             this.tabDeleteCal.UseVisualStyleBackColor = true;
-            // 
-            // listAllSupport
-            // 
-            this.listAllSupport.FormattingEnabled = true;
-            this.listAllSupport.ItemHeight = 22;
-            this.listAllSupport.Location = new System.Drawing.Point(416, 75);
-            this.listAllSupport.Margin = new System.Windows.Forms.Padding(2);
-            this.listAllSupport.Name = "listAllSupport";
-            this.listAllSupport.Size = new System.Drawing.Size(166, 136);
-            this.listAllSupport.TabIndex = 7;
             // 
             // CalendarManagement
             // 

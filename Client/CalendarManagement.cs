@@ -58,8 +58,10 @@ namespace Client
             calendar.UserId = user.Id;// den nye calendar får et user id
             calendarService.CreateCalendar(calendar);// oprettet calender objectet*/
 
+            /*
             string s = string.Format("{0} {1}'s kalender er blevet lavet", user.FirstName, user.LastName);
             MessageBox.Show(s, "Kalender lavet");
+            */
         }
 
         private void tabControl1_Selected(object sender, TabControlEventArgs e)
