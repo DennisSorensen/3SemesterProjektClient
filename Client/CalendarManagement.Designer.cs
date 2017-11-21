@@ -61,7 +61,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(786, 386);
+            this.tabControl1.Size = new System.Drawing.Size(822, 386);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -77,14 +77,14 @@
             this.tabCreateCal.Margin = new System.Windows.Forms.Padding(2);
             this.tabCreateCal.Name = "tabCreateCal";
             this.tabCreateCal.Padding = new System.Windows.Forms.Padding(2);
-            this.tabCreateCal.Size = new System.Drawing.Size(778, 351);
+            this.tabCreateCal.Size = new System.Drawing.Size(814, 351);
             this.tabCreateCal.TabIndex = 0;
             this.tabCreateCal.Text = "Opret Kalender";
             this.tabCreateCal.UseVisualStyleBackColor = true;
             // 
             // tevAllSupport
             // 
-            this.tevAllSupport.Location = new System.Drawing.Point(207, 75);
+            this.tevAllSupport.Location = new System.Drawing.Point(25, 75);
             this.tevAllSupport.Name = "tevAllSupport";
             treeNode5.Name = "TreeViewAllSupport";
             treeNode5.Text = "TreeViewAllSupport";
@@ -93,7 +93,7 @@
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
-            this.tevAllSupport.Size = new System.Drawing.Size(166, 136);
+            this.tevAllSupport.Size = new System.Drawing.Size(176, 136);
             this.tevAllSupport.TabIndex = 10;
             // 
             // lblHelptxt2
@@ -151,7 +151,7 @@
             this.tabViewCal.Margin = new System.Windows.Forms.Padding(2);
             this.tabViewCal.Name = "tabViewCal";
             this.tabViewCal.Padding = new System.Windows.Forms.Padding(2);
-            this.tabViewCal.Size = new System.Drawing.Size(778, 351);
+            this.tabViewCal.Size = new System.Drawing.Size(814, 351);
             this.tabViewCal.TabIndex = 1;
             this.tabViewCal.Text = "Se Kalender";
             this.tabViewCal.UseVisualStyleBackColor = true;
@@ -161,19 +161,19 @@
             this.dgvSupportCalendar.AllowUserToAddRows = false;
             this.dgvSupportCalendar.AllowUserToDeleteRows = false;
             this.dgvSupportCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupportCalendar.Location = new System.Drawing.Point(20, 53);
+            this.dgvSupportCalendar.Location = new System.Drawing.Point(5, 53);
             this.dgvSupportCalendar.MultiSelect = false;
             this.dgvSupportCalendar.Name = "dgvSupportCalendar";
             this.dgvSupportCalendar.ReadOnly = true;
             this.dgvSupportCalendar.RowHeadersVisible = false;
             this.dgvSupportCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToFirstHeader;
             this.dgvSupportCalendar.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvSupportCalendar.Size = new System.Drawing.Size(753, 293);
+            this.dgvSupportCalendar.Size = new System.Drawing.Size(803, 293);
             this.dgvSupportCalendar.TabIndex = 0;
             // 
             // btnFindCalendar
             // 
-            this.btnFindCalendar.Location = new System.Drawing.Point(646, 5);
+            this.btnFindCalendar.Location = new System.Drawing.Point(679, 5);
             this.btnFindCalendar.Name = "btnFindCalendar";
             this.btnFindCalendar.Size = new System.Drawing.Size(127, 42);
             this.btnFindCalendar.TabIndex = 2;
@@ -182,7 +182,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(495, 12);
+            this.textBox1.Location = new System.Drawing.Point(555, 12);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 28);
             this.textBox1.TabIndex = 1;
@@ -223,7 +223,7 @@
             // 
             this.listAllSupport.FormattingEnabled = true;
             this.listAllSupport.ItemHeight = 22;
-            this.listAllSupport.Location = new System.Drawing.Point(26, 75);
+            this.listAllSupport.Location = new System.Drawing.Point(416, 75);
             this.listAllSupport.Margin = new System.Windows.Forms.Padding(2);
             this.listAllSupport.Name = "listAllSupport";
             this.listAllSupport.Size = new System.Drawing.Size(166, 136);
@@ -233,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(792, 394);
+            this.ClientSize = new System.Drawing.Size(823, 389);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CalendarManagement";

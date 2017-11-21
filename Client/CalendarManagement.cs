@@ -22,6 +22,8 @@ namespace Client
         {
             InitializeComponent();
 
+            dgvSupportCalendar.AllowUserToResizeColumns = false;
+            dgvSupportCalendar.AllowUserToResizeRows = false;
             table.Columns.Add("Tid", typeof(string));
             table.Columns.Add("Mandag", typeof(string));
             table.Columns.Add("Tirsdag", typeof(string));
@@ -43,10 +45,11 @@ namespace Client
             calendarService.CreateCalendar(calendar);
             */
 
-            var selectedObj = listAllSupport.SelectedItem; //Henter obj fra listen
+            //UserServiceReference.User selectedUser = tr
+            /*var selectedObj = listAllSupport.SelectedItem; //Henter obj fra listen
             string ss = Convert.ToString(selectedObj); //Formaterer obj til string
             string[] words = ss.Split(',');//Deler strengen op
-            int i = Int32.Parse(words[0]);//Tager den første string i listen og formaterer den fra string til int
+            int i = Int32.Parse(words[0]);//Tager den første string i listen og formaterer den fra string til int*/
             UserServiceReference.User user = userService.GetUser(i);// Henter user med den int id vi har fundet ovenover
             CalendarServiceReference.Calendar calendar = new CalendarServiceReference.Calendar();// oprettet et nyt calender object
             calendar.UserId = user.Id;// den nye calendar får et user id
@@ -60,14 +63,13 @@ namespace Client
         {
             if(e.TabPageIndex == 0)
             {
+                
                 List<UserServiceReference.User> supporters = new List<UserServiceReference.User>();
                 supporters = userService.GetAllSupporters().ToList();
                 tevAllSupport.Nodes.Clear();
                 foreach (var user in supporters)
                 {
-                    listAllSupport.Items.Clear();
                     string s = string.Format("{0}, {1} {2}", user.Id, user.FirstName, user.LastName);
-                    listAllSupport.Items.Add(s);
                     TreeNode treeNode = new TreeNode();
                     treeNode.Text = user.Id + ", " + user.FirstName + " " + user.LastName;
                     treeNode.Tag = user;
