@@ -32,7 +32,7 @@ namespace Client
             table.Columns.Add("Fredag", typeof(string));
             table.Columns.Add("Lørdag", typeof(string));
             table.Columns.Add("Søndag", typeof(string));
-
+            SupporterList();
 
         }
 
@@ -53,24 +53,28 @@ namespace Client
         {
             if(e.TabPageIndex == 0)
             {
-                
-                List<UserServiceReference.User> supporters = new List<UserServiceReference.User>();
-                supporters = userService.GetAllSupporters().ToList();
-                tevAllSupport.Nodes.Clear();
-                foreach (var user in supporters)
-                {
-                    string s = string.Format("{0}, {1} {2}", user.Id, user.FirstName, user.LastName);
-                    TreeNode treeNode = new TreeNode();
-                    treeNode.Text = user.Id + ", " + user.FirstName + " " + user.LastName;
-                    treeNode.Tag = user;
-                    tevAllSupport.Nodes.Add(treeNode);
-                }
+                SupporterList();
             }
             else if(e.TabPageIndex == 1)
             {
                 dgvSupportCalendar.DataSource = table;
             }
 
+        }
+
+        private void SupporterList()
+        {
+            List<UserServiceReference.User> supporters = new List<UserServiceReference.User>();
+            supporters = userService.GetAllSupporters().ToList();
+            tevAllSupport.Nodes.Clear();
+            foreach (var user in supporters)
+            {
+                string s = string.Format("{0}, {1} {2}", user.Id, user.FirstName, user.LastName);
+                TreeNode treeNode = new TreeNode();
+                treeNode.Text = user.Id + ", " + user.FirstName + " " + user.LastName;
+                treeNode.Tag = user;
+                tevAllSupport.Nodes.Add(treeNode);
+            }
         }
     }
 }
