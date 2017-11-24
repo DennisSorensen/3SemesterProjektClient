@@ -73,6 +73,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="CreateBookingSupporter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBookingSupporter.Designer.cs">
+      <DependentUpon>CreateBookingSupporter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
