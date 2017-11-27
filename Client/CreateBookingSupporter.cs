@@ -32,7 +32,7 @@ namespace Client
             supportTask.Description = txtTaskDescription.Text;
             CalendarServiceReference.Calendar calendar = calendarService.Get(userId);
             supportTask.Calendar_Id = calendar.Id;
-            supportTask.Id = userId;
+            supportTask.User_Id = userId;
             supportTask.BookingType = "Task";
 
             bookingService.CreateTask(supportTask);
