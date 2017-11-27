@@ -30,6 +30,8 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpCreateUser = new System.Windows.Forms.TabPage();
+            this.txtButik = new System.Windows.Forms.TextBox();
+            this.lblButik22 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -43,6 +45,7 @@
             this.tbUserId = new System.Windows.Forms.TextBox();
             this.btnCreateUser = new System.Windows.Forms.Button();
             this.tpViewUser = new System.Windows.Forms.TabPage();
+            this.tevAllUsers = new System.Windows.Forms.TreeView();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
@@ -61,7 +64,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
-            this.tevAllUsers = new System.Windows.Forms.TreeView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.lblButik = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpCreateUser.SuspendLayout();
             this.tpViewUser.SuspendLayout();
@@ -78,12 +82,14 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(893, 544);
+            this.tabControl1.Size = new System.Drawing.Size(893, 633);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
             // tpCreateUser
             // 
+            this.tpCreateUser.Controls.Add(this.txtButik);
+            this.tpCreateUser.Controls.Add(this.lblButik22);
             this.tpCreateUser.Controls.Add(this.label7);
             this.tpCreateUser.Controls.Add(this.label5);
             this.tpCreateUser.Controls.Add(this.label4);
@@ -100,11 +106,27 @@
             this.tpCreateUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpCreateUser.Name = "tpCreateUser";
             this.tpCreateUser.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpCreateUser.Size = new System.Drawing.Size(885, 505);
+            this.tpCreateUser.Size = new System.Drawing.Size(885, 594);
             this.tpCreateUser.TabIndex = 0;
             this.tpCreateUser.Text = "Opret Bruger";
             this.tpCreateUser.UseVisualStyleBackColor = true;
             this.tpCreateUser.Click += new System.EventHandler(this.tpCreateUser_Click);
+            // 
+            // txtButik
+            // 
+            this.txtButik.Location = new System.Drawing.Point(35, 459);
+            this.txtButik.Name = "txtButik";
+            this.txtButik.Size = new System.Drawing.Size(100, 32);
+            this.txtButik.TabIndex = 13;
+            // 
+            // lblButik22
+            // 
+            this.lblButik22.AutoSize = true;
+            this.lblButik22.Location = new System.Drawing.Point(35, 427);
+            this.lblButik22.Name = "lblButik22";
+            this.lblButik22.Size = new System.Drawing.Size(61, 26);
+            this.lblButik22.TabIndex = 12;
+            this.lblButik22.Text = "Butik";
             // 
             // label7
             // 
@@ -119,7 +141,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(39, 139);
+            this.label5.Location = new System.Drawing.Point(35, 145);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(62, 26);
             this.label5.TabIndex = 10;
@@ -128,7 +150,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(39, 345);
+            this.label4.Location = new System.Drawing.Point(35, 357);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(94, 26);
             this.label4.TabIndex = 9;
@@ -137,7 +159,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(39, 273);
+            this.label3.Location = new System.Drawing.Point(35, 287);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 26);
             this.label3.TabIndex = 8;
@@ -146,7 +168,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(39, 207);
+            this.label2.Location = new System.Drawing.Point(35, 217);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 26);
             this.label2.TabIndex = 7;
@@ -155,7 +177,7 @@
             // Id
             // 
             this.Id.AutoSize = true;
-            this.Id.Location = new System.Drawing.Point(39, 75);
+            this.Id.Location = new System.Drawing.Point(35, 75);
             this.Id.Name = "Id";
             this.Id.Size = new System.Drawing.Size(30, 26);
             this.Id.TabIndex = 6;
@@ -168,7 +190,7 @@
             "Admin",
             "Supporter",
             "Sælger"});
-            this.cbUserRole.Location = new System.Drawing.Point(39, 170);
+            this.cbUserRole.Location = new System.Drawing.Point(35, 177);
             this.cbUserRole.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cbUserRole.Name = "cbUserRole";
             this.cbUserRole.Size = new System.Drawing.Size(149, 34);
@@ -176,7 +198,7 @@
             // 
             // tbPassword
             // 
-            this.tbPassword.Location = new System.Drawing.Point(39, 370);
+            this.tbPassword.Location = new System.Drawing.Point(35, 389);
             this.tbPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(149, 32);
@@ -184,7 +206,7 @@
             // 
             // tbUserLastName
             // 
-            this.tbUserLastName.Location = new System.Drawing.Point(39, 304);
+            this.tbUserLastName.Location = new System.Drawing.Point(35, 319);
             this.tbUserLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUserLastName.Name = "tbUserLastName";
             this.tbUserLastName.Size = new System.Drawing.Size(149, 32);
@@ -192,7 +214,7 @@
             // 
             // tbUserFirstName
             // 
-            this.tbUserFirstName.Location = new System.Drawing.Point(39, 238);
+            this.tbUserFirstName.Location = new System.Drawing.Point(35, 249);
             this.tbUserFirstName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUserFirstName.Name = "tbUserFirstName";
             this.tbUserFirstName.Size = new System.Drawing.Size(149, 32);
@@ -200,7 +222,7 @@
             // 
             // tbUserId
             // 
-            this.tbUserId.Location = new System.Drawing.Point(39, 103);
+            this.tbUserId.Location = new System.Drawing.Point(35, 107);
             this.tbUserId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tbUserId.Name = "tbUserId";
             this.tbUserId.Size = new System.Drawing.Size(149, 32);
@@ -208,7 +230,7 @@
             // 
             // btnCreateUser
             // 
-            this.btnCreateUser.Location = new System.Drawing.Point(29, 431);
+            this.btnCreateUser.Location = new System.Drawing.Point(29, 532);
             this.btnCreateUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(169, 52);
@@ -219,6 +241,8 @@
             // 
             // tpViewUser
             // 
+            this.tpViewUser.Controls.Add(this.lblButik);
+            this.tpViewUser.Controls.Add(this.label13);
             this.tpViewUser.Controls.Add(this.tevAllUsers);
             this.tpViewUser.Controls.Add(this.label12);
             this.tpViewUser.Controls.Add(this.label11);
@@ -240,10 +264,21 @@
             this.tpViewUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpViewUser.Name = "tpViewUser";
             this.tpViewUser.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tpViewUser.Size = new System.Drawing.Size(885, 505);
+            this.tpViewUser.Size = new System.Drawing.Size(885, 594);
             this.tpViewUser.TabIndex = 1;
             this.tpViewUser.Text = "Se Bruger";
             this.tpViewUser.UseVisualStyleBackColor = true;
+            // 
+            // tevAllUsers
+            // 
+            this.tevAllUsers.Location = new System.Drawing.Point(528, 126);
+            this.tevAllUsers.Name = "tevAllUsers";
+            this.tevAllUsers.ShowLines = false;
+            this.tevAllUsers.ShowPlusMinus = false;
+            this.tevAllUsers.ShowRootLines = false;
+            this.tevAllUsers.Size = new System.Drawing.Size(334, 361);
+            this.tevAllUsers.TabIndex = 17;
+            this.tevAllUsers.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tevAllUsers_AfterSelect);
             // 
             // label12
             // 
@@ -400,7 +435,7 @@
             this.tpEditUser.Location = new System.Drawing.Point(4, 35);
             this.tpEditUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpEditUser.Name = "tpEditUser";
-            this.tpEditUser.Size = new System.Drawing.Size(885, 505);
+            this.tpEditUser.Size = new System.Drawing.Size(885, 594);
             this.tpEditUser.TabIndex = 2;
             this.tpEditUser.Text = "Rediger Bruger";
             this.tpEditUser.UseVisualStyleBackColor = true;
@@ -410,27 +445,34 @@
             this.tpDeleteUser.Location = new System.Drawing.Point(4, 35);
             this.tpDeleteUser.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tpDeleteUser.Name = "tpDeleteUser";
-            this.tpDeleteUser.Size = new System.Drawing.Size(885, 505);
+            this.tpDeleteUser.Size = new System.Drawing.Size(885, 594);
             this.tpDeleteUser.TabIndex = 3;
             this.tpDeleteUser.Text = "Slet Bruger";
             this.tpDeleteUser.UseVisualStyleBackColor = true;
             // 
-            // tevAllUsers
+            // label13
             // 
-            this.tevAllUsers.Location = new System.Drawing.Point(528, 126);
-            this.tevAllUsers.Name = "tevAllUsers";
-            this.tevAllUsers.ShowLines = false;
-            this.tevAllUsers.ShowPlusMinus = false;
-            this.tevAllUsers.ShowRootLines = false;
-            this.tevAllUsers.Size = new System.Drawing.Size(334, 361);
-            this.tevAllUsers.TabIndex = 17;
-            this.tevAllUsers.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.tevAllUsers_AfterSelect);
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(43, 438);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(67, 26);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Butik:";
+            // 
+            // lblButik
+            // 
+            this.lblButik.AutoSize = true;
+            this.lblButik.Location = new System.Drawing.Point(165, 438);
+            this.lblButik.Name = "lblButik";
+            this.lblButik.Size = new System.Drawing.Size(30, 26);
+            this.lblButik.TabIndex = 19;
+            this.lblButik.Text = "...";
             // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 553);
+            this.ClientSize = new System.Drawing.Size(923, 630);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "UserManagement";
@@ -481,5 +523,9 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TreeView tevAllUsers;
+        private System.Windows.Forms.TextBox txtButik;
+        private System.Windows.Forms.Label lblButik22;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblButik;
     }
 }

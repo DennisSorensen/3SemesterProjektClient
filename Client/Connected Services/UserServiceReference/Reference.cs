@@ -23,6 +23,9 @@ namespace Client.UserServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string ButikField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstNameField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -44,6 +47,19 @@ namespace Client.UserServiceReference {
             }
             set {
                 this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Butik {
+            get {
+                return this.ButikField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.ButikField, value) != true)) {
+                    this.ButikField = value;
+                    this.RaisePropertyChanged("Butik");
+                }
             }
         }
         
