@@ -33,6 +33,9 @@
             this.lblUserLoggedIn = new System.Windows.Forms.Label();
             this.btnOpretTask = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.tid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupporterCalendar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,11 +95,32 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // listView1
+            // 
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.tid,
+            this.columnHeader2});
+            this.listView1.Location = new System.Drawing.Point(17, 69);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(758, 324);
+            this.listView1.TabIndex = 5;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.Details;
+            // 
+            // tid
+            // 
+            this.tid.Text = "Tid";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Mandag";
+            // 
             // SupporterCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 424);
+            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnOpretTask);
             this.Controls.Add(this.lblUserLoggedIn);
@@ -119,5 +143,8 @@
         private System.Windows.Forms.Label lblUserLoggedIn;
         private System.Windows.Forms.Button btnOpretTask;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ColumnHeader tid;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
     }
 }

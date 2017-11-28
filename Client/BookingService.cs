@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Client.BookingServiceReference;
+using System.Data;
 
 namespace Client
 {
     public class BookingService
     {
         BookingServiceReference.IBookingService bookingService = new BookingServiceReference.BookingServiceClient();
+        DataTable table;
 
 
         public void CreateTask(BookingServiceReference.SupportTask supportTask)

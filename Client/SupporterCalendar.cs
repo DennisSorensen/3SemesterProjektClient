@@ -53,7 +53,12 @@ namespace Client
 
         private void LoadCalendar()
         {
+        ListViewItem item = new ListViewItem();
+            item.Text = "9:00";
+            item.SubItems.Add("");
 
         }
+
+
     }
 }
