@@ -19,6 +19,7 @@ namespace Client
         {
             InitializeComponent();
             User = user;
+            lblLoggedInUser.Text = User.FirstName + " " + User.LastName;
 
         }
 
@@ -164,6 +165,19 @@ namespace Client
             lblPassword.Text = user.Password;
             lblDepartment.Text = user.DepartmentId.ToString();
         }
-        
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            AdminClientFront adminClientFront = new AdminClientFront(User);
+            adminClientFront.Show();
+            this.Close();
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Client
         {
             return userService.CreateUser(user);
         }
-                
+        
         public IEnumerable<UserServiceReference.User> GetAllSupporters()
         {
             return userService.GetAllSupporters();

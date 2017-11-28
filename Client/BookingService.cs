@@ -7,14 +7,29 @@ using Client.BookingServiceReference;
 
 namespace Client
 {
-    class BookingService
+    public class BookingService
     {
         BookingServiceReference.IBookingService bookingService = new BookingServiceReference.BookingServiceClient();
+
 
         public void CreateTask(BookingServiceReference.SupportTask supportTask)
         {
             bookingService.CreateSupportTask(supportTask);
         }
 
+        public IEnumerable<BookingServiceReference.SupportTask> GetAllSupportTask(int userId)
+        {
+            return bookingService.GetAllSupportTask(userId);
+        }
+
+        public IEnumerable<BookingServiceReference.SupportBooking> GetAllSupportBooking(int userId)
+        {
+            return bookingService.GetAllSupportBooking(userId);
+        }
+
+        public IEnumerable<BookingServiceReference.ReadyToGo> GetAllReadyToGo(int userId)
+        {
+            return bookingService.GetAllReadyToGo(userId);
+        }
     }
 }

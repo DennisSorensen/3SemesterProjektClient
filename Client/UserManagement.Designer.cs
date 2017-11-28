@@ -66,6 +66,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tpEditUser = new System.Windows.Forms.TabPage();
             this.tpDeleteUser = new System.Windows.Forms.TabPage();
+            this.btnBack = new System.Windows.Forms.Button();
+            this.lblLoggedInUser = new System.Windows.Forms.Label();
+            this.btnLogout = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tpCreateUser.SuspendLayout();
             this.tpViewUser.SuspendLayout();
@@ -78,11 +82,11 @@
             this.tabControl1.Controls.Add(this.tpEditUser);
             this.tabControl1.Controls.Add(this.tpDeleteUser);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(0, 0);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabControl1.Location = new System.Drawing.Point(1, 30);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(670, 514);
+            this.tabControl1.Size = new System.Drawing.Size(593, 514);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -103,10 +107,10 @@
             this.tpCreateUser.Controls.Add(this.tbUserId);
             this.tpCreateUser.Controls.Add(this.btnCreateUser);
             this.tpCreateUser.Location = new System.Drawing.Point(4, 31);
-            this.tpCreateUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpCreateUser.Margin = new System.Windows.Forms.Padding(2);
             this.tpCreateUser.Name = "tpCreateUser";
-            this.tpCreateUser.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpCreateUser.Size = new System.Drawing.Size(662, 479);
+            this.tpCreateUser.Padding = new System.Windows.Forms.Padding(2);
+            this.tpCreateUser.Size = new System.Drawing.Size(585, 479);
             this.tpCreateUser.TabIndex = 0;
             this.tpCreateUser.Text = "Opret Bruger";
             this.tpCreateUser.UseVisualStyleBackColor = true;
@@ -115,7 +119,7 @@
             // txtDepartment
             // 
             this.txtDepartment.Location = new System.Drawing.Point(26, 373);
-            this.txtDepartment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDepartment.Margin = new System.Windows.Forms.Padding(2);
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.Size = new System.Drawing.Size(76, 27);
             this.txtDepartment.TabIndex = 13;
@@ -126,9 +130,9 @@
             this.lblButik22.Location = new System.Drawing.Point(26, 347);
             this.lblButik22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblButik22.Name = "lblButik22";
-            this.lblButik22.Size = new System.Drawing.Size(50, 22);
+            this.lblButik22.Size = new System.Drawing.Size(74, 22);
             this.lblButik22.TabIndex = 12;
-            this.lblButik22.Text = "Butik";
+            this.lblButik22.Text = "Butik Nr";
             // 
             // label7
             // 
@@ -199,7 +203,7 @@
             "Supporter",
             "Sælger"});
             this.cbUserRole.Location = new System.Drawing.Point(26, 144);
-            this.cbUserRole.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbUserRole.Margin = new System.Windows.Forms.Padding(2);
             this.cbUserRole.Name = "cbUserRole";
             this.cbUserRole.Size = new System.Drawing.Size(113, 30);
             this.cbUserRole.TabIndex = 5;
@@ -207,7 +211,7 @@
             // tbPassword
             // 
             this.tbPassword.Location = new System.Drawing.Point(26, 316);
-            this.tbPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPassword.Margin = new System.Windows.Forms.Padding(2);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.Size = new System.Drawing.Size(113, 27);
             this.tbPassword.TabIndex = 4;
@@ -215,7 +219,7 @@
             // tbUserLastName
             // 
             this.tbUserLastName.Location = new System.Drawing.Point(26, 259);
-            this.tbUserLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUserLastName.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserLastName.Name = "tbUserLastName";
             this.tbUserLastName.Size = new System.Drawing.Size(113, 27);
             this.tbUserLastName.TabIndex = 3;
@@ -223,7 +227,7 @@
             // tbUserFirstName
             // 
             this.tbUserFirstName.Location = new System.Drawing.Point(26, 202);
-            this.tbUserFirstName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUserFirstName.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserFirstName.Name = "tbUserFirstName";
             this.tbUserFirstName.Size = new System.Drawing.Size(113, 27);
             this.tbUserFirstName.TabIndex = 2;
@@ -231,15 +235,15 @@
             // tbUserId
             // 
             this.tbUserId.Location = new System.Drawing.Point(26, 87);
-            this.tbUserId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbUserId.Margin = new System.Windows.Forms.Padding(2);
             this.tbUserId.Name = "tbUserId";
             this.tbUserId.Size = new System.Drawing.Size(113, 27);
             this.tbUserId.TabIndex = 1;
             // 
             // btnCreateUser
             // 
-            this.btnCreateUser.Location = new System.Drawing.Point(22, 432);
-            this.btnCreateUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreateUser.Location = new System.Drawing.Point(22, 414);
+            this.btnCreateUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateUser.Name = "btnCreateUser";
             this.btnCreateUser.Size = new System.Drawing.Size(127, 42);
             this.btnCreateUser.TabIndex = 0;
@@ -269,10 +273,10 @@
             this.tpViewUser.Controls.Add(this.txtInputUserId);
             this.tpViewUser.Controls.Add(this.label1);
             this.tpViewUser.Location = new System.Drawing.Point(4, 31);
-            this.tpViewUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpViewUser.Margin = new System.Windows.Forms.Padding(2);
             this.tpViewUser.Name = "tpViewUser";
-            this.tpViewUser.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tpViewUser.Size = new System.Drawing.Size(662, 479);
+            this.tpViewUser.Padding = new System.Windows.Forms.Padding(2);
+            this.tpViewUser.Size = new System.Drawing.Size(585, 479);
             this.tpViewUser.TabIndex = 1;
             this.tpViewUser.Text = "Se Bruger";
             this.tpViewUser.UseVisualStyleBackColor = true;
@@ -299,8 +303,8 @@
             // 
             // tevAllUsers
             // 
-            this.tevAllUsers.Location = new System.Drawing.Point(396, 102);
-            this.tevAllUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tevAllUsers.Location = new System.Drawing.Point(316, 102);
+            this.tevAllUsers.Margin = new System.Windows.Forms.Padding(2);
             this.tevAllUsers.Name = "tevAllUsers";
             this.tevAllUsers.ShowLines = false;
             this.tevAllUsers.ShowPlusMinus = false;
@@ -323,7 +327,7 @@
             // label11
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(379, 46);
+            this.label11.Location = new System.Drawing.Point(313, 46);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(259, 41);
@@ -335,7 +339,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(419, 11);
+            this.label10.Location = new System.Drawing.Point(348, 11);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(188, 26);
@@ -447,7 +451,7 @@
             // btnSearchUser
             // 
             this.btnSearchUser.Location = new System.Drawing.Point(200, 91);
-            this.btnSearchUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSearchUser.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearchUser.Name = "btnSearchUser";
             this.btnSearchUser.Size = new System.Drawing.Size(56, 29);
             this.btnSearchUser.TabIndex = 2;
@@ -458,7 +462,7 @@
             // txtInputUserId
             // 
             this.txtInputUserId.Location = new System.Drawing.Point(112, 93);
-            this.txtInputUserId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtInputUserId.Margin = new System.Windows.Forms.Padding(2);
             this.txtInputUserId.Name = "txtInputUserId";
             this.txtInputUserId.Size = new System.Drawing.Size(76, 27);
             this.txtInputUserId.TabIndex = 1;
@@ -476,9 +480,9 @@
             // tpEditUser
             // 
             this.tpEditUser.Location = new System.Drawing.Point(4, 31);
-            this.tpEditUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpEditUser.Margin = new System.Windows.Forms.Padding(2);
             this.tpEditUser.Name = "tpEditUser";
-            this.tpEditUser.Size = new System.Drawing.Size(662, 479);
+            this.tpEditUser.Size = new System.Drawing.Size(585, 479);
             this.tpEditUser.TabIndex = 2;
             this.tpEditUser.Text = "Rediger Bruger";
             this.tpEditUser.UseVisualStyleBackColor = true;
@@ -486,20 +490,64 @@
             // tpDeleteUser
             // 
             this.tpDeleteUser.Location = new System.Drawing.Point(4, 31);
-            this.tpDeleteUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tpDeleteUser.Margin = new System.Windows.Forms.Padding(2);
             this.tpDeleteUser.Name = "tpDeleteUser";
-            this.tpDeleteUser.Size = new System.Drawing.Size(662, 479);
+            this.tpDeleteUser.Size = new System.Drawing.Size(585, 479);
             this.tpDeleteUser.TabIndex = 3;
             this.tpDeleteUser.Text = "Slet Bruger";
             this.tpDeleteUser.UseVisualStyleBackColor = true;
+            // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(427, 4);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 9;
+            this.btnBack.Text = "Tilbage";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // lblLoggedInUser
+            // 
+            this.lblLoggedInUser.AutoSize = true;
+            this.lblLoggedInUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLoggedInUser.Location = new System.Drawing.Point(65, 7);
+            this.lblLoggedInUser.Name = "lblLoggedInUser";
+            this.lblLoggedInUser.Size = new System.Drawing.Size(17, 16);
+            this.lblLoggedInUser.TabIndex = 8;
+            this.lblLoggedInUser.Text = "...";
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.Location = new System.Drawing.Point(509, 4);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(75, 23);
+            this.btnLogout.TabIndex = 7;
+            this.btnLogout.Text = "Log ud";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(12, 7);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(51, 16);
+            this.label14.TabIndex = 6;
+            this.label14.Text = "Bruger:";
             // 
             // UserManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(692, 512);
+            this.ClientSize = new System.Drawing.Size(594, 543);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.lblLoggedInUser);
+            this.Controls.Add(this.btnLogout);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserManagement";
             this.Text = "UserManagement";
             this.Load += new System.EventHandler(this.UserManagement_Load);
@@ -509,6 +557,7 @@
             this.tpViewUser.ResumeLayout(false);
             this.tpViewUser.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -552,5 +601,9 @@
         private System.Windows.Forms.Label lblButik22;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblDepartment;
+        private System.Windows.Forms.Button btnBack;
+        private System.Windows.Forms.Label lblLoggedInUser;
+        private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Label label14;
     }
 }

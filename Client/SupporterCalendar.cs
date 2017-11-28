@@ -19,7 +19,7 @@ namespace Client
             InitializeComponent();
 
             User = user;
-
+            lblUserLoggedIn.Text = User.FirstName + " " + User.LastName;
             dgvSupporterCalendar.AllowUserToResizeColumns = false;
             dgvSupporterCalendar.AllowUserToResizeRows = false;
 
@@ -49,6 +49,11 @@ namespace Client
             Login login = new Login();
             login.Show();
             this.Close();
+        }
+
+        private void LoadCalendar()
+        {
+
         }
     }
 }

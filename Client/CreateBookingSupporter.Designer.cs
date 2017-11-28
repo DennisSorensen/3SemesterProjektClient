@@ -43,18 +43,18 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 33);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(61, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 25);
+            this.label1.Size = new System.Drawing.Size(154, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Opret opgave";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 87);
+            this.label2.Location = new System.Drawing.Point(11, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(50, 13);
@@ -64,7 +64,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(51, 112);
+            this.label3.Location = new System.Drawing.Point(11, 112);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
@@ -74,7 +74,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(43, 147);
+            this.label4.Location = new System.Drawing.Point(11, 150);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(75, 13);
@@ -84,7 +84,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(46, 174);
+            this.label5.Location = new System.Drawing.Point(11, 174);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(67, 13);
@@ -94,40 +94,41 @@
             // cbTaskStatDate
             // 
             this.cbTaskStatDate.FormattingEnabled = true;
-            this.cbTaskStatDate.Location = new System.Drawing.Point(124, 87);
+            this.cbTaskStatDate.Location = new System.Drawing.Point(88, 87);
             this.cbTaskStatDate.Margin = new System.Windows.Forms.Padding(2);
             this.cbTaskStatDate.Name = "cbTaskStatDate";
-            this.cbTaskStatDate.Size = new System.Drawing.Size(92, 21);
+            this.cbTaskStatDate.Size = new System.Drawing.Size(145, 21);
             this.cbTaskStatDate.TabIndex = 5;
             // 
             // cbTaskEndDate
             // 
             this.cbTaskEndDate.FormattingEnabled = true;
-            this.cbTaskEndDate.Location = new System.Drawing.Point(124, 112);
+            this.cbTaskEndDate.Location = new System.Drawing.Point(88, 112);
             this.cbTaskEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.cbTaskEndDate.Name = "cbTaskEndDate";
-            this.cbTaskEndDate.Size = new System.Drawing.Size(92, 21);
+            this.cbTaskEndDate.Size = new System.Drawing.Size(145, 21);
             this.cbTaskEndDate.TabIndex = 6;
             // 
             // txtTaskName
             // 
-            this.txtTaskName.Location = new System.Drawing.Point(134, 147);
+            this.txtTaskName.Location = new System.Drawing.Point(88, 147);
             this.txtTaskName.Margin = new System.Windows.Forms.Padding(2);
             this.txtTaskName.Name = "txtTaskName";
-            this.txtTaskName.Size = new System.Drawing.Size(76, 20);
+            this.txtTaskName.Size = new System.Drawing.Size(145, 20);
             this.txtTaskName.TabIndex = 7;
             // 
             // txtTaskDescription
             // 
-            this.txtTaskDescription.Location = new System.Drawing.Point(134, 174);
+            this.txtTaskDescription.Location = new System.Drawing.Point(88, 174);
             this.txtTaskDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTaskDescription.Multiline = true;
             this.txtTaskDescription.Name = "txtTaskDescription";
-            this.txtTaskDescription.Size = new System.Drawing.Size(76, 20);
+            this.txtTaskDescription.Size = new System.Drawing.Size(145, 69);
             this.txtTaskDescription.TabIndex = 8;
             // 
             // btnCreateTask
             // 
-            this.btnCreateTask.Location = new System.Drawing.Point(92, 229);
+            this.btnCreateTask.Location = new System.Drawing.Point(92, 261);
             this.btnCreateTask.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreateTask.Name = "btnCreateTask";
             this.btnCreateTask.Size = new System.Drawing.Size(85, 41);
