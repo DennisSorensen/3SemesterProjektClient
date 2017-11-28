@@ -19,6 +19,13 @@ namespace Client
 
             User = user;
             lblUserLoggedIn.Text = User.FirstName + " " + User.LastName;
+
+
+            ListViewItem item = new ListViewItem();
+            item.Text = "9:00";
+            item.SubItems.Add("SubItem");
+            ListViewSupport.Items.Add(item);
+
         }
 
         private void SupporterCalendar_Load(object sender, EventArgs e)
@@ -41,9 +48,6 @@ namespace Client
 
         private void LoadCalendar()
         {
-        ListViewItem item = new ListViewItem();
-            item.Text = "9:00";
-            item.SubItems.Add("");
 
         }
 
