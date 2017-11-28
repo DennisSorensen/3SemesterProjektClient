@@ -12,9 +12,11 @@ namespace Client
 {
     public partial class AdminClientFront : Form
     {
-        public AdminClientFront()
+        UserServiceReference.User User;
+        public AdminClientFront(UserServiceReference.User user)
         {
             InitializeComponent();
+            User = user;
         }
         private void btnUserManagement_Click_1(object sender, EventArgs e)
         {
@@ -28,6 +30,13 @@ namespace Client
             this.Hide();
             CalendarManagement cm = new CalendarManagement();
             cm.Show();
+        }
+
+        private void btnLogUd_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

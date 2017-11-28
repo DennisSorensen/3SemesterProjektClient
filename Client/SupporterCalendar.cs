@@ -13,10 +13,12 @@ namespace Client
     public partial class SupporterCalendar : Form
     {
         DataTable table = new DataTable();
-
-        public SupporterCalendar()
+        UserServiceReference.User User;
+        public SupporterCalendar(UserServiceReference.User user)
         {
             InitializeComponent();
+
+            User = user;
 
             dgvSupporterCalendar.AllowUserToResizeColumns = false;
             dgvSupporterCalendar.AllowUserToResizeRows = false;
@@ -34,6 +36,12 @@ namespace Client
         private void SupporterCalendar_Load(object sender, EventArgs e)
         {
             dgvSupporterCalendar.DataSource = table;
+        }
+
+        private void btnOpretTask_Click(object sender, EventArgs e)
+        {
+            CreateBookingSupporter createBookingSupporter = new CreateBookingSupporter();
+            createBookingSupporter.Show();
         }
     }
 }

@@ -16,5 +16,19 @@ namespace Client
         {
             InitializeComponent();
         }
+
+        private void btnAdminFront_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            AdminClientFront adminClientFront = new AdminClientFront();
+            adminClientFront.Show();
+        }
+
+        private void btnSupportFront_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SupporterCalendar supporterCalendar = new SupporterCalendar();
+            supporterCalendar.Show();
+        }
     }
 }

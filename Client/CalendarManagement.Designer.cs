@@ -34,7 +34,6 @@
             this.tevAllSupport = new System.Windows.Forms.TreeView();
             this.lblHelptxt2 = new System.Windows.Forms.Label();
             this.lblHelptxt1 = new System.Windows.Forms.Label();
-            this.listAllSupport = new System.Windows.Forms.ListBox();
             this.lblTitelSuppList = new System.Windows.Forms.Label();
             this.btnCreateCal = new System.Windows.Forms.Button();
             this.tabViewCal = new System.Windows.Forms.TabPage();
@@ -70,7 +69,6 @@
             this.tabCreateCal.Controls.Add(this.tevAllSupport);
             this.tabCreateCal.Controls.Add(this.lblHelptxt2);
             this.tabCreateCal.Controls.Add(this.lblHelptxt1);
-            this.tabCreateCal.Controls.Add(this.listAllSupport);
             this.tabCreateCal.Controls.Add(this.lblTitelSuppList);
             this.tabCreateCal.Controls.Add(this.btnCreateCal);
             this.tabCreateCal.Location = new System.Drawing.Point(4, 31);
@@ -93,7 +91,7 @@
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
-            this.tevAllSupport.Size = new System.Drawing.Size(176, 136);
+            this.tevAllSupport.Size = new System.Drawing.Size(288, 136);
             this.tevAllSupport.TabIndex = 10;
             // 
             // lblHelptxt2
@@ -117,16 +115,6 @@
             this.lblHelptxt1.Size = new System.Drawing.Size(203, 17);
             this.lblHelptxt1.TabIndex = 8;
             this.lblHelptxt1.Text = "Markér den ønskede supporter";
-            // 
-            // listAllSupport
-            // 
-            this.listAllSupport.FormattingEnabled = true;
-            this.listAllSupport.ItemHeight = 22;
-            this.listAllSupport.Location = new System.Drawing.Point(416, 75);
-            this.listAllSupport.Margin = new System.Windows.Forms.Padding(2);
-            this.listAllSupport.Name = "listAllSupport";
-            this.listAllSupport.Size = new System.Drawing.Size(166, 136);
-            this.listAllSupport.TabIndex = 7;
             // 
             // lblTitelSuppList
             // 
@@ -264,6 +252,5 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView tevAllSupport;
-        private System.Windows.Forms.ListBox listAllSupport;
     }
 }

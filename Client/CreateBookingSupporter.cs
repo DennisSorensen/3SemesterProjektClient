@@ -14,25 +14,24 @@ namespace Client
     {
         BookingService bookingService = new BookingService();
         CalendarService calendarService = new CalendarService();
+        UserServiceReference.User User;
 
-        int userId = 2;
-
-       public CreateBookingSupporter(/*int userId*/)
+       public CreateBookingSupporter(UserServiceReference.User user)
         {
             InitializeComponent();
-            //this.userId = userId;
+            User = user;
         }
 
         private void btnCreateTask_Click(object sender, EventArgs e)
         {
             BookingServiceReference.SupportTask supportTask = new BookingServiceReference.SupportTask();
+            supportTask.User_Id = User.Id;
             supportTask.StartDate = Convert.ToDateTime(cbTaskStatDate.Text);
             supportTask.EndDate = Convert.ToDateTime(cbTaskEndDate.Text);
             supportTask.Name = txtTaskName.Text;
             supportTask.Description = txtTaskDescription.Text;
-            CalendarServiceReference.Calendar calendar = calendarService.Get(userId);
+            CalendarServiceReference.Calendar calendar = calendarService.Get(User.Id);
             supportTask.Calendar_Id = calendar.Id;
-            supportTask.User_Id = userId;
             supportTask.BookingType = "Task";
 
             bookingService.CreateTask(supportTask);

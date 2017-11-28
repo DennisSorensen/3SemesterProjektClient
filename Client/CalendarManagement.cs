@@ -18,10 +18,13 @@ namespace Client
         CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
         DataTable table = new DataTable();
         string Tid;
-        public CalendarManagement()
+        UserServiceReference.User User;
+        public CalendarManagement(UserServiceReference.User user)
         {
             InitializeComponent();
-            
+
+            User = user;
+
             dgvSupportCalendar.AllowUserToResizeColumns = false;
             dgvSupportCalendar.AllowUserToResizeRows = false;
             table.Columns.Add("Tid", typeof(string));
