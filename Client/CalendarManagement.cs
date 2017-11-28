@@ -15,9 +15,11 @@ namespace Client
     {
         UserService userService = new UserService();
         CalendarService calendarService = new CalendarService();
+        BookingService bookingService = new BookingService();
+
         CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
-        DataTable table = new DataTable();
-        string Tid;
+        //DataTable table = new DataTable();
+        //string Tid;
         UserServiceReference.User User;
         public CalendarManagement(UserServiceReference.User user)
         {
@@ -25,8 +27,9 @@ namespace Client
 
             User = user;
             lblLoggedInUser.Text = User.FirstName + " " + User.LastName;
-            dgvSupportCalendar.AllowUserToResizeColumns = false;
-            dgvSupportCalendar.AllowUserToResizeRows = false;
+            //dgvSupportCalendar.AllowUserToResizeColumns = false;
+            //dgvSupportCalendar.AllowUserToResizeRows = false;
+            /*
             table.Columns.Add("Tid", typeof(string));
             table.Columns.Add("Mandag", typeof(string));
             table.Columns.Add("Tirsdag", typeof(string));
@@ -35,6 +38,7 @@ namespace Client
             table.Columns.Add("Fredag", typeof(string));
             table.Columns.Add("Lørdag", typeof(string));
             table.Columns.Add("Søndag", typeof(string));
+            */
             SupporterList();
 
         }
@@ -60,7 +64,7 @@ namespace Client
             }
             else if(e.TabPageIndex == 1)
             {
-                dgvSupportCalendar.DataSource = table;
+                //dgvSupportCalendar.DataSource = table;
             }
 
         }
@@ -82,7 +86,32 @@ namespace Client
 
         private void btnFindCalendar_Click(object sender, EventArgs e)
         {
+            int userId = Convert.ToInt32(txtUserId.Text); //Laver bruger id om til en int
+            CalendarServiceReference.Calendar calendar = calendarService.Get(userId); //Finder kalender med bruger id
+            
+            //Henter de tre forskellige bookinger, med det ovenstående kalender id
+            bookingService.GetAllReadyToGo(calendar.Id);
+            bookingService.GetAllSupportBooking(calendar.Id);
+            bookingService.GetAllSupportTask(calendar.Id);
 
+            //Skal sorterer de forskellige bookings
+
+            //Opret en listView
+            ListView listView = lvViewCalendar;
+
+            //Smide booking ind i listViewItem
+            ListViewItem item = new ListViewItem();
+            item.Text = "9:00";
+            item.SubItems.Add("Hej");
+            item.SubItems.Add("med");
+
+            ListViewItem item2 = new ListViewItem();
+            item2.Text = "10:00";
+            item2.SubItems.Add("Hej2");
+            item2.SubItems.Add("med2");
+
+            listView.Items.Add(item);
+            listView.Items.Add(item2);
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
