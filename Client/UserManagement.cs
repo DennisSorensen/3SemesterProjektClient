@@ -59,7 +59,8 @@ namespace Client
                                                                          Role = cbUserRole.Text.ToString(),
                                                                          FirstName = tbUserFirstName.Text.ToString(),
                                                                          LastName = tbUserLastName.Text.ToString(),
-                                                                         Password = tbPassword.Text.ToString()
+                                                                         Password = tbPassword.Text.ToString(),
+                                                                         Butik = txtButik.Text.ToString()
                                                                         };
 
             //Messagebox til og fortælle om bruger er oprettet eller ej
@@ -114,6 +115,7 @@ namespace Client
                 lblFirstName.Text = user.FirstName;
                 lblLastName.Text = user.LastName;
                 lblPassword.Text = user.Password;
+                lblButik22.Text = user.Butik;
             }
             else
             {
@@ -158,6 +160,7 @@ namespace Client
             lblFirstName.Text = user.FirstName;
             lblLastName.Text = user.LastName;
             lblPassword.Text = user.Password;
+            lblButik22.Text = user.Butik;
         }
         
     }
