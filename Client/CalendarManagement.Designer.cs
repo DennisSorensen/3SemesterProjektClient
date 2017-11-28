@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCreateCal = new System.Windows.Forms.TabPage();
             this.tevAllSupport = new System.Windows.Forms.TreeView();
@@ -98,10 +98,10 @@
             this.tevAllSupport.Location = new System.Drawing.Point(33, 92);
             this.tevAllSupport.Margin = new System.Windows.Forms.Padding(4);
             this.tevAllSupport.Name = "tevAllSupport";
-            treeNode2.Name = "TreeViewAllSupport";
-            treeNode2.Text = "TreeViewAllSupport";
+            treeNode3.Name = "TreeViewAllSupport";
+            treeNode3.Text = "TreeViewAllSupport";
             this.tevAllSupport.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode3});
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
@@ -178,6 +178,7 @@
             this.columnHeader6,
             this.columnHeader7,
             this.columnHeader8});
+            this.lvViewCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvViewCalendar.Location = new System.Drawing.Point(7, 65);
             this.lvViewCalendar.Name = "lvViewCalendar";
             this.lvViewCalendar.Size = new System.Drawing.Size(1017, 361);
