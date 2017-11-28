@@ -28,28 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvSupporterCalendar = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.lblUserLoggedIn = new System.Windows.Forms.Label();
             this.btnOpretTask = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.tid = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupporterCalendar)).BeginInit();
+            this.ListViewSupport = new System.Windows.Forms.ListView();
+            this.time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.monday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tuesday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.wednesday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.thursday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.friday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.saturday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.sundag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // dgvSupporterCalendar
-            // 
-            this.dgvSupporterCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvSupporterCalendar.Location = new System.Drawing.Point(9, 61);
-            this.dgvSupporterCalendar.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvSupporterCalendar.Name = "dgvSupporterCalendar";
-            this.dgvSupporterCalendar.RowHeadersVisible = false;
-            this.dgvSupporterCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dgvSupporterCalendar.RowTemplate.Height = 24;
-            this.dgvSupporterCalendar.Size = new System.Drawing.Size(781, 353);
-            this.dgvSupporterCalendar.TabIndex = 0;
             // 
             // label1
             // 
@@ -95,56 +87,88 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // listView1
+            // ListViewSupport
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.tid,
-            this.columnHeader2});
-            this.listView1.Location = new System.Drawing.Point(17, 69);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(758, 324);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
+            this.ListViewSupport.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.time,
+            this.monday,
+            this.tuesday,
+            this.wednesday,
+            this.thursday,
+            this.friday,
+            this.saturday,
+            this.sundag});
+            this.ListViewSupport.Location = new System.Drawing.Point(12, 53);
+            this.ListViewSupport.Name = "ListViewSupport";
+            this.ListViewSupport.Size = new System.Drawing.Size(775, 344);
+            this.ListViewSupport.TabIndex = 5;
+            this.ListViewSupport.UseCompatibleStateImageBehavior = false;
+            this.ListViewSupport.View = System.Windows.Forms.View.Details;
             // 
-            // tid
+            // time
             // 
-            this.tid.Text = "Tid";
+            this.time.Text = "Tid";
             // 
-            // columnHeader2
+            // monday
             // 
-            this.columnHeader2.Text = "Mandag";
+            this.monday.Text = "Mandag";
+            // 
+            // tuesday
+            // 
+            this.tuesday.Text = "Tirsdag";
+            // 
+            // wednesday
+            // 
+            this.wednesday.Text = "Onsdag";
+            // 
+            // thursday
+            // 
+            this.thursday.Text = "Torsdag";
+            // 
+            // friday
+            // 
+            this.friday.Text = "Fridag";
+            // 
+            // saturday
+            // 
+            this.saturday.Text = "Lørdag";
+            // 
+            // sundag
+            // 
+            this.sundag.Text = "Søndag";
             // 
             // SupporterCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 424);
-            this.Controls.Add(this.listView1);
+            this.ClientSize = new System.Drawing.Size(797, 409);
+            this.Controls.Add(this.ListViewSupport);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnOpretTask);
             this.Controls.Add(this.lblUserLoggedIn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgvSupporterCalendar);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SupporterCalendar";
             this.Text = "SupporterCalendar";
             this.Load += new System.EventHandler(this.SupporterCalendar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvSupporterCalendar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvSupporterCalendar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUserLoggedIn;
         private System.Windows.Forms.Button btnOpretTask;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.ListView listView1;
-        private System.Windows.Forms.ColumnHeader tid;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ListView ListViewSupport;
+        private System.Windows.Forms.ColumnHeader time;
+        private System.Windows.Forms.ColumnHeader monday;
+        private System.Windows.Forms.ColumnHeader tuesday;
+        private System.Windows.Forms.ColumnHeader wednesday;
+        private System.Windows.Forms.ColumnHeader thursday;
+        private System.Windows.Forms.ColumnHeader friday;
+        private System.Windows.Forms.ColumnHeader saturday;
+        private System.Windows.Forms.ColumnHeader sundag;
     }
 }
