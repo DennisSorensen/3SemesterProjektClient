@@ -104,7 +104,7 @@ namespace Client
             item.Text = "9:00";
             item.SubItems.Add("Hej");
             item.SubItems.Add("med");
-
+            
             ListViewItem item2 = new ListViewItem();
             item2.Text = "10:00";
             item2.SubItems.Add("Hej2");
@@ -112,6 +112,7 @@ namespace Client
 
             listView.Items.Add(item);
             listView.Items.Add(item2);
+            
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
