@@ -19,19 +19,19 @@ namespace Client
             bookingService.CreateSupportTask(supportTask);
         }
 
-        public IEnumerable<BookingServiceReference.SupportTask> GetAllSupportTask(int userId)
+        public IEnumerable<BookingServiceReference.SupportTask> GetAllSupportTask(int calendarId)
         {
-            return bookingService.GetAllSupportTask(userId);
+            return bookingService.GetAllSupportTask(calendarId);
         }
 
-        public IEnumerable<BookingServiceReference.SupportBooking> GetAllSupportBooking(int userId)
+        public IEnumerable<BookingServiceReference.SupportBooking> GetAllSupportBooking(int calendarId)
         {
-            return bookingService.GetAllSupportBooking(userId);
+            return bookingService.GetAllSupportBooking(calendarId);
         }
 
-        public IEnumerable<BookingServiceReference.ReadyToGo> GetAllReadyToGo(int userId)
+        public IEnumerable<BookingServiceReference.ReadyToGo> GetAllReadyToGo(int calendarId)
         {
-            return bookingService.GetAllReadyToGo(userId);
+            return bookingService.GetAllReadyToGo(calendarId);
         }
     }
 }
