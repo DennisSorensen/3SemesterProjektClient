@@ -13,11 +13,13 @@ namespace Client
     public partial class UserManagement : Form
     {
         UserService userService = new UserService();
-
-        public UserManagement()
+        UserServiceReference.User User;
+        
+        public UserManagement(UserServiceReference.User user)
         {
             InitializeComponent();
-            
+            User = user;
+
         }
 
         
@@ -60,7 +62,7 @@ namespace Client
                                                                          FirstName = tbUserFirstName.Text.ToString(),
                                                                          LastName = tbUserLastName.Text.ToString(),
                                                                          Password = tbPassword.Text.ToString(),
-                                                                         Butik = txtButik.Text.ToString()
+                                                                         DepartmentId = Convert.ToInt32(txtDepartment.Text)
                                                                         };
 
             //Messagebox til og fortælle om bruger er oprettet eller ej
@@ -115,7 +117,7 @@ namespace Client
                 lblFirstName.Text = user.FirstName;
                 lblLastName.Text = user.LastName;
                 lblPassword.Text = user.Password;
-                lblButik22.Text = user.Butik;
+                lblDepartment.Text = user.DepartmentId.ToString();
             }
             else
             {
@@ -160,7 +162,7 @@ namespace Client
             lblFirstName.Text = user.FirstName;
             lblLastName.Text = user.LastName;
             lblPassword.Text = user.Password;
-            lblButik22.Text = user.Butik;
+            lblDepartment.Text = user.DepartmentId.ToString();
         }
         
     }

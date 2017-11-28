@@ -23,9 +23,6 @@ namespace Client.CalendarServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private int BookingIdField;
-        
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private int IdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -38,19 +35,6 @@ namespace Client.CalendarServiceReference {
             }
             set {
                 this.extensionDataField = value;
-            }
-        }
-        
-        [System.Runtime.Serialization.DataMemberAttribute()]
-        public int BookingId {
-            get {
-                return this.BookingIdField;
-            }
-            set {
-                if ((this.BookingIdField.Equals(value) != true)) {
-                    this.BookingIdField = value;
-                    this.RaisePropertyChanged("BookingId");
-                }
             }
         }
         

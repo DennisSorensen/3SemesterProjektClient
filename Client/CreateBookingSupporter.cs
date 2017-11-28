@@ -35,6 +35,7 @@ namespace Client
             supportTask.BookingType = "Task";
 
             bookingService.CreateTask(supportTask);
+            this.Close();
             
         }
 

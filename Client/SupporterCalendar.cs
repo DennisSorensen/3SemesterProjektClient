@@ -40,8 +40,15 @@ namespace Client
 
         private void btnOpretTask_Click(object sender, EventArgs e)
         {
-            CreateBookingSupporter createBookingSupporter = new CreateBookingSupporter();
+            CreateBookingSupporter createBookingSupporter = new CreateBookingSupporter(User);
             createBookingSupporter.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+            this.Close();
         }
     }
 }

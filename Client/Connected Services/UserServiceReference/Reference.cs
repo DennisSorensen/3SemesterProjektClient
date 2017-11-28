@@ -23,7 +23,7 @@ namespace Client.UserServiceReference {
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string ButikField;
+        private int DepartmentIdField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
         private string FirstNameField;
@@ -51,14 +51,14 @@ namespace Client.UserServiceReference {
         }
         
         [System.Runtime.Serialization.DataMemberAttribute()]
-        public string Butik {
+        public int DepartmentId {
             get {
-                return this.ButikField;
+                return this.DepartmentIdField;
             }
             set {
-                if ((object.ReferenceEquals(this.ButikField, value) != true)) {
-                    this.ButikField = value;
-                    this.RaisePropertyChanged("Butik");
+                if ((this.DepartmentIdField.Equals(value) != true)) {
+                    this.DepartmentIdField = value;
+                    this.RaisePropertyChanged("DepartmentId");
                 }
             }
         }
@@ -138,6 +138,67 @@ namespace Client.UserServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="Department", Namespace="http://schemas.datacontract.org/2004/07/WCF.ModelLayer")]
+    [System.SerializableAttribute()]
+    public partial class Department : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IdField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string NameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int Id {
+            get {
+                return this.IdField;
+            }
+            set {
+                if ((this.IdField.Equals(value) != true)) {
+                    this.IdField = value;
+                    this.RaisePropertyChanged("Id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string Name {
+            get {
+                return this.NameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.NameField, value) != true)) {
+                    this.NameField = value;
+                    this.RaisePropertyChanged("Name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="UserServiceReference.IUserService")]
     public interface IUserService {
@@ -165,6 +226,12 @@ namespace Client.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllSupporters", ReplyAction="http://tempuri.org/IUserService/GetAllSupportersResponse")]
         System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllSupportersAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllDepartments", ReplyAction="http://tempuri.org/IUserService/GetAllDepartmentsResponse")]
+        Client.UserServiceReference.Department[] GetAllDepartments();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllDepartments", ReplyAction="http://tempuri.org/IUserService/GetAllDepartmentsResponse")]
+        System.Threading.Tasks.Task<Client.UserServiceReference.Department[]> GetAllDepartmentsAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -224,6 +291,14 @@ namespace Client.UserServiceReference {
         
         public System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllSupportersAsync() {
             return base.Channel.GetAllSupportersAsync();
+        }
+        
+        public Client.UserServiceReference.Department[] GetAllDepartments() {
+            return base.Channel.GetAllDepartments();
+        }
+        
+        public System.Threading.Tasks.Task<Client.UserServiceReference.Department[]> GetAllDepartmentsAsync() {
+            return base.Channel.GetAllDepartmentsAsync();
         }
     }
 }

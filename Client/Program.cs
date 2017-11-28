@@ -16,8 +16,7 @@ namespace Client
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new AdminClientFront());
-            Application.Run(new CreateBookingSupporter());
+            Application.Run(new Login());
         }
     }
 }

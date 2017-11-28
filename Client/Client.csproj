@@ -143,6 +143,9 @@
     <None Include="Connected Services\BookingServiceReference\BookingService11.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\BookingServiceReference\Client.BookingServiceReference.SupportBooking.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\CalendarServiceReference\CalendarService.wsdl" />
     <None Include="Connected Services\CalendarServiceReference\CalendarService.xsd">
       <SubType>Designer</SubType>
@@ -154,6 +157,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\CalendarServiceReference\Client.CalendarServiceReference.Calendar.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\UserServiceReference\Client.UserServiceReference.Department.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\UserServiceReference\Client.UserServiceReference.User.datasource">

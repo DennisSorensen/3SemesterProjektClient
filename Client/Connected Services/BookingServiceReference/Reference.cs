@@ -327,6 +327,12 @@ namespace Client.BookingServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/CreateReadyToGo", ReplyAction="http://tempuri.org/IBookingService/CreateReadyToGoResponse")]
         System.Threading.Tasks.Task CreateReadyToGoAsync(Client.BookingServiceReference.ReadyToGo readyToGo);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetSupportBooking", ReplyAction="http://tempuri.org/IBookingService/GetSupportBookingResponse")]
+        Client.BookingServiceReference.SupportBooking GetSupportBooking(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetSupportBooking", ReplyAction="http://tempuri.org/IBookingService/GetSupportBookingResponse")]
+        System.Threading.Tasks.Task<Client.BookingServiceReference.SupportBooking> GetSupportBookingAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -378,6 +384,14 @@ namespace Client.BookingServiceReference {
         
         public System.Threading.Tasks.Task CreateReadyToGoAsync(Client.BookingServiceReference.ReadyToGo readyToGo) {
             return base.Channel.CreateReadyToGoAsync(readyToGo);
+        }
+        
+        public Client.BookingServiceReference.SupportBooking GetSupportBooking(int id) {
+            return base.Channel.GetSupportBooking(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.BookingServiceReference.SupportBooking> GetSupportBookingAsync(int id) {
+            return base.Channel.GetSupportBookingAsync(id);
         }
     }
 }

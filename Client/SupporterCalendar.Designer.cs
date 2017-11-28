@@ -32,6 +32,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lblUserLoggedIn = new System.Windows.Forms.Label();
             this.btnOpretTask = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupporterCalendar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             // 
             this.dgvSupporterCalendar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSupporterCalendar.Location = new System.Drawing.Point(9, 61);
-            this.dgvSupporterCalendar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvSupporterCalendar.Margin = new System.Windows.Forms.Padding(2);
             this.dgvSupporterCalendar.Name = "dgvSupporterCalendar";
             this.dgvSupporterCalendar.RowHeadersVisible = false;
             this.dgvSupporterCalendar.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
@@ -71,7 +72,8 @@
             // 
             // btnOpretTask
             // 
-            this.btnOpretTask.Location = new System.Drawing.Point(653, 12);
+            this.btnOpretTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOpretTask.Location = new System.Drawing.Point(547, 11);
             this.btnOpretTask.Name = "btnOpretTask";
             this.btnOpretTask.Size = new System.Drawing.Size(117, 33);
             this.btnOpretTask.TabIndex = 3;
@@ -79,16 +81,28 @@
             this.btnOpretTask.UseVisualStyleBackColor = true;
             this.btnOpretTask.Click += new System.EventHandler(this.btnOpretTask_Click);
             // 
+            // btnLogout
+            // 
+            this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Location = new System.Drawing.Point(670, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(117, 33);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "Log ud";
+            this.btnLogout.UseVisualStyleBackColor = true;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
+            // 
             // SupporterCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 424);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnOpretTask);
             this.Controls.Add(this.lblUserLoggedIn);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvSupporterCalendar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SupporterCalendar";
             this.Text = "SupporterCalendar";
             this.Load += new System.EventHandler(this.SupporterCalendar_Load);
@@ -104,5 +118,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lblUserLoggedIn;
         private System.Windows.Forms.Button btnOpretTask;
+        private System.Windows.Forms.Button btnLogout;
     }
 }

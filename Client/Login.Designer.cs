@@ -28,49 +28,59 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAdminFront = new System.Windows.Forms.Button();
-            this.btnSupportFront = new System.Windows.Forms.Button();
+            this.tevAllUsers = new System.Windows.Forms.TreeView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnAdminFront
+            // tevAllUsers
             // 
-            this.btnAdminFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdminFront.Location = new System.Drawing.Point(131, 255);
-            this.btnAdminFront.Name = "btnAdminFront";
-            this.btnAdminFront.Size = new System.Drawing.Size(143, 59);
-            this.btnAdminFront.TabIndex = 0;
-            this.btnAdminFront.Text = "Admin Front";
-            this.btnAdminFront.UseVisualStyleBackColor = true;
-            this.btnAdminFront.Click += new System.EventHandler(this.btnAdminFront_Click);
+            this.tevAllUsers.Location = new System.Drawing.Point(27, 39);
+            this.tevAllUsers.Name = "tevAllUsers";
+            this.tevAllUsers.Size = new System.Drawing.Size(332, 210);
+            this.tevAllUsers.TabIndex = 2;
             // 
-            // btnSupportFront
+            // label1
             // 
-            this.btnSupportFront.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSupportFront.Location = new System.Drawing.Point(131, 320);
-            this.btnSupportFront.Name = "btnSupportFront";
-            this.btnSupportFront.Size = new System.Drawing.Size(143, 59);
-            this.btnSupportFront.TabIndex = 1;
-            this.btnSupportFront.Text = "Support Front";
-            this.btnSupportFront.UseVisualStyleBackColor = true;
-            this.btnSupportFront.Click += new System.EventHandler(this.btnSupportFront_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(131, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(136, 24);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Vælg en user";
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.Location = new System.Drawing.Point(146, 290);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(106, 38);
+            this.btnLogin.TabIndex = 4;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.UseVisualStyleBackColor = true;
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(413, 387);
-            this.Controls.Add(this.btnSupportFront);
-            this.Controls.Add(this.btnAdminFront);
+            this.Controls.Add(this.btnLogin);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.tevAllUsers);
             this.Name = "Login";
             this.Text = "Login";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnAdminFront;
-        private System.Windows.Forms.Button btnSupportFront;
+        private System.Windows.Forms.TreeView tevAllUsers;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnLogin;
     }
 }
 

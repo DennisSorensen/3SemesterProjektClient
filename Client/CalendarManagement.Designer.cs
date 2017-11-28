@@ -43,6 +43,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabEditCal = new System.Windows.Forms.TabPage();
             this.tabDeleteCal = new System.Windows.Forms.TabPage();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.lblViewCalUserName = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabCreateCal.SuspendLayout();
             this.tabViewCal.SuspendLayout();
@@ -56,11 +60,11 @@
             this.tabControl1.Controls.Add(this.tabEditCal);
             this.tabControl1.Controls.Add(this.tabDeleteCal);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(1, 2);
+            this.tabControl1.Location = new System.Drawing.Point(1, 40);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(2);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(822, 386);
+            this.tabControl1.Size = new System.Drawing.Size(824, 388);
             this.tabControl1.TabIndex = 0;
             this.tabControl1.Selected += new System.Windows.Forms.TabControlEventHandler(this.tabControl1_Selected);
             // 
@@ -75,7 +79,7 @@
             this.tabCreateCal.Margin = new System.Windows.Forms.Padding(2);
             this.tabCreateCal.Name = "tabCreateCal";
             this.tabCreateCal.Padding = new System.Windows.Forms.Padding(2);
-            this.tabCreateCal.Size = new System.Drawing.Size(814, 351);
+            this.tabCreateCal.Size = new System.Drawing.Size(816, 353);
             this.tabCreateCal.TabIndex = 0;
             this.tabCreateCal.Text = "Opret Kalender";
             this.tabCreateCal.UseVisualStyleBackColor = true;
@@ -141,7 +145,9 @@
             // 
             // tabViewCal
             // 
+            this.tabViewCal.Controls.Add(this.lblViewCalUserName);
             this.tabViewCal.Controls.Add(this.dgvSupportCalendar);
+            this.tabViewCal.Controls.Add(this.label3);
             this.tabViewCal.Controls.Add(this.btnFindCalendar);
             this.tabViewCal.Controls.Add(this.textBox1);
             this.tabViewCal.Controls.Add(this.label1);
@@ -149,7 +155,7 @@
             this.tabViewCal.Margin = new System.Windows.Forms.Padding(2);
             this.tabViewCal.Name = "tabViewCal";
             this.tabViewCal.Padding = new System.Windows.Forms.Padding(2);
-            this.tabViewCal.Size = new System.Drawing.Size(814, 351);
+            this.tabViewCal.Size = new System.Drawing.Size(816, 353);
             this.tabViewCal.TabIndex = 1;
             this.tabViewCal.Text = "Se Kalender";
             this.tabViewCal.UseVisualStyleBackColor = true;
@@ -177,6 +183,7 @@
             this.btnFindCalendar.TabIndex = 2;
             this.btnFindCalendar.Text = "Se Kalender";
             this.btnFindCalendar.UseVisualStyleBackColor = true;
+            this.btnFindCalendar.Click += new System.EventHandler(this.btnFindCalendar_Click);
             // 
             // textBox1
             // 
@@ -184,6 +191,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(100, 28);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "User ID";
             // 
             // label1
             // 
@@ -217,11 +225,49 @@
             this.tabDeleteCal.Text = "Slet Kalender";
             this.tabDeleteCal.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(606, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(304, 12);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 24);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Navn:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(718, 8);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // lblViewCalUserName
+            // 
+            this.lblViewCalUserName.AutoSize = true;
+            this.lblViewCalUserName.Location = new System.Drawing.Point(400, 13);
+            this.lblViewCalUserName.Name = "lblViewCalUserName";
+            this.lblViewCalUserName.Size = new System.Drawing.Size(25, 24);
+            this.lblViewCalUserName.TabIndex = 3;
+            this.lblViewCalUserName.Text = "...";
+            // 
             // CalendarManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(823, 389);
+            this.ClientSize = new System.Drawing.Size(823, 427);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CalendarManagement";
@@ -233,6 +279,7 @@
             this.tabViewCal.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSupportCalendar)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -252,5 +299,9 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TreeView tevAllSupport;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblViewCalUserName;
     }
 }

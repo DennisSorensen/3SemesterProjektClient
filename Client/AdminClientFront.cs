@@ -21,14 +21,14 @@ namespace Client
         private void btnUserManagement_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            UserManagement um = new UserManagement();
+            UserManagement um = new UserManagement(User);
             um.Show();
         }
 
         private void btnCalManagement_Click(object sender, EventArgs e)
         {
             this.Hide();
-            CalendarManagement cm = new CalendarManagement();
+            CalendarManagement cm = new CalendarManagement(User);
             cm.Show();
         }
 
