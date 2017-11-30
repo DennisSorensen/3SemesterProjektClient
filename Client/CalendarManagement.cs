@@ -17,6 +17,12 @@ namespace Client
         CalendarService calendarService = new CalendarService();
         BookingService bookingService = new BookingService();
 
+        DateTime selectedDate = new DateTime();
+
+        //Opret en listView
+        ListView listView = new ListView();
+        
+
         CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
         //DataTable table = new DataTable();
         //string Tid;
@@ -24,6 +30,8 @@ namespace Client
         public CalendarManagement(UserServiceReference.User user)
         {
             InitializeComponent();
+            listView = lvViewCalendar;
+
 
             User = user;
             lblLoggedInUser.Text = User.FirstName + " " + User.LastName;
@@ -96,8 +104,6 @@ namespace Client
 
             //Skal sorterer de forskellige bookings
 
-            //Opret en listView
-            ListView listView = lvViewCalendar;
 
             //Smide booking ind i listViewItem
             ListViewItem item = new ListViewItem();
@@ -128,6 +134,27 @@ namespace Client
             adminClientFront.Show();
             this.Close();
 
+        }
+
+        //Tager den valgte dag, og sætter den ind i selectedDate
+        private void mclDaySelect_DateSelected(object sender, DateRangeEventArgs e)
+        {
+            selectedDate = e.Start;
+
+            //Klader bookingService, og får fat i bookingerne for dagen
+
+            List<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
+
+            //Her smider vi bookinger i den.
+
+            //presenter dem, for de er sorteret i wcf
+            foreach(var booking in bookings)
+            {
+                ListViewItem item = new ListViewItem();
+                string s = string.Format("{0} {1} - {2}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString(), booking.BookingType);
+                item.Text = s;
+                listView.Items.Add(item);
+            }
         }
     }
 }

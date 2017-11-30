@@ -38,6 +38,8 @@
             this.btnCreateCal = new System.Windows.Forms.Button();
             this.tabViewCal = new System.Windows.Forms.TabPage();
             this.lvViewCalendar = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblViewCalUserName = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnFindCalendar = new System.Windows.Forms.Button();
@@ -49,14 +51,7 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.lblLoggedInUser = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mclDaySelect = new System.Windows.Forms.MonthCalendar();
             this.tabControl1.SuspendLayout();
             this.tabCreateCal.SuspendLayout();
             this.tabViewCal.SuspendLayout();
@@ -152,6 +147,7 @@
             // 
             // tabViewCal
             // 
+            this.tabViewCal.Controls.Add(this.mclDaySelect);
             this.tabViewCal.Controls.Add(this.lvViewCalendar);
             this.tabViewCal.Controls.Add(this.lblViewCalUserName);
             this.tabViewCal.Controls.Add(this.label3);
@@ -171,20 +167,23 @@
             // 
             this.lvViewCalendar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
-            this.columnHeader2,
-            this.columnHeader3,
-            this.columnHeader4,
-            this.columnHeader5,
-            this.columnHeader6,
-            this.columnHeader7,
-            this.columnHeader8});
+            this.columnHeader2});
             this.lvViewCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lvViewCalendar.Location = new System.Drawing.Point(7, 65);
+            this.lvViewCalendar.FullRowSelect = true;
+            this.lvViewCalendar.Location = new System.Drawing.Point(342, 65);
             this.lvViewCalendar.Name = "lvViewCalendar";
-            this.lvViewCalendar.Size = new System.Drawing.Size(1017, 361);
+            this.lvViewCalendar.Size = new System.Drawing.Size(405, 361);
             this.lvViewCalendar.TabIndex = 4;
             this.lvViewCalendar.UseCompatibleStateImageBehavior = false;
             this.lvViewCalendar.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "Tid";
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Dag";
             // 
             // lblViewCalUserName
             // 
@@ -303,37 +302,12 @@
             this.btnBack.UseVisualStyleBackColor = true;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // columnHeader1
+            // mclDaySelect
             // 
-            this.columnHeader1.Text = "Tid";
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Mandag";
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "Tirsdag";
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Onsdag";
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Torsdag";
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Fredag";
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "Lørdag";
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Søndag";
+            this.mclDaySelect.Location = new System.Drawing.Point(15, 65);
+            this.mclDaySelect.Name = "mclDaySelect";
+            this.mclDaySelect.TabIndex = 5;
+            this.mclDaySelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mclDaySelect_DateSelected);
             // 
             // CalendarManagement
             // 
@@ -382,11 +356,6 @@
         private System.Windows.Forms.ListView lvViewCalendar;
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
+        private System.Windows.Forms.MonthCalendar mclDaySelect;
     }
 }
