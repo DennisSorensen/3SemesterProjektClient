@@ -232,6 +232,12 @@ namespace Client.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllDepartments", ReplyAction="http://tempuri.org/IUserService/GetAllDepartmentsResponse")]
         System.Threading.Tasks.Task<Client.UserServiceReference.Department[]> GetAllDepartmentsAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllDepSupport", ReplyAction="http://tempuri.org/IUserService/GetAllDepSupportResponse")]
+        Client.UserServiceReference.User[] GetAllDepSupport(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllDepSupport", ReplyAction="http://tempuri.org/IUserService/GetAllDepSupportResponse")]
+        System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllDepSupportAsync(int id);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -299,6 +305,14 @@ namespace Client.UserServiceReference {
         
         public System.Threading.Tasks.Task<Client.UserServiceReference.Department[]> GetAllDepartmentsAsync() {
             return base.Channel.GetAllDepartmentsAsync();
+        }
+        
+        public Client.UserServiceReference.User[] GetAllDepSupport(int id) {
+            return base.Channel.GetAllDepSupport(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllDepSupportAsync(int id) {
+            return base.Channel.GetAllDepSupportAsync(id);
         }
     }
 }

@@ -351,6 +351,12 @@ namespace Client.BookingServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetAllReadyToGo", ReplyAction="http://tempuri.org/IBookingService/GetAllReadyToGoResponse")]
         System.Threading.Tasks.Task<Client.BookingServiceReference.ReadyToGo[]> GetAllReadyToGoAsync(int calendarId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetAllBookingSpecificDay", ReplyAction="http://tempuri.org/IBookingService/GetAllBookingSpecificDayResponse")]
+        Client.BookingServiceReference.ReadyToGo[] GetAllBookingSpecificDay(int calendarId, System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetAllBookingSpecificDay", ReplyAction="http://tempuri.org/IBookingService/GetAllBookingSpecificDayResponse")]
+        System.Threading.Tasks.Task<Client.BookingServiceReference.ReadyToGo[]> GetAllBookingSpecificDayAsync(int calendarId, System.DateTime date);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -434,6 +440,14 @@ namespace Client.BookingServiceReference {
         
         public System.Threading.Tasks.Task<Client.BookingServiceReference.ReadyToGo[]> GetAllReadyToGoAsync(int calendarId) {
             return base.Channel.GetAllReadyToGoAsync(calendarId);
+        }
+        
+        public Client.BookingServiceReference.ReadyToGo[] GetAllBookingSpecificDay(int calendarId, System.DateTime date) {
+            return base.Channel.GetAllBookingSpecificDay(calendarId, date);
+        }
+        
+        public System.Threading.Tasks.Task<Client.BookingServiceReference.ReadyToGo[]> GetAllBookingSpecificDayAsync(int calendarId, System.DateTime date) {
+            return base.Channel.GetAllBookingSpecificDayAsync(calendarId, date);
         }
     }
 }

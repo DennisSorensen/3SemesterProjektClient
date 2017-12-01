@@ -93,4 +93,19 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="GetAllBookingSpecificDay">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="calendarId" type="xs:int" />
+        <xs:element minOccurs="0" name="date" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllBookingSpecificDayResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/WCF.ModelLayer" minOccurs="0" name="GetAllBookingSpecificDayResult" nillable="true" type="q8:ArrayOfReadyToGo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
