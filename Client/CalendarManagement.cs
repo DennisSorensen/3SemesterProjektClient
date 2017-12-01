@@ -106,7 +106,7 @@ namespace Client
 
 
             //Smide booking ind i listViewItem
-            ListViewItem item = new ListViewItem();
+            /*ListViewItem item = new ListViewItem();
             item.Text = "9:00";
             item.SubItems.Add("Hej");
             item.SubItems.Add("med");
@@ -117,7 +117,7 @@ namespace Client
             item2.SubItems.Add("med2");
 
             listView.Items.Add(item);
-            listView.Items.Add(item2);
+            listView.Items.Add(item2);*/
             
         }
 
@@ -140,20 +140,24 @@ namespace Client
         private void mclDaySelect_DateSelected(object sender, DateRangeEventArgs e)
         {
             selectedDate = e.Start;
-
+            int userId = Convert.ToInt32(txtUserId.Text);
             //Klader bookingService, og får fat i bookingerne for dagen
 
-            List<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
+            IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
+
 
             //Her smider vi bookinger i den.
-
+            bookings = bookingService.GetAllBookingSpecificDay(userId, selectedDate);
             //presenter dem, for de er sorteret i wcf
             foreach(var booking in bookings)
             {
                 ListViewItem item = new ListViewItem();
-                string s = string.Format("{0} {1} - {2}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString(), booking.BookingType);
+                string s = string.Format("{0} - {1}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString());
+                string sSub = string.Format("{0}", booking.BookingType);
                 item.Text = s;
+                item.SubItems.Add(sSub);
                 listView.Items.Add(item);
+
             }
         }
     }

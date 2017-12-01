@@ -33,5 +33,10 @@ namespace Client
         {
             return bookingService.GetAllReadyToGo(calendarId);
         }
+
+        public IEnumerable<BookingServiceReference.Booking> GetAllBookingSpecificDay(int calendarId, DateTime date)
+        {
+            return bookingService.GetAllBookingSpecificDay(calendarId, date);
+        }
     }
 }
