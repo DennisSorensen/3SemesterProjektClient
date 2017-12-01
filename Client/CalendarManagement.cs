@@ -140,23 +140,32 @@ namespace Client
         private void mclDaySelect_DateSelected(object sender, DateRangeEventArgs e)
         {
             selectedDate = e.Start;
-            int userId = Convert.ToInt32(txtUserId.Text);
-            //Klader bookingService, og får fat i bookingerne for dagen
-
-            IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
-
-
-            //Her smider vi bookinger i den.
-            bookings = bookingService.GetAllBookingSpecificDay(userId, selectedDate);
-            //presenter dem, for de er sorteret i wcf
-            foreach(var booking in bookings)
+            if (txtUserId.Text != null)
             {
-                ListViewItem item = new ListViewItem();
-                string s = string.Format("{0} - {1}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString());
-                string sSub = string.Format("{0}", booking.BookingType);
-                item.Text = s;
-                item.SubItems.Add(sSub);
-                listView.Items.Add(item);
+                int userId = Convert.ToInt32(txtUserId.Text);
+                //Klader bookingService, og får fat i bookingerne for dagen
+
+                IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
+
+
+                //Her smider vi bookinger i den.
+                bookings = bookingService.GetAllBookingSpecificDay(userId, selectedDate);
+                //presenter dem, for de er sorteret i wcf
+                foreach (var booking in bookings)
+                {
+                    ListViewItem item = new ListViewItem();
+                    string s = string.Format("{0} - {1}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString());
+                    string sSub = string.Format("{0}", booking.BookingType);
+                    item.Text = s;
+                    item.SubItems.Add(sSub);
+                    listView.Items.Add(item);
+
+                }
+            }
+            else
+            {
+
+            }
 
             }
         }
