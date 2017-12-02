@@ -139,15 +139,15 @@ namespace Client
         //Tager den valgte dag, og sætter den ind i selectedDate
         private void mclDaySelect_DateSelected(object sender, DateRangeEventArgs e)
         {
+            int userId;
+            bool result = Int32.TryParse(txtUserId.Text, out userId);
             selectedDate = e.Start;
-            if (txtUserId.Text != null)
+            if (result && txtUserId.Text != null)
             {
-                int userId = Convert.ToInt32(txtUserId.Text);
                 //Klader bookingService, og får fat i bookingerne for dagen
 
                 IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
-
-
+                
                 //Her smider vi bookinger i den.
                 bookings = bookingService.GetAllBookingSpecificDay(userId, selectedDate);
                 //presenter dem, for de er sorteret i wcf
@@ -164,9 +164,8 @@ namespace Client
             }
             else
             {
-
-            }
-
+                string s = string.Format("{0} er ikke et number", txtUserId.Text);
+                MessageBox.Show(s, "Fejl");
             }
         }
     }
