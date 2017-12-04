@@ -208,6 +208,11 @@ namespace Client
                 MessageBox.Show("Fejl kunne ikke hente booking typen", "Booking type fejl");
             }
         }
+
+        private void CalendarManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 

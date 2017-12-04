@@ -33,7 +33,9 @@
             this.btnOpretTask = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.lvViewCalendar = new System.Windows.Forms.ListView();
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
+            this.timeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.bookingTypeHeader = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.mclDaySelect = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // label1
@@ -61,7 +63,7 @@
             // btnOpretTask
             // 
             this.btnOpretTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOpretTask.Location = new System.Drawing.Point(547, 14);
+            this.btnOpretTask.Location = new System.Drawing.Point(43, 225);
             this.btnOpretTask.Name = "btnOpretTask";
             this.btnOpretTask.Size = new System.Drawing.Size(117, 33);
             this.btnOpretTask.TabIndex = 3;
@@ -72,7 +74,7 @@
             // btnLogout
             // 
             this.btnLogout.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.Location = new System.Drawing.Point(670, 14);
+            this.btnLogout.Location = new System.Drawing.Point(43, 264);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(117, 33);
             this.btnLogout.TabIndex = 4;
@@ -82,24 +84,44 @@
             // 
             // lvViewCalendar
             // 
-            this.lvViewCalendar.Location = new System.Drawing.Point(213, 78);
+            this.lvViewCalendar.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.timeHeader,
+            this.bookingTypeHeader});
+            this.lvViewCalendar.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvViewCalendar.FullRowSelect = true;
+            this.lvViewCalendar.Location = new System.Drawing.Point(196, 53);
+            this.lvViewCalendar.Margin = new System.Windows.Forms.Padding(2);
             this.lvViewCalendar.Name = "lvViewCalendar";
             this.lvViewCalendar.Size = new System.Drawing.Size(206, 294);
-            this.lvViewCalendar.TabIndex = 5;
+            this.lvViewCalendar.TabIndex = 7;
             this.lvViewCalendar.UseCompatibleStateImageBehavior = false;
+            this.lvViewCalendar.View = System.Windows.Forms.View.Details;
+            this.lvViewCalendar.ItemActivate += new System.EventHandler(this.lvViewCalendar_ItemActivate);
             // 
-            // monthCalendar1
+            // timeHeader
             // 
-            this.monthCalendar1.Location = new System.Drawing.Point(30, 78);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 6;
+            this.timeHeader.Text = "Tid";
+            this.timeHeader.Width = 100;
+            // 
+            // bookingTypeHeader
+            // 
+            this.bookingTypeHeader.Text = "Booking Type";
+            this.bookingTypeHeader.Width = 100;
+            // 
+            // mclDaySelect
+            // 
+            this.mclDaySelect.Location = new System.Drawing.Point(16, 53);
+            this.mclDaySelect.Margin = new System.Windows.Forms.Padding(7);
+            this.mclDaySelect.Name = "mclDaySelect";
+            this.mclDaySelect.TabIndex = 8;
+            this.mclDaySelect.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.mclDaySelect_DateSelected);
             // 
             // SupporterCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(797, 409);
-            this.Controls.Add(this.monthCalendar1);
+            this.ClientSize = new System.Drawing.Size(415, 361);
+            this.Controls.Add(this.mclDaySelect);
             this.Controls.Add(this.lvViewCalendar);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnOpretTask);
@@ -110,6 +132,7 @@
             this.MaximizeBox = false;
             this.Name = "SupporterCalendar";
             this.Text = "Supporter Kalender";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.SupporterCalendar_FormClosing);
             this.Load += new System.EventHandler(this.SupporterCalendar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -122,6 +145,8 @@
         private System.Windows.Forms.Button btnOpretTask;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.ListView lvViewCalendar;
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
+        private System.Windows.Forms.ColumnHeader timeHeader;
+        private System.Windows.Forms.ColumnHeader bookingTypeHeader;
+        private System.Windows.Forms.MonthCalendar mclDaySelect;
     }
 }

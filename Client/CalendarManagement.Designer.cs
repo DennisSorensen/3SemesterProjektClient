@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("TreeViewAllSupport");
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabCreateCal = new System.Windows.Forms.TabPage();
             this.tevAllSupport = new System.Windows.Forms.TreeView();
@@ -91,10 +91,10 @@
             // 
             this.tevAllSupport.Location = new System.Drawing.Point(25, 75);
             this.tevAllSupport.Name = "tevAllSupport";
-            treeNode3.Name = "TreeViewAllSupport";
-            treeNode3.Text = "TreeViewAllSupport";
+            treeNode4.Name = "TreeViewAllSupport";
+            treeNode4.Text = "TreeViewAllSupport";
             this.tevAllSupport.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode4});
             this.tevAllSupport.ShowLines = false;
             this.tevAllSupport.ShowPlusMinus = false;
             this.tevAllSupport.ShowRootLines = false;
@@ -311,6 +311,7 @@
             this.MaximizeBox = false;
             this.Name = "CalendarManagement";
             this.Text = "Kalender Styring";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CalendarManagement_FormClosing);
             this.tabControl1.ResumeLayout(false);
             this.tabCreateCal.ResumeLayout(false);
             this.tabCreateCal.PerformLayout();

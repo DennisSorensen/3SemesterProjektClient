@@ -40,6 +40,7 @@
             this.lblProductNr = new System.Windows.Forms.Label();
             this.lblCreatedBy = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -162,11 +163,22 @@
             this.lblEndDate.TabIndex = 11;
             this.lblEndDate.Text = "...";
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(80, 206);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 12;
+            this.btnClose.Text = "Luk";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // ShowReadyToGoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 215);
+            this.ClientSize = new System.Drawing.Size(243, 241);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblCreatedBy);
             this.Controls.Add(this.lblProductNr);
@@ -180,7 +192,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ShowReadyToGoForm";
@@ -205,5 +217,6 @@
         private System.Windows.Forms.Label lblProductNr;
         private System.Windows.Forms.Label lblCreatedBy;
         private System.Windows.Forms.Label lblEndDate;
+        private System.Windows.Forms.Button btnClose;
     }
 }

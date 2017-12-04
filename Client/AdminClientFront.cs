@@ -38,5 +38,10 @@ namespace Client
             login.Show();
             this.Close();
         }
+
+        private void AdminClientFront_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

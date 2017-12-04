@@ -92,6 +92,7 @@
             this.MaximizeBox = false;
             this.Name = "AdminClientFront";
             this.Text = "Elgiganten Administration";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminClientFront_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 

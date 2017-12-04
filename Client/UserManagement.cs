@@ -179,5 +179,10 @@ namespace Client
             adminClientFront.Show();
             this.Close();
         }
+
+        private void UserManagement_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

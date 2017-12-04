@@ -38,6 +38,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtDescription = new System.Windows.Forms.TextBox();
+            this.btnClose = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblEndDate
@@ -134,18 +135,29 @@
             // 
             this.txtDescription.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtDescription.Location = new System.Drawing.Point(93, 136);
-            this.txtDescription.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
             this.txtDescription.Multiline = true;
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.ReadOnly = true;
             this.txtDescription.Size = new System.Drawing.Size(110, 106);
             this.txtDescription.TabIndex = 24;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(65, 250);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 26;
+            this.btnClose.Text = "Luk";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // ShowTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(212, 252);
+            this.ClientSize = new System.Drawing.Size(212, 285);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblCreatedBy);
@@ -157,7 +169,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "ShowTaskForm";
@@ -180,5 +192,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Button btnClose;
     }
 }

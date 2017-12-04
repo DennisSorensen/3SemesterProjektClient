@@ -551,6 +551,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserManagement";
             this.Text = "Bruger Styring";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.UserManagement_FormClosing);
             this.Load += new System.EventHandler(this.UserManagement_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpCreateUser.ResumeLayout(false);
