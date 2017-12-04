@@ -24,7 +24,7 @@ namespace Client
             ListViewItem item = new ListViewItem();
             item.Text = "9:00";
             item.SubItems.Add("SubItem");
-            ListViewSupport.Items.Add(item);
+            
 
         }
 

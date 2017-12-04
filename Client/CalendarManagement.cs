@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Client.ShowBookingForms;
 
 
 namespace Client
@@ -92,34 +93,7 @@ namespace Client
             }
         }
 
-        private void btnFindCalendar_Click(object sender, EventArgs e)
-        {
-            int userId = Convert.ToInt32(txtUserId.Text); //Laver bruger id om til en int
-            CalendarServiceReference.Calendar calendar = calendarService.Get(userId); //Finder kalender med bruger id
-            
-            //Henter de tre forskellige bookinger, med det ovenstående kalender id
-            bookingService.GetAllReadyToGo(calendar.Id);
-            bookingService.GetAllSupportBooking(calendar.Id);
-            bookingService.GetAllSupportTask(calendar.Id);
-
-            //Skal sorterer de forskellige bookings
-
-
-            //Smide booking ind i listViewItem
-            /*ListViewItem item = new ListViewItem();
-            item.Text = "9:00";
-            item.SubItems.Add("Hej");
-            item.SubItems.Add("med");
-            
-            ListViewItem item2 = new ListViewItem();
-            item2.Text = "10:00";
-            item2.SubItems.Add("Hej2");
-            item2.SubItems.Add("med2");
-
-            listView.Items.Add(item);
-            listView.Items.Add(item2);*/
-            
-        }
+        
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -139,8 +113,12 @@ namespace Client
         //Tager den valgte dag, og sætter den ind i selectedDate
         private void mclDaySelect_DateSelected(object sender, DateRangeEventArgs e)
         {
+            listView.Items.Clear();
             int userId;
             bool result = Int32.TryParse(txtUserId.Text, out userId);
+
+
+            CalendarServiceReference.Calendar calendar = calendarService.Get(userId); //Finder kalender med bruger id
             selectedDate = e.Start;
             if (result && txtUserId.Text != null)
             {
@@ -149,7 +127,7 @@ namespace Client
                 IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
                 
                 //Her smider vi bookinger i den.
-                bookings = bookingService.GetAllBookingSpecificDay(userId, selectedDate);
+                bookings = bookingService.GetAllBookingSpecificDay(calendar.Id, selectedDate);
                 //presenter dem, for de er sorteret i wcf
                 foreach (var booking in bookings)
                 {
@@ -158,15 +136,77 @@ namespace Client
                     string sSub = string.Format("{0}", booking.BookingType);
                     item.Text = s;
                     item.SubItems.Add(sSub);
+                    item.Tag = booking;
                     listView.Items.Add(item);
 
                 }
             }
             else
             {
-                string s = string.Format("{0} er ikke et number", txtUserId.Text);
+                string s = string.Format("{0} er ikke et nummer", txtUserId.Text);
                 MessageBox.Show(s, "Fejl");
+            }
+        }
+
+        private void txtUserId_Leave(object sender, EventArgs e)
+        {
+            int userId;
+            bool result = Int32.TryParse(txtUserId.Text, out userId);
+
+            if (result)
+            {
+                //Henter user ud fra id, og sætter navnet på user ind i label
+                UserServiceReference.User user = userService.GetUser(userId);
+                lblViewCalUserName.Text = user.FirstName + " " + user.LastName;
+            }
+            else
+            {
+                string s = string.Format("{0} er ikke et nummer", txtUserId.Text);
+                MessageBox.Show(s, "Fejl");
+            }
+
+        }
+
+        private void lvViewCalendar_ItemActivate(object sender, EventArgs e)
+        {
+            ListViewItem item = listView.SelectedItems[0];
+            BookingServiceReference.Booking booking = item.Tag as BookingServiceReference.Booking;
+            
+            //Kalde metode
+        }
+
+        private void showBookingWithType(int bookingId, string bookingType)
+        {
+            BookingServiceReference.Booking booking = bookingService.GetBooking(bookingId);
+            
+            if (bookingType == "ReadyToGo")
+            {
+                BookingServiceReference.ReadyToGo readyToGo = bookingService.GetReadyToGo(bookingId);
+
+                //Viser formen
+                ShowBookingForms.ShowReadyToGoForm showReadyToGoForm = new ShowReadyToGoForm(booking, readyToGo);
+                showReadyToGoForm.Show();
+            }
+            else if (bookingType == "Task")
+            {
+                BookingServiceReference.SupportTask supportTask = bookingService.GetSupportTask(bookingId);
+
+                //Viser formen
+                ShowBookingForms.ShowTaskForm showTaskForm = new ShowTaskForm(booking, supportTask);
+                showTaskForm.Show();
+            }
+            else if (bookingType == "SupportBooking")
+            {
+                BookingServiceReference.SupportBooking supportBooking = bookingService.GetSupportBooking(bookingId);
+
+                //Viser formen
+                ShowBookingForms.ShowSupportBookingForm showSupportBookingForm = new ShowSupportBookingForm(booking, supportBooking);
+                showSupportBookingForm.Show();
+            }
+            else {
+                MessageBox.Show("Fejl kunne ikke hente booking typen", "Booking type fejl");
             }
         }
     }
 }
+

@@ -93,6 +93,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowBookingForms\ShowReadyToGoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBookingForms\ShowReadyToGoForm.Designer.cs">
+      <DependentUpon>ShowReadyToGoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowBookingForms\ShowSupportBookingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBookingForms\ShowSupportBookingForm.Designer.cs">
+      <DependentUpon>ShowSupportBookingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowBookingForms\ShowTaskForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowBookingForms\ShowTaskForm.Designer.cs">
+      <DependentUpon>ShowTaskForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SupporterCalendar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +145,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowBookingForms\ShowReadyToGoForm.resx">
+      <DependentUpon>ShowReadyToGoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowBookingForms\ShowSupportBookingForm.resx">
+      <DependentUpon>ShowSupportBookingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowBookingForms\ShowTaskForm.resx">
+      <DependentUpon>ShowTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SupporterCalendar.resx">
       <DependentUpon>SupporterCalendar.cs</DependentUpon>
     </EmbeddedResource>
