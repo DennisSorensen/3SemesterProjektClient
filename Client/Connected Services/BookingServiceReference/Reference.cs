@@ -334,6 +334,24 @@ namespace Client.BookingServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetSupportBooking", ReplyAction="http://tempuri.org/IBookingService/GetSupportBookingResponse")]
         System.Threading.Tasks.Task<Client.BookingServiceReference.SupportBooking> GetSupportBookingAsync(int id);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetReadyToGo", ReplyAction="http://tempuri.org/IBookingService/GetReadyToGoResponse")]
+        Client.BookingServiceReference.ReadyToGo GetReadyToGo(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetReadyToGo", ReplyAction="http://tempuri.org/IBookingService/GetReadyToGoResponse")]
+        System.Threading.Tasks.Task<Client.BookingServiceReference.ReadyToGo> GetReadyToGoAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetSupportTask", ReplyAction="http://tempuri.org/IBookingService/GetSupportTaskResponse")]
+        Client.BookingServiceReference.SupportTask GetSupportTask(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetSupportTask", ReplyAction="http://tempuri.org/IBookingService/GetSupportTaskResponse")]
+        System.Threading.Tasks.Task<Client.BookingServiceReference.SupportTask> GetSupportTaskAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetBooking", ReplyAction="http://tempuri.org/IBookingService/GetBookingResponse")]
+        Client.BookingServiceReference.Booking GetBooking(int bookingId);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetBooking", ReplyAction="http://tempuri.org/IBookingService/GetBookingResponse")]
+        System.Threading.Tasks.Task<Client.BookingServiceReference.Booking> GetBookingAsync(int bookingId);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetAllSupportTask", ReplyAction="http://tempuri.org/IBookingService/GetAllSupportTaskResponse")]
         Client.BookingServiceReference.SupportTask[] GetAllSupportTask(int calendarId);
         
@@ -416,6 +434,30 @@ namespace Client.BookingServiceReference {
         
         public System.Threading.Tasks.Task<Client.BookingServiceReference.SupportBooking> GetSupportBookingAsync(int id) {
             return base.Channel.GetSupportBookingAsync(id);
+        }
+        
+        public Client.BookingServiceReference.ReadyToGo GetReadyToGo(int id) {
+            return base.Channel.GetReadyToGo(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.BookingServiceReference.ReadyToGo> GetReadyToGoAsync(int id) {
+            return base.Channel.GetReadyToGoAsync(id);
+        }
+        
+        public Client.BookingServiceReference.SupportTask GetSupportTask(int id) {
+            return base.Channel.GetSupportTask(id);
+        }
+        
+        public System.Threading.Tasks.Task<Client.BookingServiceReference.SupportTask> GetSupportTaskAsync(int id) {
+            return base.Channel.GetSupportTaskAsync(id);
+        }
+        
+        public Client.BookingServiceReference.Booking GetBooking(int bookingId) {
+            return base.Channel.GetBooking(bookingId);
+        }
+        
+        public System.Threading.Tasks.Task<Client.BookingServiceReference.Booking> GetBookingAsync(int bookingId) {
+            return base.Channel.GetBookingAsync(bookingId);
         }
         
         public Client.BookingServiceReference.SupportTask[] GetAllSupportTask(int calendarId) {

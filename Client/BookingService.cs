@@ -11,7 +11,6 @@ namespace Client
     public class BookingService
     {
         BookingServiceReference.IBookingService bookingService = new BookingServiceReference.BookingServiceClient();
-        DataTable table;
 
 
         public void CreateTask(BookingServiceReference.SupportTask supportTask)
@@ -37,6 +36,26 @@ namespace Client
         public IEnumerable<BookingServiceReference.Booking> GetAllBookingSpecificDay(int calendarId, DateTime date)
         {
             return bookingService.GetAllBookingSpecificDay(calendarId, date);
+        }
+
+        public BookingServiceReference.Booking GetBooking(int bookingId)
+        {
+            return bookingService.GetBooking(bookingId);
+        }
+
+        public BookingServiceReference.ReadyToGo GetReadyToGo(int bookingId)
+        {
+            return bookingService.GetReadyToGo(bookingId);
+        }
+
+        public BookingServiceReference.SupportTask GetSupportTask(int bookingId)
+        {
+            return bookingService.GetSupportTask(bookingId);
+        }
+
+        public BookingServiceReference.SupportBooking GetSupportBooking(int bookingId)
+        {
+            return bookingService.GetSupportBooking(bookingId);
         }
     }
 }

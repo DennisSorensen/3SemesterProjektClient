@@ -171,8 +171,9 @@ namespace Client
         {
             ListViewItem item = listView.SelectedItems[0];
             BookingServiceReference.Booking booking = item.Tag as BookingServiceReference.Booking;
-            
+
             //Kalde metode
+            showBookingWithType(booking.Id, booking.BookingType);
         }
 
         private void showBookingWithType(int bookingId, string bookingType)
