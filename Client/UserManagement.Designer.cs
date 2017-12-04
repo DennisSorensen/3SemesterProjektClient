@@ -547,9 +547,10 @@
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "UserManagement";
-            this.Text = "UserManagement";
+            this.Text = "Bruger Styring";
             this.Load += new System.EventHandler(this.UserManagement_Load);
             this.tabControl1.ResumeLayout(false);
             this.tpCreateUser.ResumeLayout(false);

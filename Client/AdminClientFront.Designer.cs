@@ -38,7 +38,7 @@
             // 
             this.btnUserManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUserManagement.Location = new System.Drawing.Point(71, 108);
-            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUserManagement.Margin = new System.Windows.Forms.Padding(2);
             this.btnUserManagement.Name = "btnUserManagement";
             this.btnUserManagement.Size = new System.Drawing.Size(184, 71);
             this.btnUserManagement.TabIndex = 0;
@@ -61,7 +61,7 @@
             // 
             this.btnCalManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCalManagement.Location = new System.Drawing.Point(71, 197);
-            this.btnCalManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCalManagement.Margin = new System.Windows.Forms.Padding(2);
             this.btnCalManagement.Name = "btnCalManagement";
             this.btnCalManagement.Size = new System.Drawing.Size(184, 71);
             this.btnCalManagement.TabIndex = 2;
@@ -88,6 +88,8 @@
             this.Controls.Add(this.btnCalManagement);
             this.Controls.Add(this.btnUserManagement);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdminClientFront";
             this.Text = "Elgiganten Administration";
             this.ResumeLayout(false);

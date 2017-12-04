@@ -105,9 +105,11 @@
             this.Controls.Add(this.btnOpretTask);
             this.Controls.Add(this.lblUserLoggedIn);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
             this.Name = "SupporterCalendar";
-            this.Text = "SupporterCalendar";
+            this.Text = "Supporter Kalender";
             this.Load += new System.EventHandler(this.SupporterCalendar_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
