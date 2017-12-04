@@ -32,15 +32,8 @@
             this.lblUserLoggedIn = new System.Windows.Forms.Label();
             this.btnOpretTask = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
-            this.ListViewSupport = new System.Windows.Forms.ListView();
-            this.time = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.monday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tuesday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.wednesday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.thursday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.friday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.saturday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.sundag = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.lvViewCalendar = new System.Windows.Forms.ListView();
+            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
             this.SuspendLayout();
             // 
             // label1
@@ -87,62 +80,27 @@
             this.btnLogout.UseVisualStyleBackColor = true;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // ListViewSupport
+            // lvViewCalendar
             // 
-            this.ListViewSupport.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.time,
-            this.monday,
-            this.tuesday,
-            this.wednesday,
-            this.thursday,
-            this.friday,
-            this.saturday,
-            this.sundag});
-            this.ListViewSupport.Location = new System.Drawing.Point(12, 53);
-            this.ListViewSupport.Name = "ListViewSupport";
-            this.ListViewSupport.Size = new System.Drawing.Size(775, 344);
-            this.ListViewSupport.TabIndex = 5;
-            this.ListViewSupport.UseCompatibleStateImageBehavior = false;
-            this.ListViewSupport.View = System.Windows.Forms.View.Details;
+            this.lvViewCalendar.Location = new System.Drawing.Point(213, 78);
+            this.lvViewCalendar.Name = "lvViewCalendar";
+            this.lvViewCalendar.Size = new System.Drawing.Size(206, 294);
+            this.lvViewCalendar.TabIndex = 5;
+            this.lvViewCalendar.UseCompatibleStateImageBehavior = false;
             // 
-            // time
+            // monthCalendar1
             // 
-            this.time.Text = "Tid";
-            // 
-            // monday
-            // 
-            this.monday.Text = "Mandag";
-            // 
-            // tuesday
-            // 
-            this.tuesday.Text = "Tirsdag";
-            // 
-            // wednesday
-            // 
-            this.wednesday.Text = "Onsdag";
-            // 
-            // thursday
-            // 
-            this.thursday.Text = "Torsdag";
-            // 
-            // friday
-            // 
-            this.friday.Text = "Fridag";
-            // 
-            // saturday
-            // 
-            this.saturday.Text = "Lørdag";
-            // 
-            // sundag
-            // 
-            this.sundag.Text = "Søndag";
+            this.monthCalendar1.Location = new System.Drawing.Point(30, 78);
+            this.monthCalendar1.Name = "monthCalendar1";
+            this.monthCalendar1.TabIndex = 6;
             // 
             // SupporterCalendar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(797, 409);
-            this.Controls.Add(this.ListViewSupport);
+            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.lvViewCalendar);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnOpretTask);
             this.Controls.Add(this.lblUserLoggedIn);
@@ -161,14 +119,7 @@
         private System.Windows.Forms.Label lblUserLoggedIn;
         private System.Windows.Forms.Button btnOpretTask;
         private System.Windows.Forms.Button btnLogout;
-        private System.Windows.Forms.ListView ListViewSupport;
-        private System.Windows.Forms.ColumnHeader time;
-        private System.Windows.Forms.ColumnHeader monday;
-        private System.Windows.Forms.ColumnHeader tuesday;
-        private System.Windows.Forms.ColumnHeader wednesday;
-        private System.Windows.Forms.ColumnHeader thursday;
-        private System.Windows.Forms.ColumnHeader friday;
-        private System.Windows.Forms.ColumnHeader saturday;
-        private System.Windows.Forms.ColumnHeader sundag;
+        private System.Windows.Forms.ListView lvViewCalendar;
+        private System.Windows.Forms.MonthCalendar monthCalendar1;
     }
 }
