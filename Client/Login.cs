@@ -19,6 +19,7 @@ namespace Client
         {
             InitializeComponent();
             ListAllUsers();
+            btnLogin.Focus();
         }
 
         //Metode som bliver kaldt hver gang se bruger fanen bliver trykket på
@@ -39,28 +40,57 @@ namespace Client
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            UserServiceReference.User selectedUser = new UserServiceReference.User(); //Opretter en nu user
-            selectedUser = tevAllUsers.SelectedNode.Tag as UserServiceReference.User; //Tager den selected user fra treeView, og sætter den lig user variabel
-
-            //Skriver selected user ud på labels og søgefelt id
-            User = selectedUser;
-            if (User.Role == "Admin")
+            int userId;
+            bool result = Int32.TryParse(txtUserId.Text, out userId);
+            if (result)
             {
-                this.Hide();
-                AdminClientFront adminClientFront = new AdminClientFront(User);
-                adminClientFront.Show();
+                UserServiceReference.User user = userService.Login(userId, txtPassword.Text);
+                if(user != null)
+                {
+                    ShowSelectedForm(user);
+                }
+                else
+                {
+                    string s = string.Format("Koden er forkert", txtUserId.Text);
+                    MessageBox.Show(s, "Login Fejl");
+                }
             }
-            else if (User.Role == "Supporter")
+            else
             {
-                this.Hide();
-                SupporterCalendar supporterCalendar = new SupporterCalendar(User);
-                supporterCalendar.Show();
+                string s = string.Format("Bruger forkert", txtUserId.Text);
+                MessageBox.Show(s, "Login Fejl");
             }
         }
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+        
+
+        private void ShowSelectedForm(UserServiceReference.User user)
+        {
+            if (user.Role == "Admin")
+            {
+                this.Hide();
+                AdminClientFront adminClientFront = new AdminClientFront(user);
+                adminClientFront.Show();
+            }
+            else if (user.Role == "Supporter")
+            {
+                this.Hide();
+                SupporterCalendar supporterCalendar = new SupporterCalendar(user);
+                supporterCalendar.Show();
+            }
+        }
+
+        private void tevAllUsers_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            //Skriver selected user ud på labels og søgefelt id
+            UserServiceReference.User user = e.Node.Tag as UserServiceReference.User;
+            Console.WriteLine(user.FirstName);
+            User = user;
+            ShowSelectedForm(User);
         }
     }
 }

@@ -34,14 +34,13 @@ namespace Client
 
         private void btnLogUd_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
             this.Close();
         }
 
         private void AdminClientFront_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

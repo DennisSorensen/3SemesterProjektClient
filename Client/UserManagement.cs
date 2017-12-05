@@ -14,6 +14,7 @@ namespace Client
     {
         UserService userService = new UserService();
         UserServiceReference.User User;
+        bool back = false;
         
         public UserManagement(UserServiceReference.User user)
         {
@@ -168,21 +169,29 @@ namespace Client
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            back = false;
             this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            AdminClientFront adminClientFront = new AdminClientFront(User);
-            adminClientFront.Show();
+            back = true;
             this.Close();
         }
 
         private void UserManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+
+            if (back == false)
+            {
+            Login login = new Login();
+            login.Show();
+            }
+            else
+            {
+            AdminClientFront adminClientFront = new AdminClientFront(User);
+            adminClientFront.Show();
+            }
         }
     }
 }

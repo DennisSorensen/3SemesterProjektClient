@@ -46,8 +46,6 @@ namespace Client
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
             this.Close();
         }
 
@@ -129,7 +127,8 @@ namespace Client
 
         private void SupporterCalendar_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Login login = new Login();
+            login.Show();
         }
     }
 }

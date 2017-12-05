@@ -19,14 +19,12 @@ namespace Client
         BookingService bookingService = new BookingService();
 
         DateTime selectedDate = new DateTime();
-
+        bool back = false;
         //Opret en listView
         ListView listView = new ListView();
         
 
         CalendarServiceReference.ICalendarService service = new CalendarServiceReference.CalendarServiceClient();
-        //DataTable table = new DataTable();
-        //string Tid;
         UserServiceReference.User User;
         public CalendarManagement(UserServiceReference.User user)
         {
@@ -36,18 +34,6 @@ namespace Client
 
             User = user;
             lblLoggedInUser.Text = User.FirstName + " " + User.LastName;
-            //dgvSupportCalendar.AllowUserToResizeColumns = false;
-            //dgvSupportCalendar.AllowUserToResizeRows = false;
-            /*
-            table.Columns.Add("Tid", typeof(string));
-            table.Columns.Add("Mandag", typeof(string));
-            table.Columns.Add("Tirsdag", typeof(string));
-            table.Columns.Add("Onsdag", typeof(string));
-            table.Columns.Add("Torsdag", typeof(string));
-            table.Columns.Add("Fredag", typeof(string));
-            table.Columns.Add("Lørdag", typeof(string));
-            table.Columns.Add("Søndag", typeof(string));
-            */
             SupporterList();
 
         }
@@ -97,15 +83,13 @@ namespace Client
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
-            login.Show();
+            back = false;
             this.Close();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            AdminClientFront adminClientFront = new AdminClientFront(User);
-            adminClientFront.Show();
+            back = true;
             this.Close();
 
         }
@@ -211,7 +195,16 @@ namespace Client
 
         private void CalendarManagement_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (back == false)
+            {
+                Login login = new Login();
+                login.Show();
+            }
+            else
+            {
+                AdminClientFront adminClientFront = new AdminClientFront(User);
+                adminClientFront.Show();
+            }
         }
     }
 }

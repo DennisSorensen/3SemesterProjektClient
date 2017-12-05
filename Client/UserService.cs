@@ -28,6 +28,11 @@ namespace Client
             return userService.GetUser(id);
         }
 
+        public UserServiceReference.User Login(int id, string password)
+        {
+            return userService.Login(id, password);
+        }
+
         public IEnumerable<UserServiceReference.User> GetAllUsers()
         {
             return userService.GetAll();

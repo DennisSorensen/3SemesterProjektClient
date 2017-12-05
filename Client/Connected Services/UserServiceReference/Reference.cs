@@ -238,6 +238,12 @@ namespace Client.UserServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/GetAllDepSupport", ReplyAction="http://tempuri.org/IUserService/GetAllDepSupportResponse")]
         System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllDepSupportAsync(int id);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
+        Client.UserServiceReference.User Login(int id, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUserService/Login", ReplyAction="http://tempuri.org/IUserService/LoginResponse")]
+        System.Threading.Tasks.Task<Client.UserServiceReference.User> LoginAsync(int id, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -313,6 +319,14 @@ namespace Client.UserServiceReference {
         
         public System.Threading.Tasks.Task<Client.UserServiceReference.User[]> GetAllDepSupportAsync(int id) {
             return base.Channel.GetAllDepSupportAsync(id);
+        }
+        
+        public Client.UserServiceReference.User Login(int id, string password) {
+            return base.Channel.Login(id, password);
+        }
+        
+        public System.Threading.Tasks.Task<Client.UserServiceReference.User> LoginAsync(int id, string password) {
+            return base.Channel.LoginAsync(id, password);
         }
     }
 }
