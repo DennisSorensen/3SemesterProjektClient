@@ -155,8 +155,15 @@ namespace Client
             readyToGo.BookingType = "ReadyToGo";
             
             //Skal tilføje et kalender id, men den skal tjekke for ledige tider i alle kalendre først
+            try
+            {
+                BookingService.CreateReadyToGo(readyToGo); //Sender RTG'en vidre til service, og bliver senere gemt i db.
+            }
+            catch
+            {
 
-            BookingService.CreateReadyToGo(readyToGo); //Sender RTG'en vidre til service, og bliver senere gemt i db.
+            }
+            
         }
     }
 }
