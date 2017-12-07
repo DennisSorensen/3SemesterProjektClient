@@ -85,6 +85,12 @@
     <Compile Include="CreateBookingSupporter.Designer.cs">
       <DependentUpon>CreateBookingSupporter.cs</DependentUpon>
     </Compile>
+    <Compile Include="CreateBookingSælger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateBookingSælger.Designer.cs">
+      <DependentUpon>CreateBookingSælger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +139,9 @@
     <EmbeddedResource Include="CreateBookingSupporter.resx">
       <DependentUpon>CreateBookingSupporter.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CreateBookingSælger.resx">
+      <DependentUpon>CreateBookingSælger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +177,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\BookingServiceReference\BookingService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\BookingServiceReference\BookingService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\BookingServiceReference\Client.BookingServiceReference.Booking.datasource">

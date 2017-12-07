@@ -82,6 +82,12 @@ namespace Client
                 SupporterCalendar supporterCalendar = new SupporterCalendar(user);
                 supporterCalendar.Show();
             }
+            else if (user.Role == "Sælger")
+            {
+                this.Hide();
+                CreateBookingSælger createBookingSælger = new CreateBookingSælger(user);
+                createBookingSælger.Show();
+            }
         }
 
         private void tevAllUsers_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -91,6 +97,11 @@ namespace Client
             Console.WriteLine(user.FirstName);
             User = user;
             ShowSelectedForm(User);
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

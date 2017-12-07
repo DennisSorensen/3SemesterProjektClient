@@ -3,6 +3,7 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:49197/BookingService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:49197/BookingService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/WCF.Exceptions" />
       <xsd:import schemaLocation="http://localhost:49197/BookingService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:49197/BookingService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF.ModelLayer" />
     </xsd:schema>
@@ -12,6 +13,9 @@
   </wsdl:message>
   <wsdl:message name="IBookingService_CreateSupportTask_OutputMessage">
     <wsdl:part name="parameters" element="tns:CreateSupportTaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBookingService_CreateSupportTask_BookingExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/WCF.Exceptions" name="detail" element="q1:BookingException" />
   </wsdl:message>
   <wsdl:message name="IBookingService_CreateSupportBooking_InputMessage">
     <wsdl:part name="parameters" element="tns:CreateSupportBooking" />
@@ -77,6 +81,7 @@
     <wsdl:operation name="CreateSupportTask">
       <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/CreateSupportTask" message="tns:IBookingService_CreateSupportTask_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBookingService/CreateSupportTaskResponse" message="tns:IBookingService_CreateSupportTask_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IBookingService/CreateSupportTaskBookingExceptionFault" name="BookingExceptionFault" message="tns:IBookingService_CreateSupportTask_BookingExceptionFault_FaultMessage" />
     </wsdl:operation>
     <wsdl:operation name="CreateSupportBooking">
       <wsdl:input wsaw:Action="http://tempuri.org/IBookingService/CreateSupportBooking" message="tns:IBookingService_CreateSupportBooking_InputMessage" />
@@ -129,6 +134,9 @@
       <wsdl:output>
         <soap:body use="literal" />
       </wsdl:output>
+      <wsdl:fault name="BookingExceptionFault">
+        <soap:fault use="literal" name="BookingExceptionFault" namespace="" />
+      </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="CreateSupportBooking">
       <soap:operation soapAction="http://tempuri.org/IBookingService/CreateSupportBooking" style="document" />

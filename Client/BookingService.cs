@@ -18,6 +18,11 @@ namespace Client
             bookingService.CreateSupportTask(supportTask);
         }
 
+        public void CreateReadyToGo(BookingServiceReference.ReadyToGo readyToGo)
+        {
+            bookingService.CreateReadyToGo(readyToGo);
+        }
+
         public IEnumerable<BookingServiceReference.SupportTask> GetAllSupportTask(int calendarId)
         {
             return bookingService.GetAllSupportTask(calendarId);
