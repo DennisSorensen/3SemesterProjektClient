@@ -152,6 +152,9 @@ namespace Client
 
             //Tilføjer userid
             readyToGo.User_Id = user.Id;
+            readyToGo.BookingType = "ReadyToGo";
+            
+            //Skal tilføje et kalender id, men den skal tjekke for ledige tider i alle kalendre først
 
             BookingService.CreateReadyToGo(readyToGo); //Sender RTG'en vidre til service, og bliver senere gemt i db.
         }

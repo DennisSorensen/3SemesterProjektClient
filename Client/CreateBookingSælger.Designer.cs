@@ -70,7 +70,7 @@
             "Spillekonsol"});
             this.cbService.Location = new System.Drawing.Point(30, 87);
             this.cbService.Name = "cbService";
-            this.cbService.Size = new System.Drawing.Size(121, 24);
+            this.cbService.Size = new System.Drawing.Size(193, 24);
             this.cbService.TabIndex = 1;
             this.cbService.TextChanged += new System.EventHandler(this.cbService_TextChanged);
             // 
@@ -97,9 +97,9 @@
             // cbEndDate
             // 
             this.cbEndDate.FormattingEnabled = true;
-            this.cbEndDate.Location = new System.Drawing.Point(30, 325);
+            this.cbEndDate.Location = new System.Drawing.Point(30, 336);
             this.cbEndDate.Name = "cbEndDate";
-            this.cbEndDate.Size = new System.Drawing.Size(121, 24);
+            this.cbEndDate.Size = new System.Drawing.Size(193, 24);
             this.cbEndDate.TabIndex = 8;
             // 
             // label4
