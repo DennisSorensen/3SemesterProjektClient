@@ -126,9 +126,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(27, 474);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(70, 17);
+            this.label6.Size = new System.Drawing.Size(67, 17);
             this.label6.TabIndex = 11;
-            this.label6.Text = "Billgas nr:";
+            this.label6.Text = "Bilags nr:";
             // 
             // label7
             // 

@@ -12,6 +12,10 @@ namespace Client
     {
         BookingServiceReference.IBookingService bookingService = new BookingServiceReference.BookingServiceClient();
 
+        public int FindAvaibleCalendar(DateTime startDate, DateTime endDate)
+        {
+            return bookingService.FindAvaliableCalendar(startDate, endDate);
+        }
 
         public void CreateTask(BookingServiceReference.SupportTask supportTask)
         {

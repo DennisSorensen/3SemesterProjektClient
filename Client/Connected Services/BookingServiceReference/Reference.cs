@@ -324,9 +324,9 @@ namespace Client.BookingServiceReference {
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="BookingException", Namespace="http://schemas.datacontract.org/2004/07/WCF.Exceptions")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="BookingExistsException", Namespace="http://schemas.datacontract.org/2004/07/WCF.Exceptions")]
     [System.SerializableAttribute()]
-    public partial class BookingException : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+    public partial class BookingExistsException : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
         [System.NonSerializedAttribute()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
@@ -372,7 +372,7 @@ namespace Client.BookingServiceReference {
     public interface IBookingService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/CreateSupportTask", ReplyAction="http://tempuri.org/IBookingService/CreateSupportTaskResponse")]
-        [System.ServiceModel.FaultContractAttribute(typeof(Client.BookingServiceReference.BookingException), Action="http://tempuri.org/IBookingService/CreateSupportTaskBookingExceptionFault", Name="BookingException", Namespace="http://schemas.datacontract.org/2004/07/WCF.Exceptions")]
+        [System.ServiceModel.FaultContractAttribute(typeof(Client.BookingServiceReference.BookingExistsException), Action="http://tempuri.org/IBookingService/CreateSupportTaskBookingExistsExceptionFault", Name="BookingExistsException", Namespace="http://schemas.datacontract.org/2004/07/WCF.Exceptions")]
         void CreateSupportTask(Client.BookingServiceReference.SupportTask supportTask);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/CreateSupportTask", ReplyAction="http://tempuri.org/IBookingService/CreateSupportTaskResponse")]
@@ -437,6 +437,12 @@ namespace Client.BookingServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/GetAllBookingSpecificDay", ReplyAction="http://tempuri.org/IBookingService/GetAllBookingSpecificDayResponse")]
         System.Threading.Tasks.Task<Client.BookingServiceReference.Booking[]> GetAllBookingSpecificDayAsync(int calendarId, System.DateTime date);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/FindAvaliableCalendar", ReplyAction="http://tempuri.org/IBookingService/FindAvaliableCalendarResponse")]
+        int FindAvaliableCalendar(System.DateTime startDate, System.DateTime endDate);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBookingService/FindAvaliableCalendar", ReplyAction="http://tempuri.org/IBookingService/FindAvaliableCalendarResponse")]
+        System.Threading.Tasks.Task<int> FindAvaliableCalendarAsync(System.DateTime startDate, System.DateTime endDate);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -552,6 +558,14 @@ namespace Client.BookingServiceReference {
         
         public System.Threading.Tasks.Task<Client.BookingServiceReference.Booking[]> GetAllBookingSpecificDayAsync(int calendarId, System.DateTime date) {
             return base.Channel.GetAllBookingSpecificDayAsync(calendarId, date);
+        }
+        
+        public int FindAvaliableCalendar(System.DateTime startDate, System.DateTime endDate) {
+            return base.Channel.FindAvaliableCalendar(startDate, endDate);
+        }
+        
+        public System.Threading.Tasks.Task<int> FindAvaliableCalendarAsync(System.DateTime startDate, System.DateTime endDate) {
+            return base.Channel.FindAvaliableCalendarAsync(startDate, endDate);
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Client
     {
         UserServiceReference.User user = new UserServiceReference.User();
 
-        BookingService BookingService = new BookingService();
+        BookingService bookingService = new BookingService();
         public CreateBookingSælger(UserServiceReference.User user)
         {
             InitializeComponent();
@@ -153,15 +153,25 @@ namespace Client
             //Tilføjer userid
             readyToGo.User_Id = user.Id;
             readyToGo.BookingType = "ReadyToGo";
-            
-            //Skal tilføje et kalender id, men den skal tjekke for ledige tider i alle kalendre først
-            try
-            {
-                BookingService.CreateReadyToGo(readyToGo); //Sender RTG'en vidre til service, og bliver senere gemt i db.
-            }
-            catch
-            {
 
+            int calendarId = bookingService.FindAvaibleCalendar(readyToGo.StartDate, readyToGo.EndDate);
+            if (calendarId > 0) {
+                //Skal tilføje et kalender id, men den skal tjekke for ledige tider i alle kalendre først
+                readyToGo.Calendar_Id = calendarId;
+                try
+                {
+                    bookingService.CreateReadyToGo(readyToGo); //Sender RTG'en vidre til service, og bliver senere gemt i db.
+                    string s = string.Format("RTG oprettet og kan afhentes kl: {0}", Convert.ToDateTime(cbEndDate.Text));
+                    MessageBox.Show(s, "RTG oprettet");
+                }
+                catch
+                {
+                    MessageBox.Show("Kunne ikke oprette booking", "Fejl");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Der er en tid på dette tidspunkt","Tid taget");
             }
             
         }
