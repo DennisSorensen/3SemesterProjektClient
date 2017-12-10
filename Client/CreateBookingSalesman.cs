@@ -10,20 +10,16 @@ using System.Windows.Forms;
 
 namespace Client
 {
-    public partial class CreateBookingSælger : Form
+    public partial class CreateBookingSalesman : Form
     {
         UserServiceReference.User user = new UserServiceReference.User();
 
         BookingService bookingService = new BookingService();
-        public CreateBookingSælger(UserServiceReference.User user)
+        public CreateBookingSalesman(UserServiceReference.User user)
         {
             InitializeComponent();
             this.user = user;
-        }
-
-        private void CreateBookingSælger_Load(object sender, EventArgs e)
-        {
-            
+            lblUser.Text = user.FirstName + " " + user.LastName;
         }
 
         private void cbService_TextChanged(object sender, EventArgs e)
@@ -155,8 +151,8 @@ namespace Client
             readyToGo.BookingType = "ReadyToGo";
 
             int calendarId = bookingService.FindAvaibleCalendar(readyToGo.StartDate, readyToGo.EndDate);
-            if (calendarId > 0) {
-                //Skal tilføje et kalender id, men den skal tjekke for ledige tider i alle kalendre først
+            if (calendarId > 0)
+            {
                 readyToGo.Calendar_Id = calendarId;
                 try
                 {
@@ -174,6 +170,22 @@ namespace Client
                 MessageBox.Show("Der er en tid på dette tidspunkt","Tid taget");
             }
             
+        }
+
+        private void btnCreateRTG_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CreateBookingSalesman_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Login login = new Login();
+            login.Show();
+        }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

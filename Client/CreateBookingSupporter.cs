@@ -16,7 +16,7 @@ namespace Client
         CalendarService calendarService = new CalendarService();
         UserServiceReference.User User;
 
-       public CreateBookingSupporter(UserServiceReference.User user)
+        public CreateBookingSupporter(UserServiceReference.User user)
         {
             InitializeComponent();
             User = user;
@@ -24,19 +24,49 @@ namespace Client
 
         private void btnCreateTask_Click(object sender, EventArgs e)
         {
+            DateTime date;
+            DateTime time;
+            DateTime dateTime;
             BookingServiceReference.SupportTask supportTask = new BookingServiceReference.SupportTask();
             supportTask.User_Id = User.Id;
-            supportTask.StartDate = Convert.ToDateTime(cbTaskStatDate.Text);
-            supportTask.EndDate = Convert.ToDateTime(cbTaskEndDate.Text);
+            date = dtpDate.Value.Date;
+
+            time = Convert.ToDateTime(cbTaskStatDate.Text);
+            dateTime = date.Date + time.TimeOfDay;
+            supportTask.StartDate = dateTime;
+
+            time = Convert.ToDateTime(cbTaskEndDate.Text);
+            dateTime = date.Date + time.TimeOfDay;
+            supportTask.EndDate = dateTime;
+            
             supportTask.Name = txtTaskName.Text;
             supportTask.Description = txtTaskDescription.Text;
             CalendarServiceReference.Calendar calendar = calendarService.Get(User.Id);
             supportTask.Calendar_Id = calendar.Id;
             supportTask.BookingType = "Task";
-
-            bookingService.CreateTask(supportTask);
-            this.Close();
-            
+            if (cbTaskEndDate.Text != null && cbTaskStatDate != null)
+            {
+                if (supportTask.EndDate > supportTask.StartDate)
+                {
+                    try
+                    {
+                        bookingService.CreateTask(supportTask);
+                        this.Close();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Kunne ikke oprette booking", "Fejl");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Slut tid er mindre end Start tid", "Fejl");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Ikke alle tidspunkter er udfyldt", "Fejl");
+            }
         }
 
         private void CreateBookingSupporter_Load(object sender, EventArgs e)

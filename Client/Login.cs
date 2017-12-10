@@ -85,7 +85,7 @@ namespace Client
             else if (user.Role == "Sælger")
             {
                 this.Hide();
-                CreateBookingSælger createBookingSælger = new CreateBookingSælger(user);
+                CreateBookingSalesman createBookingSælger = new CreateBookingSalesman(user);
                 createBookingSælger.Show();
             }
         }
