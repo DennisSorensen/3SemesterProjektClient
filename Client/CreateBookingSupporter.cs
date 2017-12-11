@@ -20,6 +20,7 @@ namespace Client
         {
             InitializeComponent();
             User = user;
+            dtpDate.Value = DateTime.Now;
         }
 
         private void btnCreateTask_Click(object sender, EventArgs e)
