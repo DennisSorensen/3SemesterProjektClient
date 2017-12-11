@@ -74,5 +74,18 @@ namespace Client
         {
 
         }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            if(dtpDate.Value > DateTime.Now)
+            {
+                MessageBox.Show("Kan ikke sætte en task i fortiden", "Fejl");
+                dtpDate.Value = DateTime.Now;
+            }
+            else
+            {
+
+            }
+        }
     }
 }
