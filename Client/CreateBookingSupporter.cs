@@ -20,7 +20,7 @@ namespace Client
         {
             InitializeComponent();
             User = user;
-            dtpDate.Value = DateTime.Now;
+            dtpDate.Value = DateTime.Now.Date;
         }
 
         private void btnCreateTask_Click(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace Client
 
         private void dtpDate_ValueChanged(object sender, EventArgs e)
         {
-            if(dtpDate.Value > DateTime.Now)
+            if(dtpDate.Value.Date > DateTime.Now.Date)
             {
                 MessageBox.Show("Kan ikke sætte en task i fortiden", "Fejl");
                 dtpDate.Value = DateTime.Now;
