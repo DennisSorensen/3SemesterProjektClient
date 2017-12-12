@@ -41,6 +41,8 @@
             this.lblCreatedBy = new System.Windows.Forms.Label();
             this.lblEndDate = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
+            this.lblAdditionalServices = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -56,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 54);
+            this.label2.Location = new System.Drawing.Point(36, 53);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
@@ -66,7 +68,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 83);
+            this.label3.Location = new System.Drawing.Point(18, 82);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(60, 13);
@@ -76,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 112);
+            this.label4.Location = new System.Drawing.Point(19, 111);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(59, 13);
@@ -86,7 +88,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 141);
+            this.label5.Location = new System.Drawing.Point(26, 140);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(52, 13);
@@ -96,7 +98,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(10, 171);
+            this.label6.Location = new System.Drawing.Point(9, 169);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(69, 13);
@@ -116,7 +118,7 @@
             // lblHasContract
             // 
             this.lblHasContract.AutoSize = true;
-            this.lblHasContract.Location = new System.Drawing.Point(87, 171);
+            this.lblHasContract.Location = new System.Drawing.Point(87, 169);
             this.lblHasContract.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHasContract.Name = "lblHasContract";
             this.lblHasContract.Size = new System.Drawing.Size(16, 13);
@@ -126,7 +128,7 @@
             // lblAppendixNr
             // 
             this.lblAppendixNr.AutoSize = true;
-            this.lblAppendixNr.Location = new System.Drawing.Point(87, 141);
+            this.lblAppendixNr.Location = new System.Drawing.Point(87, 140);
             this.lblAppendixNr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAppendixNr.Name = "lblAppendixNr";
             this.lblAppendixNr.Size = new System.Drawing.Size(16, 13);
@@ -136,7 +138,7 @@
             // lblProductNr
             // 
             this.lblProductNr.AutoSize = true;
-            this.lblProductNr.Location = new System.Drawing.Point(87, 112);
+            this.lblProductNr.Location = new System.Drawing.Point(87, 111);
             this.lblProductNr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProductNr.Name = "lblProductNr";
             this.lblProductNr.Size = new System.Drawing.Size(16, 13);
@@ -146,7 +148,7 @@
             // lblCreatedBy
             // 
             this.lblCreatedBy.AutoSize = true;
-            this.lblCreatedBy.Location = new System.Drawing.Point(87, 83);
+            this.lblCreatedBy.Location = new System.Drawing.Point(87, 82);
             this.lblCreatedBy.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCreatedBy.Name = "lblCreatedBy";
             this.lblCreatedBy.Size = new System.Drawing.Size(16, 13);
@@ -156,7 +158,7 @@
             // lblEndDate
             // 
             this.lblEndDate.AutoSize = true;
-            this.lblEndDate.Location = new System.Drawing.Point(87, 54);
+            this.lblEndDate.Location = new System.Drawing.Point(87, 53);
             this.lblEndDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEndDate.Name = "lblEndDate";
             this.lblEndDate.Size = new System.Drawing.Size(16, 13);
@@ -165,7 +167,7 @@
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(80, 206);
+            this.btnClose.Location = new System.Drawing.Point(80, 244);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 12;
@@ -173,11 +175,33 @@
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // lblAdditionalServices
+            // 
+            this.lblAdditionalServices.AutoSize = true;
+            this.lblAdditionalServices.Location = new System.Drawing.Point(87, 198);
+            this.lblAdditionalServices.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAdditionalServices.Name = "lblAdditionalServices";
+            this.lblAdditionalServices.Size = new System.Drawing.Size(16, 13);
+            this.lblAdditionalServices.TabIndex = 14;
+            this.lblAdditionalServices.Text = "...";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1, 198);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Tillægsydelser:";
+            // 
             // ShowReadyToGoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(243, 241);
+            this.ClientSize = new System.Drawing.Size(243, 279);
+            this.Controls.Add(this.lblAdditionalServices);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblEndDate);
             this.Controls.Add(this.lblCreatedBy);
@@ -218,5 +242,7 @@
         private System.Windows.Forms.Label lblCreatedBy;
         private System.Windows.Forms.Label lblEndDate;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Label lblAdditionalServices;
+        private System.Windows.Forms.Label label8;
     }
 }

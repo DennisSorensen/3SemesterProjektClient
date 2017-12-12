@@ -35,6 +35,7 @@ namespace Client.ShowBookingForms
             {
                 lblHasContract.Text = "Nej";
             }
+            lblAdditionalServices.Text = readyToGo.AdditionalServices;
             
         }
 
