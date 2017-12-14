@@ -66,52 +66,57 @@ namespace Client
         private void btnCreateRTG_MouseClick(object sender, MouseEventArgs e)
         {
             BookingServiceReference.ReadyToGo readyToGo = new BookingServiceReference.ReadyToGo(); //Opretter en tom RTG
-
+            DateTime date;
+            DateTime time;
+            DateTime dateTime;
             //Udfylder felter til RTG
+            date = dtpDate.Value.Date;
 
             //Tjekker på hvilken service det er, og sætter tid efter dette
+            time = Convert.ToDateTime(cbEndDate.Text);
+            dateTime = date.Date + time.TimeOfDay;
             if (cbService.Text == "Pc")
             {
                 if (chbOffice.Checked)
                 {
-                    readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text).AddHours(-1.5);
+                    readyToGo.EndDate = Convert.ToDateTime(dateTime).AddHours(-1.5);
                     readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.5);
                 }
                 else
                 {
-                    readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text).AddHours(-1.67);
+                    readyToGo.EndDate = Convert.ToDateTime(dateTime).AddHours(-1.67);
                     readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.33);
                 }
                 
             }
             else if (cbService.Text == "Tv")
             {
-                readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text);
+                readyToGo.EndDate = Convert.ToDateTime(dateTime);
                 readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.42);
             }
             else if (cbService.Text == "Mobil")
             {
-                readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text);
+                readyToGo.EndDate = Convert.ToDateTime(dateTime);
                 readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.5);
             }
             else if (cbService.Text == "Tablet")
             {
-                readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text);
+                readyToGo.EndDate = Convert.ToDateTime(dateTime);
                 readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.33);
             }
             else if (cbService.Text == "Gps")
             {
-                readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text).AddHours(-4.0);
+                readyToGo.EndDate = Convert.ToDateTime(dateTime).AddHours(-4.0);
                 readyToGo.StartDate = readyToGo.EndDate.AddMinutes(-3.33);
             }
             else if (cbService.Text == "Ur")
             {
-                readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text);
+                readyToGo.EndDate = Convert.ToDateTime(dateTime);
                 readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.58);
             }
             else if (cbService.Text == "Spillekonsol")
             {
-                readyToGo.EndDate = Convert.ToDateTime(cbEndDate.Text);
+                readyToGo.EndDate = Convert.ToDateTime(dateTime);
                 readyToGo.StartDate = readyToGo.EndDate.AddHours(-2.0);
             }
 
@@ -157,7 +162,7 @@ namespace Client
                 try
                 {
                     bookingService.CreateReadyToGo(readyToGo); //Sender RTG'en vidre til service, og bliver senere gemt i db.
-                    string s = string.Format("RTG oprettet og kan afhentes kl: {0}", Convert.ToDateTime(cbEndDate.Text));
+                    string s = string.Format("RTG oprettet og kan afhentes kl: {0}", Convert.ToDateTime(dateTime));
                     MessageBox.Show(s, "RTG oprettet");
                 }
                 catch
@@ -186,6 +191,19 @@ namespace Client
         private void btnLogout_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dtpDate_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpDate.Value.Date < DateTime.Now.Date)
+            {
+                MessageBox.Show("Kan ikke sætte en task i fortiden", "Fejl");
+                dtpDate.Value = DateTime.Now;
+            }
+            else
+            {
+
+            }
         }
     }
 }

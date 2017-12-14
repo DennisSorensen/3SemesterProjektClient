@@ -47,13 +47,15 @@
             this.btnLogout = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.lblUser = new System.Windows.Forms.Label();
+            this.dtpDate = new System.Windows.Forms.DateTimePicker();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(20, 89);
+            this.label1.Location = new System.Drawing.Point(20, 77);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 20);
@@ -72,7 +74,7 @@
             "Gps",
             "Ur",
             "Spillekonsol"});
-            this.cbService.Location = new System.Drawing.Point(20, 122);
+            this.cbService.Location = new System.Drawing.Point(20, 110);
             this.cbService.Margin = new System.Windows.Forms.Padding(2);
             this.cbService.Name = "cbService";
             this.cbService.Size = new System.Drawing.Size(146, 21);
@@ -83,7 +85,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(20, 164);
+            this.label2.Location = new System.Drawing.Point(20, 146);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(109, 20);
@@ -94,7 +96,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(20, 254);
+            this.label3.Location = new System.Drawing.Point(20, 232);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(97, 20);
@@ -104,10 +106,10 @@
             // cbEndDate
             // 
             this.cbEndDate.FormattingEnabled = true;
-            this.cbEndDate.Location = new System.Drawing.Point(22, 286);
+            this.cbEndDate.Location = new System.Drawing.Point(83, 290);
             this.cbEndDate.Margin = new System.Windows.Forms.Padding(2);
             this.cbEndDate.Name = "cbEndDate";
-            this.cbEndDate.Size = new System.Drawing.Size(146, 21);
+            this.cbEndDate.Size = new System.Drawing.Size(85, 21);
             this.cbEndDate.TabIndex = 8;
             // 
             // label4
@@ -194,7 +196,7 @@
             // chbInstallPrinter
             // 
             this.chbInstallPrinter.AutoSize = true;
-            this.chbInstallPrinter.Location = new System.Drawing.Point(22, 218);
+            this.chbInstallPrinter.Location = new System.Drawing.Point(22, 200);
             this.chbInstallPrinter.Margin = new System.Windows.Forms.Padding(2);
             this.chbInstallPrinter.Name = "chbInstallPrinter";
             this.chbInstallPrinter.Size = new System.Drawing.Size(120, 17);
@@ -205,7 +207,7 @@
             // chbOffice
             // 
             this.chbOffice.AutoSize = true;
-            this.chbOffice.Location = new System.Drawing.Point(22, 196);
+            this.chbOffice.Location = new System.Drawing.Point(22, 178);
             this.chbOffice.Margin = new System.Windows.Forms.Padding(2);
             this.chbOffice.Name = "chbOffice";
             this.chbOffice.Size = new System.Drawing.Size(54, 17);
@@ -254,11 +256,31 @@
             this.lblUser.TabIndex = 23;
             this.lblUser.Text = "...";
             // 
+            // dtpDate
+            // 
+            this.dtpDate.Location = new System.Drawing.Point(22, 260);
+            this.dtpDate.Name = "dtpDate";
+            this.dtpDate.Size = new System.Drawing.Size(146, 20);
+            this.dtpDate.TabIndex = 24;
+            this.dtpDate.ValueChanged += new System.EventHandler(this.dtpDate_ValueChanged);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(20, 293);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(57, 13);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Tidspunkt:";
+            // 
             // CreateBookingSalesman
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(187, 515);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.dtpDate);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.btnLogout);
@@ -308,5 +330,7 @@
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.DateTimePicker dtpDate;
+        private System.Windows.Forms.Label label9;
     }
 }
