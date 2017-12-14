@@ -32,7 +32,7 @@ namespace Client
             foreach (var user in users)
             {
                 TreeNode treeNode = new TreeNode();
-                treeNode.Text = user.Id + ", " + user.FirstName + " " + user.LastName;
+                treeNode.Text = user.Id + ", " + user.FirstName + " " + user.LastName + ", " + user.Role;
                 treeNode.Tag = user;
                 tevAllUsers.Nodes.Add(treeNode);
             }
