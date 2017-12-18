@@ -48,11 +48,7 @@ namespace Client
         {
             this.Close();
         }
-
-        private void LoadCalendar()
-        {
-
-        }
+        
         
 
         private void showBookingWithType(int bookingId, string bookingType)
@@ -110,6 +106,8 @@ namespace Client
             IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
 
             //Her smider vi bookinger i den.
+            try
+            {
             bookings = bookingService.GetAllBookingSpecificDay(calendar.Id, selectedDate);
             //presenter dem, for de er sorteret i wcf
             foreach (var booking in bookings)
@@ -121,8 +119,13 @@ namespace Client
                 item.SubItems.Add(sSub);
                 item.Tag = booking;
                 listView.Items.Add(item);
-
             }
+            }
+            catch
+            {
+                MessageBox.Show("Der er ikke oprettet en kalender til denne supporter. Kontakt en Administartor for at lave en kalendar", "Fejl - Ingen kalendar");
+            }
+            
         }
 
         private void SupporterCalendar_FormClosing(object sender, FormClosingEventArgs e)

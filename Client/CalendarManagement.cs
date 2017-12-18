@@ -57,11 +57,6 @@ namespace Client
             {
                 SupporterList();
             }
-            else if(e.TabPageIndex == 1)
-            {
-                //dgvSupportCalendar.DataSource = table;
-            }
-
         }
 
         private void SupporterList()
@@ -109,20 +104,28 @@ namespace Client
                 //Klader bookingService, og får fat i bookingerne for dagen
 
                 IEnumerable<BookingServiceReference.Booking> bookings = new List<BookingServiceReference.Booking>();
-                
+                try
+                {
                 //Her smider vi bookinger i den.
                 bookings = bookingService.GetAllBookingSpecificDay(calendar.Id, selectedDate);
-                //presenter dem, for de er sorteret i wcf
-                foreach (var booking in bookings)
-                {
-                    ListViewItem item = new ListViewItem();
-                    string s = string.Format("{0} - {1}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString());
-                    string sSub = string.Format("{0}", booking.BookingType);
-                    item.Text = s;
-                    item.SubItems.Add(sSub);
-                    item.Tag = booking;
-                    listView.Items.Add(item);
+                    //presenter dem, for de er sorteret i wcf
+                    foreach (var booking in bookings)
+                    {
+                        ListViewItem item = new ListViewItem();
+                        string s = string.Format("{0} - {1}", booking.StartDate.ToShortTimeString(), booking.EndDate.ToShortTimeString());
+                        string sSub = string.Format("{0}", booking.BookingType);
+                        item.Text = s;
+                        item.SubItems.Add(sSub);
+                        item.Tag = booking;
+                        listView.Items.Add(item);
 
+                    }
+
+                }
+                catch
+                {
+
+                    MessageBox.Show("Der er ikke oprettet en kalender til denne supporter. Lave en kalendar til givende bruger", "Fejl - Ingen kalendar");
                 }
             }
             else
