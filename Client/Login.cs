@@ -51,8 +51,8 @@ namespace Client
                 }
                 else
                 {
-                    string s = string.Format("Koden er forkert", txtUserId.Text);
-                    MessageBox.Show(s, "Login Fejl");
+                    string s = string.Format("Fejl i login", txtUserId.Text);
+                    MessageBox.Show(s, "Fejl - Login");
                 }
             }
             else
