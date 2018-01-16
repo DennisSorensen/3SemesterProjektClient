@@ -41,13 +41,13 @@ namespace Client
         private void btnLogin_Click(object sender, EventArgs e)
         {
             int userId;
-            bool result = Int32.TryParse(txtUserId.Text, out userId);
+            bool result = Int32.TryParse(txtUserId.Text, out userId); //smier bool ud om den kunne lave den om, og hvis ja, så smider den også tallet ud
             if (result)
             {
                 UserServiceReference.User user = userService.Login(userId, txtPassword.Text);
                 if(user != null)
                 {
-                    ShowSelectedForm(user);
+                    ShowSelectedForm(user); //Åbner den rigitge form til user
                 }
                 else
                 {
@@ -64,7 +64,7 @@ namespace Client
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            Application.Exit(); //Lukker formen
         }
         
 
@@ -93,7 +93,7 @@ namespace Client
         private void tevAllUsers_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
             //Skriver selected user ud på labels og søgefelt id
-            UserServiceReference.User user = e.Node.Tag as UserServiceReference.User;
+            UserServiceReference.User user = e.Node.Tag as UserServiceReference.User; //den man har klikket på
             Console.WriteLine(user.FirstName);
             User = user;
             ShowSelectedForm(User);

@@ -17,7 +17,7 @@ namespace Client
         BookingService bookingService = new BookingService();
         public CreateBookingSalesman(UserServiceReference.User user)
         {
-            InitializeComponent();
+            InitializeComponent(); //Starter komponenter
             this.user = user;
             lblUser.Text = user.FirstName + " " + user.LastName;
         }
@@ -79,8 +79,8 @@ namespace Client
             {
                 if (chbOffice.Checked)
                 {
-                    readyToGo.EndDate = Convert.ToDateTime(dateTime).AddHours(-1.5);
-                    readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.5);
+                    readyToGo.EndDate = Convert.ToDateTime(dateTime).AddHours(-1.5); //Regner slut tid tilbage
+                    readyToGo.StartDate = readyToGo.EndDate.AddHours(-0.5); //Regner start tid ud fra slut tid
                 }
                 else
                 {
@@ -204,6 +204,11 @@ namespace Client
             {
 
             }
+        }
+
+        private void CreateBookingSalesman_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
